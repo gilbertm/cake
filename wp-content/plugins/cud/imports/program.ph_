@@ -1,0 +1,134 @@
+<?php
+
+include_once(WP_PLUGIN_DIR . '/custom-permalinks/frontend/class-custom-permalinks-frontend.php');
+
+$request = wp_remote_get('http://devs.cud.ac.ae/staging/wp/migrate/content/program');
+
+if (is_wp_error($request)) {
+    return false; // Bail early
+}
+
+$body = wp_remote_retrieve_body($request);
+
+
+$data = json_decode($body);
+
+if (!empty($data)) {
+
+
+    $ctr = 1;
+    foreach ($data as $program) {
+
+        $program_id = add_program($program);
+
+        if ($program_id) {
+            $url = $program->view_node;
+
+            delete_add_custom_permalink($program_id, $url);    
+        }
+
+        $ctr++;
+
+        if ($ctr == 5)
+            die();
+    }
+}
+
+function delete_add_custom_permalink($post_id, $custom_permalink) {
+
+    delete_post_meta($post_id, 'custom_permalink');
+
+    $permalink = str_replace('%2F', '/', urlencode(ltrim(stripcslashes($custom_permalink), "/")));
+
+    $permalink = str_replace('staging/', '', $permalink);
+
+    add_post_meta(
+        $post_id,
+        'custom_permalink',
+        $permalink
+    );
+}
+
+function add_program($program)
+{   
+    $url_address = "https://cud.ac.ae";
+
+    // check the slug and run an update if necessary 
+    $new_slug = sanitize_title( $program->title );
+
+    echo "Processing... " . $new_slug;
+
+    $query = new WP_Query( array( 'name' => $new_slug, 'post_type' => 'program' ) );
+
+    if ( !$query->have_posts() ) {
+
+        // use this line if you have multiple posts with the same title
+        $new_slug = wp_unique_post_slug( $new_slug, $program->nid, $program->status, "program", null );
+ 
+        $image_url = str_replace('%2F', '/', urlencode(ltrim(stripcslashes($program->field_image), "/")));
+
+        $image_url = str_replace('staging/', '/', $url_address . $image_url);
+
+        $post_status = ($program->status === "True") ? 'publish' : 'draft';
+
+        $post_is_new = ($program->field_is_new === "True") ? true : false;
+
+        $post_is_only_arabic = ($program->field_only_in_arabic === "True") ? true : false;
+
+        $post_is_also_arabic = ($program->field_also_in_arabic === "True") ? true : false;
+
+        $program_add = array(
+            'title' => $program->title,
+            'content' => $program->body,
+            'excerpt' => $program->body_1,
+            'credit_hours' => $program->field_program_credit_hours,
+            'minor' => $program->field_program_minor,
+            'opening_dates' => $program->field_program_opening_dates,
+            'years' => $program->field_program_years,
+            'group' => $program->field_program_group,
+            'date_gmt' => $program->created,
+            'date' => $program->created,
+            'status' => $post_status,
+            'is_new' => $post_is_new,
+            'is_only_arabic' => $post_is_only_arabic,
+            'is_also_in_arabic'=> $post_is_also_arabic,
+            'is_ministry_accredited' => true,
+            'reference_node_id' => $program->nid,
+            'slug' => $new_slug
+        );
+
+        $program_id = pods('program')->add($program_add);
+
+        $img_1 = pods_attachment_import( $image_url, $program_id , true);
+
+        $pod =  pods('program', $program_id);
+
+        $pod->save('image', $img_1);
+
+        $image_metadata = array(
+			'ID'		=> $img_1,			// Specify the image (ID) to be updated
+			'post_title'	=> "Program-imported --- " . basename($image_url),		// Set image Title to sanitized title
+			'post_excerpt'	=> "Program-imported --- " . basename($image_url),			// Set image Caption (Excerpt) to sanitized title
+			'post_content'	=> "Program-imported --- " . basename($image_url)		// Set image Description (Content) to sanitized title
+		);
+
+		// Set the image Alt-Text
+		update_post_meta( $img_1, '_wp_attachment_image_alt', basename($image_url) );
+
+		// Set the image meta (e.g. Title, Excerpt, Content)
+		wp_update_post( $image_metadata );
+
+        echo "... success";
+
+        echo "<br />";
+
+        return $program_id;
+    }
+
+    echo "... exists";
+
+    echo "<br />";
+
+    return null;
+
+}
