@@ -170,7 +170,7 @@ class WPCF7Submissions
                  if (!empty($additional_fields)) {
                      foreach ($additional_fields as $name => $value) {
                          if (!empty($value)) {
-                             add_post_meta($post_id, 'wpcf7s_posted-' . $name, $value);
+                             add_post_meta($post_id, 'wpcf7s_posted-' . $name, wp_kses_post($value));
                          }
                      }
                  }

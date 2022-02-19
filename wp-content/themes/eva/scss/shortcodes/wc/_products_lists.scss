@@ -1,0 +1,21 @@
+h2.shortcode_title {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	margin: rem-calc(40) auto rem-calc(60);
+	font-size: rem-calc(26);
+	line-height: rem-calc(36);
+	// font-weight: bold;
+	// font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	&:after {
+		margin: rem-calc(10) auto 0;
+		text-align: center;
+		display: block;
+		content: "";
+		height: rem-calc(3);
+		width: rem-calc(100);
+		background-color: $maincolor;
+	}
+}

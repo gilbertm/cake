@@ -1,0 +1,63 @@
+//	Navbars
+
+.mm-navbar
+{
+	border-bottom: 1px solid;
+	border-color: $maincolor;
+	text-align: left;
+	line-height: $mm_btnSize / 2;
+
+	height: $mm_navbarHeight;
+	padding: 0 $mm_btnSize 0 30px;
+
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	> *
+	{
+		display: block;
+		padding: ( $mm_btnSize / 4 ) 0;
+	}
+	a,
+	a:hover
+	{
+		text-decoration: none;
+	}
+	.mm-title
+	{
+		@include mm_ellipsis;
+		// font-size: $mm_fontSize*1.2;
+		font-size: $mm_fontSize;
+		letter-spacing: $mm_letterspacing;
+		font-weight: $mm_titlefontWeight;
+		text-transform: uppercase;
+	}
+	.mm-btn
+	{
+		&:first-child
+		{
+			padding-left: $mm_panelPadding;
+			left: 0;
+		}
+		&:last-child
+		{
+			text-align: right;
+			padding-right: $mm_panelPadding;
+			right: 0;
+		}
+	}
+}
+.mm-panel
+{
+	.mm-navbar
+	{
+		display: none;
+	}
+	&.mm-hasnavbar .mm-navbar
+	{
+		display: block;
+	}
+}

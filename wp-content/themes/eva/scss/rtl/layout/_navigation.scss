@@ -1,0 +1,180 @@
+/* -------------------------------- 
+	Navigation
+-------------------------------- */
+
+.main-navigation {
+
+	> ul > li.menu-item-has-children {
+		padding-right:0;
+		margin-right:0;
+
+		padding-left:2px;
+		margin-left:10px;		
+	}
+
+	ul ul li.menu-item-has-children a {
+		margin: 3px 0px 3px 10px; 
+	}
+
+	ul li.menu-item-has-children > a:after {
+		right: auto;
+		left: 20px;
+	}
+
+	> ul > li.menu-item-has-children > a:after {
+		right: auto;
+		left: 2px;	
+	}
+	ul ul li.menu-item-has-children > a:after {
+		content: "\e912";
+	}
+
+	ul {
+		li {
+			a {
+
+			}
+			&:first-child {
+				margin-right: 0;
+				a {
+					padding-left: 13px;
+				}
+			}			
+		}
+	}	
+
+	ul ul {
+		left:auto;
+		right: -15px;
+		li {
+			text-align: right;
+			&:first-child {
+				a {
+					padding-left: 0;
+				}
+				
+			}
+			a {
+				text-align: right;
+			}
+		}
+	}
+
+	ul ul {
+		li {
+			a {
+				margin: 3px 0 3px 10px;
+			}
+		}
+	}
+
+	ul ul ul {
+		left: auto;
+		right: 100%;
+	}
+
+	.mega-menu {
+		> ul {
+			padding:40px 50px 40px 0px;
+		}
+		> ul.with_bg_image	{
+			padding:40px 50px 20px 150px;
+			background-position:top left;
+		}
+
+		ul ul li.menu-item-has-children > a:after {
+			content: "\e912";
+			right: auto;
+			left: 15px;	
+
+		}
+	}
+
+	ul li.mega-menu ul li.menu-item-has-children {
+		margin-right: 0px;
+		margin-left: 40px;
+	}	
+}
+
+
+#nav-below {
+	.nav-left {
+    	text-align: left;
+    	padding-right: 0;
+    	padding-left: 50px;
+    	border-right: none;
+    	border-left: 1px solid #f0f0f0;
+        @include breakpoint(small only) {
+        	border-left: none;
+        	padding: 0;
+        	text-align: center;
+        	margin-bottom: 20px;
+        	.nav-previous {
+        		padding: 0;
+        	}
+        }    	
+	}
+	.nav-right {
+	    text-align: right;
+	    padding-left: 0;
+	    padding-right: 50px;
+        @include breakpoint(small only) {
+        	padding: 0;
+        	text-align: center;
+        	.nav-next {
+        		padding: 0;
+        	}
+        }	    
+	}	
+}
+
+.mm-menu .wishlist-button a,
+.mm-menu .login-button a,
+.mm-menu .account-button a,
+.mm-menu .logout-button a {
+	span {
+		display: inline-block;
+		position: relative;
+		padding-right: 20px;
+		
+		&:before {
+			position: absolute;
+			top: calc(50% - 8px);
+			padding-right: 0;
+			padding-left: 15px;
+			left: auto;
+			right: 0;
+			vertical-align: middle;			
+		}
+		div {
+
+		}
+	}
+
+}
+
+.mm-navbar {
+    padding: 0 30px 0 40px;
+    text-align: right;
+	.mm-btn:first-child {
+	    padding-left: 0px;
+	    left: auto;
+	    right: 0;
+	}
+}
+
+.mm-prev:before {
+	transform: rotate(0deg) scaleX(-1);
+    left: auto;
+    right: 3px;
+}
+
+.offcanvas_aside {
+	.mm-menu {
+		.mm-listview {
+			li {
+
+			}
+		}
+	}
+}

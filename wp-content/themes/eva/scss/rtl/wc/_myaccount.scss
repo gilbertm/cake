@@ -1,0 +1,73 @@
+/* -------------------------------- 
+	My Account
+-------------------------------- */
+
+.account-forms-container {
+	.account-tab-list {
+		.account-tab-item {
+			margin-right: auto;
+			margin-left: 20px;
+		}
+		.account-tab-item.last {
+			.account-tab-link:before {
+				margin-right: 0px;
+				margin-left: 20px;
+			}
+		}
+	}
+}
+.account-forms-container .account-forms form.login-form .lost_password,
+.account-forms-container .account-forms form.register .lost_password,
+.account-forms-container .account-forms form.track_order .lost_password {
+    float: left;
+}
+
+.my_account_container  {
+	.myaccount_user {
+		.woocommerce-MyAccount-navigation {
+		    float: right;
+		}		
+		 .woocommerce-MyAccount-content {
+		 	float: left;
+		 }
+	}
+}
+
+.woocommerce-MyAccount-orders {
+
+	thead {
+		tr {
+			th {
+				text-align: right;
+			}
+		}
+	}
+}
+
+.my_account_container .order-container table.shop_table th,
+.my_account_container .order-container table.shop_table td {
+	text-align: right;
+}
+
+.my_account_container .order-container table.shop_table tbody td.product-name {
+    padding-right: 0px;
+}
+
+.my_account_container .myaccount_user .woocommerce-MyAccount-content table.shop_table tbody td {
+	text-align: right;
+    padding: 20px 10px 10px 10px;
+}
+
+table.woocommerce-table--order-details {
+	th {
+		text-align: right;
+	}
+}
+
+.woocommerce-order-details {
+
+	.order-again {
+		text-align: left;
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,25 @@
+.track-order-container {
+	margin-bottom: rem-calc(40);
+	.track-order-description {
+		font-size: rem-calc(20);
+		width: rem-calc(700);
+		max-width: 100%;
+		margin: 0 auto rem-calc(60);
+		text-align: center;
+		@include breakpoint(small only) {
+			width: 100%;
+		}
+	}
+	.track_order_form {
+		border: 2px solid $maincolor;
+		width: rem-calc(700);
+		max-width: 100%;
+		margin: 0 auto rem-calc(10);
+		padding: rem-calc(50) rem-calc(60) rem-calc(40);
+		@include breakpoint(small only) {
+			border: none;
+			padding: rem-calc(20) 0px;
+		}		
+	}	
+}
+

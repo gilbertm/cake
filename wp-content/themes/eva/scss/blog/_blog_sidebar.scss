@@ -1,0 +1,25 @@
+.blog-content-area,
+.page-template-page-right-sidebar {
+  .widget-area:not(.f-columns) {
+    background-color: rgba(0, 0, 0, 0.02);
+
+    @include breakpoint(small only) {
+      background-color: transparent;
+    }
+  }
+}
+
+.blog-content-area,
+.page-template-page-right-sidebar {
+  .widget-area {
+    padding: 50px;
+
+    @include breakpoint(medium down) {
+      margin-top: 40px;
+    }
+
+    @include breakpoint(small only) {
+      padding: 50px 0;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/*
+Theme Name: Eva
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+/* RTL Support */
+
+@import "bourbon";
+@import 'settings';
+@import "base/utilities";
+
+@import "rtl/globals";
+@import "rtl/grid";
+
+@import "rtl/layout/header";
+@import "rtl/layout/navigation";
+@import "rtl/layout/sidebar";
+
+@import "rtl/wc/shop";
+@import "rtl/wc/single";
+@import "rtl/wc/quick-view";
+@import "rtl/wc/elements";
+@import "rtl/wc/cart";
+@import "rtl/wc/checkout";
+@import "rtl/wc/myaccount";
+
+@import "rtl/wp/blog";
+
+
+
+
+

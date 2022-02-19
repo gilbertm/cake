@@ -1,0 +1,23 @@
+/**
+* Theme Name: Eva Child
+* Description: This is a child theme of Eva.
+* Author: <a href="https://temash.design">TemashDesign</a>
+* Template: eva
+* Version: 1.9.9.6
+*/
+
+header.site-header .header-wrapper .tools ul li a .counter_number {
+    color: #fff !important;
+    font-weight: bold !important;
+    font-family: Helvetica, Arial, 'Courier New' !important;
+}
+
+.main-navigation ul ul,
+.main-navigation .mega-menu > ul {
+    padding:1.5rem;
+}
+
+.main-navigation .mega-menu > ul > li > a {
+    text-transform: uppercase;
+    font-weight: bold;
+}

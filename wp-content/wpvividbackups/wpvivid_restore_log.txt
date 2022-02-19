@@ -1,0 +1,420 @@
+Log created: 2022-02-18 15:28:00
+Type: restore
+[2022-02-18 15:28:00][notice]init restore data
+[2022-02-18 15:28:00][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_all.part002.zip
+[2022-02-18 15:28:00][notice]extract root:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/
+[2022-02-18 15:28:00][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_all.part002.zip
+[2022-02-18 15:28:01][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_all.part002.zip
+[2022-02-18 15:28:01][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_all.part002.zip
+[2022-02-18 15:28:01][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_all.part001.zip
+[2022-02-18 15:28:01][notice]extract root:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/
+[2022-02-18 15:28:01][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_all.part001.zip
+[2022-02-18 15:28:02][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_all.part001.zip
+[2022-02-18 15:28:02][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_all.part001.zip
+[2022-02-18 15:28:03][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_core.zip
+[2022-02-18 15:28:03][notice]restore from files:["\/var\/www\/html\/custom-wp-cake.local\/public_html\/wp-content\/wpvividbackups\/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_core.zip"]
+[2022-02-18 15:28:03][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_core.zip
+[2022-02-18 15:28:03][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_core.zip
+[2022-02-18 15:28:03][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_core.zip
+[2022-02-18 15:28:04][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_uploads.zip
+[2022-02-18 15:28:04][notice]restore from files:["\/var\/www\/html\/custom-wp-cake.local\/public_html\/wp-content\/wpvividbackups\/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_uploads.zip"]
+[2022-02-18 15:28:04][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_uploads.zip
+[2022-02-18 15:28:04][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_uploads.zip
+[2022-02-18 15:28:04][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_uploads.zip
+[2022-02-18 15:28:05][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_themes.zip
+[2022-02-18 15:28:05][notice]restore from files:["\/var\/www\/html\/custom-wp-cake.local\/public_html\/wp-content\/wpvividbackups\/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_themes.zip"]
+[2022-02-18 15:28:05][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_themes.zip
+[2022-02-18 15:28:05][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_themes.zip
+[2022-02-18 15:28:05][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_themes.zip
+[2022-02-18 15:28:07][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part002.zip
+[2022-02-18 15:28:07][notice]restore from files:["\/var\/www\/html\/custom-wp-cake.local\/public_html\/wp-content\/wpvividbackups\/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part002.zip"]
+[2022-02-18 15:28:07][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part002.zip
+[2022-02-18 15:28:07][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part002.zip
+[2022-02-18 15:28:07][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part002.zip
+[2022-02-18 15:28:08][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part001.zip
+[2022-02-18 15:28:08][notice]restore from files:["\/var\/www\/html\/custom-wp-cake.local\/public_html\/wp-content\/wpvividbackups\/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part001.zip"]
+[2022-02-18 15:28:08][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part001.zip
+[2022-02-18 15:28:09][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part001.zip
+[2022-02-18 15:28:09][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_plugin.part001.zip
+[2022-02-18 15:28:10][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_content.zip
+[2022-02-18 15:28:10][notice]restore from files:["\/var\/www\/html\/custom-wp-cake.local\/public_html\/wp-content\/wpvividbackups\/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_content.zip"]
+[2022-02-18 15:28:10][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_content.zip
+[2022-02-18 15:28:10][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_content.zip
+[2022-02-18 15:28:10][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_content.zip
+[2022-02-18 15:28:11][notice]Start restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_db.zip
+[2022-02-18 15:28:11][notice]start extracting file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_db.zip
+[2022-02-18 15:28:11][notice]extract finished file:/var/www/html/custom-wp-cake.local/public_html/wp-content/wpvividbackups/custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_db.zip
+[2022-02-18 15:28:11][notice]sql file: custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_db.sql
+[2022-02-18 15:28:11][Warning]wpdb
+[2022-02-18 15:28:11][notice]The test to create table succeeds.
+[2022-02-18 15:28:11][notice]The test to insert into table succeeds.
+[2022-02-18 15:28:11][notice]The test to drop table succeeds.
+[2022-02-18 15:28:11][notice]get max_allowed_packet wpdb 
+[2022-02-18 15:28:11][notice]Start import sql file.
+[2022-02-18 15:28:11][notice]old site url:http://custom-wp-cake.local
+[2022-02-18 15:28:11][notice]old home url:http://custom-wp-cake.local
+[2022-02-18 15:28:11][notice]old content url:http://custom-wp-cake.local/wp-content
+[2022-02-18 15:28:11][notice]old upload url:http://custom-wp-cake.local/wp-content/uploads
+[2022-02-18 15:28:11][notice]old site prefix:wp_
+[2022-02-18 15:28:11][notice]Drop table if exist
+[2022-02-18 15:28:11][notice]Create table wp_commentmeta
+[2022-02-18 15:28:11][notice]Dumping table wp_commentmeta is complete. Start replacing row(s).
+[2022-02-18 15:28:11][notice]Count of rows in wp_commentmeta: 26
+[2022-02-18 15:28:11][notice]Replace the row in 0 line.
+[2022-02-18 15:28:11][notice]finish replace rows
+[2022-02-18 15:28:11][notice]Drop table if exist
+[2022-02-18 15:28:11][notice]Create table wp_links
+[2022-02-18 15:28:11][notice]Dumping table wp_links is complete. Start replacing row(s).
+[2022-02-18 15:28:11][notice]Count of rows in wp_links: 0
+[2022-02-18 15:28:11][notice]Drop table if exist
+[2022-02-18 15:28:11][notice]Create table wp_options
+[2022-02-18 15:28:15][notice]Dumping table wp_options is complete. Start replacing row(s).
+[2022-02-18 15:28:15][notice]Count of rows in wp_options: 514
+[2022-02-18 15:28:15][notice]Replace the row in 0 line.
+[2022-02-18 15:28:15][notice]finish replace rows
+[2022-02-18 15:28:15][notice]Drop table if exist
+[2022-02-18 15:28:15][notice]Create table wp_postmeta
+[2022-02-18 15:49:20][notice]Dumping table wp_postmeta is complete. Start replacing row(s).
+[2022-02-18 15:49:20][notice]Count of rows in wp_postmeta: 167019
+[2022-02-18 15:49:20][notice]Replace the row in 0 line.
+[2022-02-18 15:49:20][notice]Replace the row in 5000 line.
+[2022-02-18 15:49:20][notice]Replace the row in 10000 line.
+[2022-02-18 15:49:20][notice]Replace the row in 15000 line.
+[2022-02-18 15:49:20][notice]Replace the row in 20000 line.
+[2022-02-18 15:49:21][notice]Replace the row in 25000 line.
+[2022-02-18 15:49:21][notice]Replace the row in 30000 line.
+[2022-02-18 15:49:21][notice]Replace the row in 35000 line.
+[2022-02-18 15:49:21][notice]Replace the row in 40000 line.
+[2022-02-18 15:49:21][notice]Replace the row in 45000 line.
+[2022-02-18 15:49:21][notice]Replace the row in 50000 line.
+[2022-02-18 15:49:22][notice]Replace the row in 55000 line.
+[2022-02-18 15:49:22][notice]Replace the row in 60000 line.
+[2022-02-18 15:49:22][notice]Replace the row in 65000 line.
+[2022-02-18 15:49:22][notice]Replace the row in 70000 line.
+[2022-02-18 15:49:22][notice]Replace the row in 75000 line.
+[2022-02-18 15:49:23][notice]Replace the row in 80000 line.
+[2022-02-18 15:49:23][notice]Replace the row in 85000 line.
+[2022-02-18 15:49:23][notice]Replace the row in 90000 line.
+[2022-02-18 15:49:23][notice]Replace the row in 95000 line.
+[2022-02-18 15:49:23][notice]Replace the row in 100000 line.
+[2022-02-18 15:49:24][notice]Replace the row in 105000 line.
+[2022-02-18 15:49:24][notice]Replace the row in 110000 line.
+[2022-02-18 15:49:24][notice]Replace the row in 115000 line.
+[2022-02-18 15:49:25][notice]Replace the row in 120000 line.
+[2022-02-18 15:49:25][notice]Replace the row in 125000 line.
+[2022-02-18 15:49:25][notice]Replace the row in 130000 line.
+[2022-02-18 15:49:25][notice]Replace the row in 135000 line.
+[2022-02-18 15:49:26][notice]Replace the row in 140000 line.
+[2022-02-18 15:49:26][notice]Replace the row in 145000 line.
+[2022-02-18 15:49:26][notice]Replace the row in 150000 line.
+[2022-02-18 15:49:26][notice]Replace the row in 155000 line.
+[2022-02-18 15:49:27][notice]Replace the row in 160000 line.
+[2022-02-18 15:49:27][notice]Replace the row in 165000 line.
+[2022-02-18 15:49:27][notice]finish replace rows
+[2022-02-18 15:49:27][notice]Drop table if exist
+[2022-02-18 15:49:27][notice]Create table wp_posts
+[2022-02-18 15:49:33][notice]Dumping table wp_posts is complete. Start replacing row(s).
+[2022-02-18 15:49:33][notice]Count of rows in wp_posts: 505
+[2022-02-18 15:49:33][notice]Replace the row in 0 line.
+[2022-02-18 15:49:33][notice]finish replace rows
+[2022-02-18 15:49:33][notice]Drop table if exist
+[2022-02-18 15:49:33][notice]Create table wp_term_relationships
+[2022-02-18 15:49:36][notice]Dumping table wp_term_relationships is complete. Start replacing row(s).
+[2022-02-18 15:49:36][Warning]Skip table wp_term_relationships
+[2022-02-18 15:49:36][notice]Drop table if exist
+[2022-02-18 15:49:36][notice]Create table wp_term_taxonomy
+[2022-02-18 15:49:37][notice]Dumping table wp_term_taxonomy is complete. Start replacing row(s).
+[2022-02-18 15:49:37][notice]Count of rows in wp_term_taxonomy: 86
+[2022-02-18 15:49:37][notice]Replace the row in 0 line.
+[2022-02-18 15:49:37][notice]finish replace rows
+[2022-02-18 15:49:37][notice]Drop table if exist
+[2022-02-18 15:49:37][notice]Create table wp_termmeta
+[2022-02-18 15:49:38][notice]Dumping table wp_termmeta is complete. Start replacing row(s).
+[2022-02-18 15:49:38][notice]Count of rows in wp_termmeta: 151
+[2022-02-18 15:49:38][notice]Replace the row in 0 line.
+[2022-02-18 15:49:38][notice]finish replace rows
+[2022-02-18 15:49:38][notice]Drop table if exist
+[2022-02-18 15:49:38][notice]Create table wp_terms
+[2022-02-18 15:49:39][notice]Dumping table wp_terms is complete. Start replacing row(s).
+[2022-02-18 15:49:39][notice]Count of rows in wp_terms: 86
+[2022-02-18 15:49:39][notice]Replace the row in 0 line.
+[2022-02-18 15:49:39][notice]finish replace rows
+[2022-02-18 15:49:39][notice]Drop table if exist
+[2022-02-18 15:49:39][notice]Create table wp_usermeta
+[2022-02-18 15:49:39][notice]Dumping table wp_usermeta is complete. Start replacing row(s).
+[2022-02-18 15:49:39][notice]Count of rows in wp_usermeta: 28
+[2022-02-18 15:49:39][notice]Replace the row in 0 line.
+[2022-02-18 15:49:39][notice]finish replace rows
+[2022-02-18 15:49:39][notice]Drop table if exist
+[2022-02-18 15:49:39][notice]Create table wp_users
+[2022-02-18 15:49:40][notice]Dumping table wp_users is complete. Start replacing row(s).
+[2022-02-18 15:49:40][notice]Count of rows in wp_users: 1
+[2022-02-18 15:49:40][notice]Replace the row in 0 line.
+[2022-02-18 15:49:40][notice]finish replace rows
+[2022-02-18 15:49:40][notice]Drop table if exist
+[2022-02-18 15:49:40][notice]Create table wp_wpmm_subscribers
+[2022-02-18 15:49:40][notice]Dumping table wp_wpmm_subscribers is complete. Start replacing row(s).
+[2022-02-18 15:49:40][notice]Count of rows in wp_wpmm_subscribers: 0
+[2022-02-18 15:49:40][notice]Drop table if exist
+[2022-02-18 15:49:40][notice]Create table wp_wpvivid_scan_result
+[2022-02-18 15:49:40][notice]Dumping table wp_wpvivid_scan_result is complete. Start replacing row(s).
+[2022-02-18 15:49:40][notice]Count of rows in wp_wpvivid_scan_result: 0
+[2022-02-18 15:49:40][notice]Drop table if exist
+[2022-02-18 15:49:40][notice]Create table wp_wpvivid_unused_uploads_files
+[2022-02-18 15:49:40][notice]Dumping table wp_wpvivid_unused_uploads_files is complete. Start replacing row(s).
+[2022-02-18 15:49:40][notice]Count of rows in wp_wpvivid_unused_uploads_files: 0
+[2022-02-18 15:49:40][notice]Drop table if exist
+[2022-02-18 15:49:40][notice]Create table wp_revslider_sliders
+[2022-02-18 15:49:40][notice]Dumping table wp_revslider_sliders is complete. Start replacing row(s).
+[2022-02-18 15:49:40][notice]Count of rows in wp_revslider_sliders: 5
+[2022-02-18 15:49:40][notice]Replace the row in 0 line.
+[2022-02-18 15:49:40][notice]finish replace rows
+[2022-02-18 15:49:40][notice]Drop table if exist
+[2022-02-18 15:49:40][notice]Create table wp_revslider_slides
+[2022-02-18 15:49:40][notice]Dumping table wp_revslider_slides is complete. Start replacing row(s).
+[2022-02-18 15:49:40][notice]Count of rows in wp_revslider_slides: 5
+[2022-02-18 15:49:40][notice]Replace the row in 0 line.
+[2022-02-18 15:49:40][notice]finish replace rows
+[2022-02-18 15:49:40][notice]Drop table if exist
+[2022-02-18 15:49:40][notice]Create table wp_revslider_static_slides
+[2022-02-18 15:49:40][notice]Dumping table wp_revslider_static_slides is complete. Start replacing row(s).
+[2022-02-18 15:49:40][notice]Count of rows in wp_revslider_static_slides: 3
+[2022-02-18 15:49:40][notice]Replace the row in 0 line.
+[2022-02-18 15:49:40][notice]finish replace rows
+[2022-02-18 15:49:40][notice]Drop table if exist
+[2022-02-18 15:49:40][notice]Create table wp_revslider_css
+[2022-02-18 15:49:42][notice]Dumping table wp_revslider_css is complete. Start replacing row(s).
+[2022-02-18 15:49:42][notice]Count of rows in wp_revslider_css: 109
+[2022-02-18 15:49:42][notice]Replace the row in 0 line.
+[2022-02-18 15:49:42][notice]finish replace rows
+[2022-02-18 15:49:42][notice]Drop table if exist
+[2022-02-18 15:49:42][notice]Create table wp_revslider_layer_animations
+[2022-02-18 15:49:42][notice]Dumping table wp_revslider_layer_animations is complete. Start replacing row(s).
+[2022-02-18 15:49:42][notice]Count of rows in wp_revslider_layer_animations: 0
+[2022-02-18 15:49:42][notice]Drop table if exist
+[2022-02-18 15:49:42][notice]Create table wp_revslider_navigations
+[2022-02-18 15:49:42][notice]Dumping table wp_revslider_navigations is complete. Start replacing row(s).
+[2022-02-18 15:49:42][notice]Count of rows in wp_revslider_navigations: 0
+[2022-02-18 15:49:42][notice]Drop table if exist
+[2022-02-18 15:49:42][notice]Create table wp_revslider_sliders_bkp
+[2022-02-18 15:49:42][notice]Dumping table wp_revslider_sliders_bkp is complete. Start replacing row(s).
+[2022-02-18 15:49:42][notice]Count of rows in wp_revslider_sliders_bkp: 0
+[2022-02-18 15:49:42][notice]Drop table if exist
+[2022-02-18 15:49:42][notice]Create table wp_revslider_slides_bkp
+[2022-02-18 15:49:42][notice]Dumping table wp_revslider_slides_bkp is complete. Start replacing row(s).
+[2022-02-18 15:49:42][notice]Count of rows in wp_revslider_slides_bkp: 0
+[2022-02-18 15:49:42][notice]Drop table if exist
+[2022-02-18 15:49:42][notice]Create table wp_revslider_static_slides_bkp
+[2022-02-18 15:49:42][notice]Dumping table wp_revslider_static_slides_bkp is complete. Start replacing row(s).
+[2022-02-18 15:49:42][notice]Count of rows in wp_revslider_static_slides_bkp: 0
+[2022-02-18 15:49:42][notice]Drop table if exist
+[2022-02-18 15:49:42][notice]Create table wp_revslider_css_bkp
+[2022-02-18 15:49:42][notice]Dumping table wp_revslider_css_bkp is complete. Start replacing row(s).
+[2022-02-18 15:49:42][notice]Count of rows in wp_revslider_css_bkp: 47
+[2022-02-18 15:49:42][notice]Replace the row in 0 line.
+[2022-02-18 15:49:42][notice]finish replace rows
+[2022-02-18 15:49:42][notice]Drop table if exist
+[2022-02-18 15:49:42][notice]Create table wp_revslider_layer_animations_bkp
+[2022-02-18 15:49:43][notice]Dumping table wp_revslider_layer_animations_bkp is complete. Start replacing row(s).
+[2022-02-18 15:49:43][notice]Count of rows in wp_revslider_layer_animations_bkp: 0
+[2022-02-18 15:49:43][notice]Drop table if exist
+[2022-02-18 15:49:43][notice]Create table wp_revslider_navigations_bkp
+[2022-02-18 15:49:43][notice]Dumping table wp_revslider_navigations_bkp is complete. Start replacing row(s).
+[2022-02-18 15:49:43][notice]Count of rows in wp_revslider_navigations_bkp: 0
+[2022-02-18 15:49:43][notice]Drop table if exist
+[2022-02-18 15:49:43][notice]Create table wp_actionscheduler_actions
+[2022-02-18 15:49:45][notice]Dumping table wp_actionscheduler_actions is complete. Start replacing row(s).
+[2022-02-18 15:49:45][notice]Count of rows in wp_actionscheduler_actions: 220
+[2022-02-18 15:49:45][notice]Replace the row in 0 line.
+[2022-02-18 15:49:45][notice]finish replace rows
+[2022-02-18 15:49:45][notice]Drop table if exist
+[2022-02-18 15:49:45][notice]Create table wp_actionscheduler_claims
+[2022-02-18 15:49:45][notice]Dumping table wp_actionscheduler_claims is complete. Start replacing row(s).
+[2022-02-18 15:49:45][notice]Count of rows in wp_actionscheduler_claims: 0
+[2022-02-18 15:49:45][notice]Drop table if exist
+[2022-02-18 15:49:45][notice]Create table wp_actionscheduler_groups
+[2022-02-18 15:49:45][notice]Dumping table wp_actionscheduler_groups is complete. Start replacing row(s).
+[2022-02-18 15:49:45][notice]Count of rows in wp_actionscheduler_groups: 2
+[2022-02-18 15:49:45][notice]Replace the row in 0 line.
+[2022-02-18 15:49:45][notice]finish replace rows
+[2022-02-18 15:49:45][notice]Drop table if exist
+[2022-02-18 15:49:45][notice]Create table wp_actionscheduler_logs
+[2022-02-18 15:49:51][notice]Dumping table wp_actionscheduler_logs is complete. Start replacing row(s).
+[2022-02-18 15:49:51][notice]Count of rows in wp_actionscheduler_logs: 660
+[2022-02-18 15:49:51][notice]Replace the row in 0 line.
+[2022-02-18 15:49:51][notice]finish replace rows
+[2022-02-18 15:49:51][notice]Drop table if exist
+[2022-02-18 15:49:51][notice]Create table wp_woocommerce_sessions
+[2022-02-18 15:49:51][notice]Dumping table wp_woocommerce_sessions is complete. Start replacing row(s).
+[2022-02-18 15:49:51][Warning]Skip table wp_woocommerce_sessions
+[2022-02-18 15:49:51][notice]Drop table if exist
+[2022-02-18 15:49:51][notice]Create table wp_woocommerce_api_keys
+[2022-02-18 15:49:51][notice]Dumping table wp_woocommerce_api_keys is complete. Start replacing row(s).
+[2022-02-18 15:49:51][notice]Count of rows in wp_woocommerce_api_keys: 0
+[2022-02-18 15:49:51][notice]Drop table if exist
+[2022-02-18 15:49:51][notice]Create table wp_woocommerce_attribute_taxonomies
+[2022-02-18 15:49:51][notice]Dumping table wp_woocommerce_attribute_taxonomies is complete. Start replacing row(s).
+[2022-02-18 15:49:51][notice]Count of rows in wp_woocommerce_attribute_taxonomies: 2
+[2022-02-18 15:49:51][notice]Replace the row in 0 line.
+[2022-02-18 15:49:51][notice]finish replace rows
+[2022-02-18 15:49:51][notice]Drop table if exist
+[2022-02-18 15:49:51][notice]Create table wp_woocommerce_downloadable_product_permissions
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_downloadable_product_permissions is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_downloadable_product_permissions: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_order_items
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_order_items is complete. Start replacing row(s).
+[2022-02-18 15:49:52][Warning]Skip table wp_woocommerce_order_items
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_order_itemmeta
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_order_itemmeta is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_order_itemmeta: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_tax_rates
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_tax_rates is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_tax_rates: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_tax_rate_locations
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_tax_rate_locations is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_tax_rate_locations: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_shipping_zones
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_shipping_zones is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_shipping_zones: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_shipping_zone_locations
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_shipping_zone_locations is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_shipping_zone_locations: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_shipping_zone_methods
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_shipping_zone_methods is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_shipping_zone_methods: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_payment_tokens
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_payment_tokens is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_payment_tokens: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_payment_tokenmeta
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_payment_tokenmeta is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_payment_tokenmeta: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_woocommerce_log
+[2022-02-18 15:49:52][notice]Dumping table wp_woocommerce_log is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_woocommerce_log: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_wc_webhooks
+[2022-02-18 15:49:52][notice]Dumping table wp_wc_webhooks is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_wc_webhooks: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_wc_product_meta_lookup
+[2022-02-18 15:49:52][notice]Dumping table wp_wc_product_meta_lookup is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_wc_product_meta_lookup: 1
+[2022-02-18 15:49:52][notice]Replace the row in 0 line.
+[2022-02-18 15:49:52][notice]finish replace rows
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_wc_tax_rate_classes
+[2022-02-18 15:49:52][notice]Dumping table wp_wc_tax_rate_classes is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_wc_tax_rate_classes: 2
+[2022-02-18 15:49:52][notice]Replace the row in 0 line.
+[2022-02-18 15:49:52][notice]finish replace rows
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_wc_reserved_stock
+[2022-02-18 15:49:52][notice]Dumping table wp_wc_reserved_stock is complete. Start replacing row(s).
+[2022-02-18 15:49:52][notice]Count of rows in wp_wc_reserved_stock: 0
+[2022-02-18 15:49:52][notice]Drop table if exist
+[2022-02-18 15:49:52][notice]Create table wp_wc_rate_limits
+[2022-02-18 15:49:53][notice]Dumping table wp_wc_rate_limits is complete. Start replacing row(s).
+[2022-02-18 15:49:53][notice]Count of rows in wp_wc_rate_limits: 0
+[2022-02-18 15:49:53][notice]Drop table if exist
+[2022-02-18 15:49:53][notice]Create table wp_comments
+[2022-02-18 15:49:54][notice]Dumping table wp_comments is complete. Start replacing row(s).
+[2022-02-18 15:49:54][notice]Count of rows in wp_comments: 211
+[2022-02-18 15:49:54][notice]Replace the row in 0 line.
+[2022-02-18 15:49:54][notice]finish replace rows
+[2022-02-18 15:49:54][notice]Drop table if exist
+[2022-02-18 15:49:54][notice]Create table wp_wc_download_log
+[2022-02-18 15:49:54][notice]Dumping table wp_wc_download_log is complete. Start replacing row(s).
+[2022-02-18 15:49:54][notice]Count of rows in wp_wc_download_log: 0
+[2022-02-18 15:49:54][notice]Drop table if exist
+[2022-02-18 15:49:54][notice]Create table wp_wc_order_stats
+[2022-02-18 15:49:55][notice]Dumping table wp_wc_order_stats is complete. Start replacing row(s).
+[2022-02-18 15:49:55][notice]Count of rows in wp_wc_order_stats: 189
+[2022-02-18 15:49:55][notice]Replace the row in 0 line.
+[2022-02-18 15:49:55][notice]finish replace rows
+[2022-02-18 15:49:55][notice]Drop table if exist
+[2022-02-18 15:49:55][notice]Create table wp_wc_order_product_lookup
+[2022-02-18 15:49:55][notice]Dumping table wp_wc_order_product_lookup is complete. Start replacing row(s).
+[2022-02-18 15:49:55][notice]Count of rows in wp_wc_order_product_lookup: 0
+[2022-02-18 15:49:55][notice]Drop table if exist
+[2022-02-18 15:49:55][notice]Create table wp_wc_order_tax_lookup
+[2022-02-18 15:49:55][notice]Dumping table wp_wc_order_tax_lookup is complete. Start replacing row(s).
+[2022-02-18 15:49:55][notice]Count of rows in wp_wc_order_tax_lookup: 0
+[2022-02-18 15:49:55][notice]Drop table if exist
+[2022-02-18 15:49:55][notice]Create table wp_wc_order_coupon_lookup
+[2022-02-18 15:49:55][notice]Dumping table wp_wc_order_coupon_lookup is complete. Start replacing row(s).
+[2022-02-18 15:49:55][notice]Count of rows in wp_wc_order_coupon_lookup: 0
+[2022-02-18 15:49:55][notice]Drop table if exist
+[2022-02-18 15:49:55][notice]Create table wp_wc_admin_notes
+[2022-02-18 15:49:56][notice]Dumping table wp_wc_admin_notes is complete. Start replacing row(s).
+[2022-02-18 15:49:56][notice]Count of rows in wp_wc_admin_notes: 41
+[2022-02-18 15:49:56][notice]Replace the row in 0 line.
+[2022-02-18 15:49:56][notice]finish replace rows
+[2022-02-18 15:49:56][notice]Drop table if exist
+[2022-02-18 15:49:56][notice]Create table wp_wc_admin_note_actions
+[2022-02-18 15:49:56][notice]Dumping table wp_wc_admin_note_actions is complete. Start replacing row(s).
+[2022-02-18 15:49:56][notice]Count of rows in wp_wc_admin_note_actions: 44
+[2022-02-18 15:49:56][notice]Replace the row in 0 line.
+[2022-02-18 15:49:56][notice]finish replace rows
+[2022-02-18 15:49:56][notice]Drop table if exist
+[2022-02-18 15:49:56][notice]Create table wp_wc_customer_lookup
+[2022-02-18 15:49:57][notice]Dumping table wp_wc_customer_lookup is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_wc_customer_lookup: 173
+[2022-02-18 15:49:57][notice]Replace the row in 0 line.
+[2022-02-18 15:49:57][notice]finish replace rows
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_wc_category_lookup
+[2022-02-18 15:49:57][notice]Dumping table wp_wc_category_lookup is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_wc_category_lookup: 12
+[2022-02-18 15:49:57][notice]Replace the row in 0 line.
+[2022-02-18 15:49:57][notice]finish replace rows
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_sbi_instagram_posts
+[2022-02-18 15:49:57][notice]Dumping table wp_sbi_instagram_posts is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_sbi_instagram_posts: 0
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_sbi_instagram_feeds_posts
+[2022-02-18 15:49:57][notice]Dumping table wp_sbi_instagram_feeds_posts is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_sbi_instagram_feeds_posts: 0
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_sbi_instagram_feed_locator
+[2022-02-18 15:49:57][notice]Dumping table wp_sbi_instagram_feed_locator is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_sbi_instagram_feed_locator: 0
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_sbi_feeds
+[2022-02-18 15:49:57][notice]Dumping table wp_sbi_feeds is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_sbi_feeds: 0
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_sbi_feed_caches
+[2022-02-18 15:49:57][notice]Dumping table wp_sbi_feed_caches is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_sbi_feed_caches: 0
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_sbi_sources
+[2022-02-18 15:49:57][notice]Dumping table wp_sbi_sources is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_sbi_sources: 0
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_yith_wcwl_lists
+[2022-02-18 15:49:57][notice]create table replace charset:utf8mb3 to :utf8
+[2022-02-18 15:49:57][notice]Dumping table wp_yith_wcwl_lists is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_yith_wcwl_lists: 0
+[2022-02-18 15:49:57][notice]Drop table if exist
+[2022-02-18 15:49:57][notice]Create table wp_yith_wcwl
+[2022-02-18 15:49:57][notice]create table replace charset:utf8mb3 to :utf8
+[2022-02-18 15:49:57][notice]Dumping table wp_yith_wcwl is complete. Start replacing row(s).
+[2022-02-18 15:49:57][notice]Count of rows in wp_yith_wcwl: 0
+[2022-02-18 15:49:58][notice]UPDATE wp_options SET option_value="https://custom-wp-cake.local" WHERE option_name="siteurl";
+[2022-02-18 15:49:58][notice]update query len:94
+[2022-02-18 15:49:58][notice]UPDATE wp_options SET option_value="https://custom-wp-cake.local" WHERE option_name="home";
+[2022-02-18 15:49:58][notice]update query len:91
+[2022-02-18 15:49:58][notice]Finished restoring custom-wp-cake.local_wpvivid-620e8312e1065_2022-02-17-17-17_backup_db.zip
+[2022-02-18 19:38:39][Warning]wpdb
+[2022-02-18 19:38:42][Warning]wpdb

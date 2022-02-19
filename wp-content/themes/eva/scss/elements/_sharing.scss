@@ -1,0 +1,198 @@
+/* ============================ */
+/* SHARING POPUP                */
+/* ============================ */
+
+.arthref{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  .overlay{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(255,255,255,0.6);
+    pointer-events: none;
+    display: none;
+    @include transition(all 200ms ease-in-out);
+
+    &.active{
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  .opaque{
+    background: rgba(255,255,255,0.7);
+  }
+
+  .icon-container{
+    z-index: 101;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    &:before{
+      content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .centered {
+      display: inline-block;
+      padding: 1em;
+      vertical-align: middle;
+      text-align: left;
+      width: 90%;
+      max-width: 725px;
+    }
+
+    .share-title {
+      display: block;
+      margin-bottom: 40px;
+
+
+      @include transition(all .2s ease);
+      text-align: center;
+
+
+      h4 {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;      
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 52px;
+        @include breakpoint(small only) {
+          font-size: 36px;
+          line-height: 40px;
+        }        
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+      opacity: 0;
+      @include transition(all 200ms ease-in-out);     
+      pointer-events: none;
+
+      &.active{
+        opacity: 1;
+        pointer-events: auto;
+      }
+      li {
+        display: inline-block;
+        text-align: center;
+        width: 70px;
+        margin-bottom: 15px;
+            @include breakpoint(small only) {
+              width: 50px;
+            } 
+
+        a {
+          text-align: center;
+          display: inline-block;
+          width: auto;
+
+          &:before {
+            width: 50px;
+            height: 50px;
+            font-size: 36px;
+            line-height: 50px;
+            @include border-radius(60px);
+            @include breakpoint(small only) {
+              font-size: 30px;
+              line-height: 40px;
+            } 
+          }
+
+            &:hover:before {
+              // color: #fff;
+              // background-color: $maincolor;
+              @include transform(scale(1.4))
+            } 
+
+        }
+        span {
+          display: none !important;
+          margin-top: 10px !important;
+          text-align: center;
+          font-size: 14px !important;
+          font-weight: bold;
+          font-weight: 400 !important;
+        }
+      }
+    }    
+  }
+
+
+
+  /* Animations */
+
+  .launchpadReverse .icon-container ul,
+  .launchpadReverse .icon-container .share-title {
+    -webkit-transform-origin: center 20%;
+    -webkit-transform: scale(1.2);
+    
+    -moz-transform-origin: center 20%;
+    -moz-transform: scale(1.2);
+
+    -o-transform-origin: center 20%;
+    -o-transform: scale(1.2);
+
+    -ms-transform-origin: center 20%;
+    -ms-transform: scale(1.2);
+
+    transform-origin: center 20%;
+    transform: scale(1.2);
+  }
+
+  .launchpadReverse.active .icon-container ul,
+  .launchpadReverse.active .icon-container .share-title {
+    @include transform(scale(1));
+  }
+
+}
+
+.arthref.sdark {
+    h1 {
+      color: #fff;
+    }
+    .overlay {
+      background: rgba(0,0,0,0.7);
+    }
+    .opaque {
+      background: rgba(0,0,0,0.7);
+    }
+    .social-icons {
+      span {
+        color: #fff;
+      }
+    }
+    ul li a {
+      &:hover:before {
+        color: #333;
+        background-color: #fff;
+      }      
+    }
+}
+
+.blurred {
+  @include filter(blur(14px));
+  @include transition(filter .3s ease-in-out);
+}

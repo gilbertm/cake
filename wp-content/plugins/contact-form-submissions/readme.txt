@@ -4,7 +4,7 @@ Tags: contact form 7, save contact form, submissions, contact form db, cf7, wpcf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SNHXWSXSPYATE
 Requires at least: 3.0.1
 Tested up to: 5.7
-Stable tag: 1.7.1
+Stable tag: 1.7.2
 Requires PHP: 5.6
 License: GPLv3
 
@@ -42,6 +42,9 @@ None yet
 3. Submission detailed screen
 
 == Changelog ==
+
+= 1.7.2 =
+* Security fix
 
 = 1.7.1 =
 * Security fix

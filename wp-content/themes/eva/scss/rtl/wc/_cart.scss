@@ -1,0 +1,116 @@
+/* -------------------------------- 
+	Cart
+-------------------------------- */
+
+.woocommerce-cart {
+
+	.entry-content {
+
+			.woocommerce {
+				form {
+					float: right;
+				}
+
+			.cart-collaterals {
+			    float: left;
+			    .cart_totals table {
+			    	text-align: right;
+			    }
+			}
+
+			.shop_table {
+				th {
+					text-align: right;
+				}
+			}		 	
+		}
+	}
+}
+
+.woocommerce-cart .entry-content .woocommerce .cart-collaterals h2.total-title {
+    left: auto;
+    right: -10px;
+}
+
+.woocommerce-cart .entry-content .woocommerce .cart-collaterals .woocommerce-shipping-calculator {
+    text-align: right;
+    h2 {
+    	text-align: right;
+    }
+}
+
+.woocommerce-cart .entry-content .woocommerce form table tbody td.product-remove {
+    text-align: right;
+}
+
+body[data-form-style="minimal"].woocommerce-cart {
+	.entry-content {
+		.woocommerce {
+			.actions {
+				.coupon {
+					.minimal-form-input {
+						float: right;
+					}
+				}
+			}
+			form table tbody td.actions .coupon {
+				float: right;
+				padding-left: 0rem;
+				padding-right: 2.8125rem;
+				&:before {
+					left: auto;
+					right: 0;
+				}
+				@include breakpoint(small only) {
+					padding-right: 0;
+				}
+			}
+			form table tbody td.actions .button {
+			    float: right;
+			    margin-left: 0px;
+			    margin-right: 20px;
+			    @include breakpoint(small only) {
+			    	float: none;
+			    	margin-right: 0;
+			    }
+			    &.update_cart_button {
+			    	float: left;
+			    	@include breakpoint(small only) {
+			    		float: none;
+			    	}
+			    }
+			}			
+		}
+	}
+}
+
+body[data-form-style="minimal"] {
+   .minimal-form-input label:after {
+      -webkit-transform: translate3d(101%, 0, 0);
+      transform: translate3d(101%, 0, 0);
+  } 
+}
+
+@media screen and (max-width: 39.9375em) {
+	.woocommerce-cart .entry-content .woocommerce form table tbody td:before {
+	    float: right;
+	}	
+
+	.woocommerce-cart .entry-content .woocommerce form table tbody td.product-name a {
+	    float: left;
+	}
+
+	.woocommerce-cart .entry-content .woocommerce form table tbody td {
+		text-align: left !important;
+	}
+
+	.woocommerce .cart .quantity {
+		text-align: left;
+	    margin-left: 0px;
+	    margin-right: 20px;
+	}
+
+	.woocommerce-cart .entry-content .woocommerce form table tbody td.product-quantity .quantity input.qty {
+		float: left;
+	}
+}

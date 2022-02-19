@@ -1,0 +1,52 @@
+.vc_tta-container {
+	.vc_tta.vc_general {
+		.vc_tta-tabs-container {
+			.vc_tta-tab {
+				margin: 10px;
+				> a	{
+					font-size: rem-calc(26);
+					padding: rem-calc(14) rem-calc(30) rem-calc(12) rem-calc(30);
+					background-color: #fafafa;
+	    			color: #999;
+					    
+					&:hover   {
+					    	background: #f2f2f2
+					    }
+					}
+
+				}
+			}
+
+			.vc_tta-tab.vc_active {
+				> a	{
+					color: #000;
+				}
+			}
+		}
+
+		.vc_tta-panels-container {
+			.vc_tta-panels {
+				.vc_tta-panel {
+					.vc_tta-panel-title {
+						> a {
+							font-size: rem-calc(20);
+							line-height: rem-calc(30);
+							color: #999;							
+						}
+
+					}
+					&.vc_active {
+						.vc_tta-panel-title {
+							> a {
+								color: #000;
+							}
+							
+						}
+					}
+				}				
+			}
+		}
+
+
+
+}

@@ -1,0 +1,264 @@
+/* -------------------------------- 
+	Sidebar
+-------------------------------- */
+.mm-listview {
+	.mm-next {
+	    right: auto;
+	    left: 0;
+	}
+
+	.mm-next + a,
+	.mm-next + span {
+	    margin-right: 0px;
+	    margin-left: 40px;
+	}	
+
+	.mm-next:after, .mm-arrow:after {
+	    content: '\e912';
+	    right: auto;
+	    left: 3px;
+	}	
+}
+
+.mm-menu .social-icons {
+	text-align: right;
+	float: right;
+}
+
+.mm-menu .social-icons li {
+    // float: right;
+}
+
+.widget-area {
+
+	.widget {
+		h3.widget-title {
+			text-align: right;
+		}
+
+		ul {
+			li {
+				text-align: right;
+			}
+		}
+	}	
+	.widget.woocommerce.widget_product_categories {
+		ul {
+			li {
+				ul.children {
+					li {
+					    padding-left: 0px;
+					    padding-right: 20px;
+					    &:before,
+					    &:after {
+						    border-left: none;
+						    border-right-width: 1px;
+						    border-right-style: solid;
+						    left: auto;
+						    right: 2px;
+					    }						
+					}
+				}
+			}
+		}
+	}
+
+	.widget.woocommerce.widget_layered_nav {
+		ul {
+			li {
+				span.count {
+					right: auto;
+					left: 0;
+				}
+				a {
+					padding: 0 1.6em 0 1.2em;
+				}
+			}
+			li > a {
+				&:before {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+	.widget.woocommerce.widget_products,
+	.widget.woocommerce.widget_recent_reviews,
+	.widget.woocommerce.widget_top_rated_products {
+		li {
+			padding: 0 5rem 0 0;
+			img {
+				left: auto;
+				right: 0;
+			}
+		}
+	}	
+}
+
+
+
+.offcanvas_aside_right  {
+
+	.offcanvas_sizechart {
+		.offcanvas_close {
+			left: 0px;
+			right: auto;			
+		}
+	}
+
+	.offcanvas_minicart  {
+		.cart-title {
+			text-align: left;
+		}
+
+		.widget_shopping_cart_content  {
+			.cart_list {
+				li {
+					img {
+					    float: right;
+					    margin-right: 0;	
+					    margin-left: 20px;					
+					}
+
+					a.remove {
+						left: auto;
+						right: -9px;
+					}
+				}
+			}
+		}		
+	}
+
+  .offcanvas_search {
+    .search-title {
+      text-align: left;
+    }
+  }
+	
+}
+
+.offcanvas_aside {
+	.offcanvas_sidebars {
+		.offcanvas_close {
+			left: 0;
+			right: auto;			
+		}
+	}
+}
+
+.widget-area {
+	padding-right: 0px;
+	padding-left: 30px;
+}
+
+.widget-area .widget.widget_tag_cloud a {
+    margin: 0 0 0.5rem 0.375rem;
+}
+
+.widget-area .widget.widget_search form:after {
+    right: auto;
+    left: 0;
+}
+
+.widget-area  {
+	.widget.widget_recent_entries,
+	.widget.widget_recent_comments {
+		ul {
+			li {
+				padding: 0 2em 1em 0;
+				&:last-child {
+					padding-right: 2em;
+				}
+				&:before {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------- 
+  Offcanvas
+-------------------------------- */
+.offcanvas_aside {
+
+	&.offcanvas_aside_left {
+		left:auto;
+		right: 0;
+		-webkit-transform: translate3d($offcanvas_mobile_width,0,0);
+		transform: translate3d($offcanvas_mobile_width,0,0);
+
+		@media #{$large-up} {
+			width: $offcanvas_largeup_width;
+			-webkit-transform: translate3d($offcanvas_largeup_width,0,0);
+			transform: translate3d($offcanvas_largeup_width,0,0);	
+		}		
+
+		.offcanvas_close {
+			left: auto;
+			right: 0px;      	
+		} 		
+	}
+
+	&.offcanvas_aside_right {
+		right:auto;
+		left: 0;
+		-webkit-transform: translate3d(-$offcanvas_mobile_width,0,0);
+		transform: translate3d(-$offcanvas_mobile_width,0,0); 
+
+		@media #{$large-up} {
+			width: $offcanvas_largeup_width;
+			-webkit-transform: translate3d(-$offcanvas_largeup_width,0,0);
+			transform: translate3d(-$offcanvas_largeup_width,0,0);  
+    	}
+
+		.offcanvas_close {
+			right: auto;
+			left: 0px;      	
+		} 
+
+		.cart-title,
+		.search-title {
+			text-align: right;
+		}
+
+	}
+}
+
+.no-products-info .woocommerce-no-products:before {
+    padding-right: 15px;
+    padding-right: 0;
+    padding-left: 15px;
+}
+
+.woocommerce-product-search input[type="submit"],
+.woocommerce-product-search button[type="submit"],
+.widget-area .widget.woocommerce.widget_product_search form:after,
+.mob_inputbox form:after,
+.offcanvas_search .woocommerce-product-search:after {
+    right: auto;
+    left: 0;
+}
+
+.offcanvas_aside   {
+	.offcanvas_mainmenu {
+		.header-contact {
+		    left: auto;
+		    right: 0;	
+
+			.header-contact-icon {
+
+				margin: rem-calc(8px 0 0 10px);
+
+				&:before {						
+					padding-right: 0px;
+					padding-left: 30px;
+
+				}					
+			}		    		
+		}
+	}
+
+}

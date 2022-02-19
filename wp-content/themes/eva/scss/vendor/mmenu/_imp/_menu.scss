@@ -1,0 +1,65 @@
+//	Generic classes
+.mm-hidden
+{
+	display: none !important;
+}
+
+
+//	Container
+.mm-wrapper
+{
+	overflow-x: hidden;
+	position: relative;
+}
+
+
+//	Menu
+.mm-menu {
+	box-sizing: border-box;
+	opacity: 0;
+	background: inherit;
+	display: block;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	// margin-bottom: 40px;
+
+	.wishlist-button,
+	.login-button,
+	.account-button,
+	.logout-button {
+		a {
+			span {
+				&:before {
+					padding-right: 10px;
+					font-size: 14px;
+										
+				}
+			}
+		}
+	}
+
+	.social-icons {
+		// display: none;
+		margin: 20px 0 0 0;
+		li {
+			// display: inline-block !important;
+			position: relative;
+			float: left;
+			margin: 0 !important;
+			a {
+			    // position: relative;
+			    display: block;
+			    vertical-align: middle;
+			    // width: 24px;
+			    // height: 24px;
+			    // margin: 0 10px;												
+			}
+		}
+	}
+}

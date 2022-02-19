@@ -1,0 +1,260 @@
+// Header styles
+
+#header-top-bar {
+	.topbar_left {
+		padding-left: 0;
+		padding-right: 15px;
+		.topbar-item {
+			padding-left: 15px;
+			&:nth-child(2) {
+				border-left: none;
+				border-right-width: 1px;
+				border-right-style: solid;
+				padding-left: 0;
+				padding-right: 15px;
+			}			
+		}
+		.topbar_myaccount {
+			float: right;
+			margin-right: 0px;
+		}
+
+		.topbar_contact {
+			float: right;
+		}
+	}
+
+	.topbar_right {
+		.topbar_socials {
+			float: left;
+			ul {
+				li {
+					float: left;
+				}
+			}
+		}
+
+    .topbar_languages {
+      float: left;
+      margin-right: 0px; 
+      margin-left: 20px;    
+    }    
+	}
+}
+
+#header-top-bar {
+  .topbar_right {
+    .topbar_languages {
+      .language_currency {
+        ul {
+          margin: 0;
+          float: left;          
+        }
+        .wcml_currency_switcher {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+
+#header-top-bar .topbar_left .topbar_myaccount {
+  .login-button-icon {
+    float: left;
+  }
+}
+
+header.site-header {
+	.header-wrapper {
+		.nav {
+			padding-left: 0;
+			
+			.header-nav {
+				float: right;
+				margin-right: 10px;
+				margin-left: 30px;
+				@include breakpoint(small only) {
+					margin: 0;
+				}
+				body[data-header-layout="3"] & {
+					margin-right: 50px;
+					margin-left: 0px;
+				}
+				.menu-trigger {
+					padding-right: 0px;
+					padding-left: 20px;
+
+					&.menu_trigger_4 {
+						padding-left: 0;
+					}
+					@include breakpoint(small only) {
+						padding-left: 0;
+					}
+					div {
+						margin-right: 0px;
+						margin-left: 20px;
+						@include breakpoint(small only) {
+							margin-left: 0;
+						}
+						span {
+
+						}
+					}
+				}
+				.menu_trigger_2 {
+					padding-left: 0;
+					div {
+						margin-left: 0;
+					}
+				}
+
+				.menu-trigger {
+					div {
+						span {
+							left: auto;
+							right: calc(50% - 9px); 
+							&::before,
+							&::after{
+								content: '';
+								left:auto;
+								right: 0;
+							}						
+						}						
+					}
+
+					&:hover span {
+						transform: rotate(180deg);
+					}					
+
+				    &:hover span::before {
+				      width: 50%;
+				      transform: translateX(-12px) translateY(1px) rotate(-45deg);		      
+				    }
+				    
+				    &:hover span::after {
+				      width: 50%;
+				      transform: translateX(-12px) translateY(-1px) rotate(45deg);		      
+				    }
+
+				    &.hovertrig {
+				    	div {
+						    span {
+						      transform: rotate(180deg);
+						    }
+						    
+						    span::before {
+						      width: 50%;
+						      transform: translateX(-12px) translateY(1px) rotate(-45deg);		      
+						    }
+						    
+						    span::after {
+						      width: 50%;
+						      transform: translateX(-12px) translateY(-1px) rotate(45deg);		      
+						    }			    		
+				    	}				    	
+				    }					
+				}
+
+
+			}
+
+			.header-contact {
+				float: right;
+				.header-contact-icon {
+					margin-left: 10px;
+					&:before {
+						padding-right: 0px;
+						padding-left: 30px;
+					}
+				}
+			}			
+		}
+
+		.tools {
+			padding-right: 0;
+			padding-left: 15px;
+
+			@include breakpoint(small only) {
+				padding-left: 0;
+			}
+
+			ul {
+				text-align: left;
+				float: left;				
+				li {
+					padding: 0px 35px 0 0;
+					// margin-right: 35px;
+					&:first-child
+					 {
+						padding-right: 0px;
+					}
+
+					@include breakpoint(small only) {
+						padding: 0;
+					}
+
+					a {
+						.counter_number {
+							right: auto;
+							left: -7px;
+						}
+					}
+
+					&.cart-button {
+						padding-left: 0;
+						.cart-desc {
+							float: right;
+							text-align: left;
+							padding-right: 0px;
+							padding-left: 7px;
+							span {
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------- 
+	Page Header
+-------------------------------- */
+
+.page-header {
+	#breadcrumbs {
+		&:before {
+			right: auto;
+			left: 0;
+			margin-left: auto;
+			margin-right: auto;    
+		}
+
+		&:after {
+			right: 0;
+			right: 0.5em;
+			left: auto;
+			margin-left: auto;
+			margin-right: auto; 
+		}		
+	}
+
+	.title-section {
+		@include breakpoint(medium down) {
+			width: auto;
+		}		
+	}
+
+	.list_shop_categories {
+		li {
+			a {
+				margin-left: 0;
+			}
+			span.counter {
+				margin-left: 10px;	
+			}			
+		}
+	}
+}
