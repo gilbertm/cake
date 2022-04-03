@@ -96,7 +96,7 @@ class BlocksyMailerliteManager extends BlocksyNewsletterManager {
 
 			return [
 				'result' => 'yes',
-				'message' => __('Thank you for subscribing!', 'blocksy-companion')
+				'message' => __('Thank you for subscribing to our newsletter!', 'blocksy-companion')
 			];
 		}
 

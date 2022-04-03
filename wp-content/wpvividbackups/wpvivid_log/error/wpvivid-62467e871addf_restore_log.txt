@@ -1,0 +1,239 @@
+Log created: 2022-04-01 03:59:22
+Type: restore
+[2022-04-01 03:59:22][notice]init restore data
+[2022-04-01 03:59:22][notice]Start restoring sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_all.zip
+[2022-04-01 03:59:22][notice]extract root:/var/www/html/custom-wp-cake.local/httpdocs/wp-content/wpvividbackups/
+[2022-04-01 03:59:22][notice]start extracting file:/var/www/html/custom-wp-cake.local/httpdocs/wp-content/wpvividbackups/sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_all.zip
+[2022-04-01 03:59:22][notice]extract finished file:/var/www/html/custom-wp-cake.local/httpdocs/wp-content/wpvividbackups/sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_all.zip
+[2022-04-01 03:59:22][notice]Finished restoring sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_all.zip
+[2022-04-01 03:59:23][notice]Start restoring sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_db.zip
+[2022-04-01 03:59:23][notice]start extracting file:/var/www/html/custom-wp-cake.local/httpdocs/wp-content/wpvividbackups/sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_db.zip
+[2022-04-01 03:59:23][notice]extract finished file:/var/www/html/custom-wp-cake.local/httpdocs/wp-content/wpvividbackups/sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_db.zip
+[2022-04-01 03:59:23][notice]sql file: sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_db.sql
+[2022-04-01 03:59:23][Warning]wpdb
+[2022-04-01 03:59:24][notice]The test to create table succeeds.
+[2022-04-01 03:59:24][notice]The test to insert into table succeeds.
+[2022-04-01 03:59:25][notice]The test to drop table succeeds.
+[2022-04-01 03:59:25][notice]get max_allowed_packet wpdb 
+[2022-04-01 03:59:25][notice]Start import sql file.
+[2022-04-01 03:59:25][notice]old site url:https://sunshinessweettooth.com
+[2022-04-01 03:59:25][notice]old home url:https://sunshinessweettooth.com
+[2022-04-01 03:59:25][notice]old content url:https://sunshinessweettooth.com/wp-content
+[2022-04-01 03:59:25][notice]old upload url:https://sunshinessweettooth.com/wp-content/uploads
+[2022-04-01 03:59:25][notice]old site prefix:wp_
+[2022-04-01 03:59:25][notice]Drop table if exist
+[2022-04-01 03:59:25][notice]Create table wp_actionscheduler_actions
+[2022-04-01 03:59:54][notice]Dumping table wp_actionscheduler_actions is complete. Start replacing row(s).
+[2022-04-01 03:59:54][notice]Count of rows in wp_actionscheduler_actions: 199
+[2022-04-01 03:59:54][notice]Replace the row in 0 line.
+[2022-04-01 03:59:54][notice]finish replace rows
+[2022-04-01 03:59:54][notice]Drop table if exist
+[2022-04-01 03:59:55][notice]Create table wp_actionscheduler_claims
+[2022-04-01 03:59:56][notice]Dumping table wp_actionscheduler_claims is complete. Start replacing row(s).
+[2022-04-01 03:59:56][notice]Count of rows in wp_actionscheduler_claims: 0
+[2022-04-01 03:59:56][notice]Drop table if exist
+[2022-04-01 03:59:56][notice]Create table wp_actionscheduler_groups
+[2022-04-01 03:59:58][notice]Dumping table wp_actionscheduler_groups is complete. Start replacing row(s).
+[2022-04-01 03:59:58][notice]Count of rows in wp_actionscheduler_groups: 6
+[2022-04-01 03:59:58][notice]Replace the row in 0 line.
+[2022-04-01 03:59:58][notice]finish replace rows
+[2022-04-01 03:59:58][notice]Drop table if exist
+[2022-04-01 03:59:58][notice]Create table wp_actionscheduler_logs
+[2022-04-01 04:01:11][notice]Dumping table wp_actionscheduler_logs is complete. Start replacing row(s).
+[2022-04-01 04:01:11][notice]Count of rows in wp_actionscheduler_logs: 595
+[2022-04-01 04:01:11][notice]Replace the row in 0 line.
+[2022-04-01 04:01:11][notice]finish replace rows
+[2022-04-01 04:01:11][notice]Drop table if exist
+[2022-04-01 04:01:11][notice]Create table wp_commentmeta
+[2022-04-01 04:01:14][notice]Dumping table wp_commentmeta is complete. Start replacing row(s).
+[2022-04-01 04:01:14][notice]Count of rows in wp_commentmeta: 8
+[2022-04-01 04:01:14][notice]Replace the row in 0 line.
+[2022-04-01 04:01:14][notice]finish replace rows
+[2022-04-01 04:01:14][notice]Drop table if exist
+[2022-04-01 04:01:14][notice]Create table wp_comments
+[2022-04-01 04:01:17][notice]Dumping table wp_comments is complete. Start replacing row(s).
+[2022-04-01 04:01:17][notice]Count of rows in wp_comments: 5
+[2022-04-01 04:01:17][notice]Replace the row in 0 line.
+[2022-04-01 04:01:17][notice]finish replace rows
+[2022-04-01 04:01:17][notice]Drop table if exist
+[2022-04-01 04:01:17][notice]Create table wp_gla_budget_recommendations
+[2022-04-01 04:09:37][notice]Dumping table wp_gla_budget_recommendations is complete. Start replacing row(s).
+[2022-04-01 04:09:37][notice]Count of rows in wp_gla_budget_recommendations: 4230
+[2022-04-01 04:09:37][notice]Replace the row in 0 line.
+[2022-04-01 04:09:37][notice]finish replace rows
+[2022-04-01 04:09:37][notice]Drop table if exist
+[2022-04-01 04:09:37][notice]Create table wp_gla_merchant_issues
+[2022-04-01 04:09:38][notice]Dumping table wp_gla_merchant_issues is complete. Start replacing row(s).
+[2022-04-01 04:09:38][notice]Count of rows in wp_gla_merchant_issues: 0
+[2022-04-01 04:09:38][notice]Drop table if exist
+[2022-04-01 04:09:38][notice]Create table wp_gla_shipping_rates
+[2022-04-01 04:09:39][notice]Dumping table wp_gla_shipping_rates is complete. Start replacing row(s).
+[2022-04-01 04:09:39][notice]Count of rows in wp_gla_shipping_rates: 0
+[2022-04-01 04:09:39][notice]Drop table if exist
+[2022-04-01 04:09:39][notice]Create table wp_gla_shipping_times
+[2022-04-01 04:09:41][notice]Dumping table wp_gla_shipping_times is complete. Start replacing row(s).
+[2022-04-01 04:09:41][notice]Count of rows in wp_gla_shipping_times: 0
+[2022-04-01 04:09:41][notice]Drop table if exist
+[2022-04-01 04:09:41][notice]Create table wp_links
+[2022-04-01 04:09:42][notice]Dumping table wp_links is complete. Start replacing row(s).
+[2022-04-01 04:09:42][notice]Count of rows in wp_links: 0
+[2022-04-01 04:09:42][notice]Drop table if exist
+[2022-04-01 04:09:42][notice]Create table wp_mailchimp_carts
+[2022-04-01 04:09:43][notice]Dumping table wp_mailchimp_carts is complete. Start replacing row(s).
+[2022-04-01 04:09:43][notice]Count of rows in wp_mailchimp_carts: 0
+[2022-04-01 04:09:43][notice]Drop table if exist
+[2022-04-01 04:09:43][notice]Create table wp_mailchimp_jobs
+[2022-04-01 04:09:44][notice]Dumping table wp_mailchimp_jobs is complete. Start replacing row(s).
+[2022-04-01 04:09:44][notice]Count of rows in wp_mailchimp_jobs: 0
+[2022-04-01 04:09:44][notice]Drop table if exist
+[2022-04-01 04:09:44][notice]Create table wp_mailpoet_custom_fields
+[2022-04-01 04:09:45][notice]Dumping table wp_mailpoet_custom_fields is complete. Start replacing row(s).
+[2022-04-01 04:09:45][notice]Count of rows in wp_mailpoet_custom_fields: 0
+[2022-04-01 04:09:45][notice]Drop table if exist
+[2022-04-01 04:09:45][notice]Create table wp_mailpoet_dynamic_segment_filters
+[2022-04-01 04:09:46][notice]Dumping table wp_mailpoet_dynamic_segment_filters is complete. Start replacing row(s).
+[2022-04-01 04:09:46][notice]Count of rows in wp_mailpoet_dynamic_segment_filters: 0
+[2022-04-01 04:09:46][notice]Drop table if exist
+[2022-04-01 04:09:46][notice]Create table wp_mailpoet_feature_flags
+[2022-04-01 04:09:48][notice]Dumping table wp_mailpoet_feature_flags is complete. Start replacing row(s).
+[2022-04-01 04:09:48][notice]Count of rows in wp_mailpoet_feature_flags: 0
+[2022-04-01 04:09:48][notice]Drop table if exist
+[2022-04-01 04:09:48][notice]Create table wp_mailpoet_forms
+[2022-04-01 04:09:49][notice]Dumping table wp_mailpoet_forms is complete. Start replacing row(s).
+[2022-04-01 04:09:49][notice]Count of rows in wp_mailpoet_forms: 0
+[2022-04-01 04:09:49][notice]Drop table if exist
+[2022-04-01 04:09:49][notice]Create table wp_mailpoet_log
+[2022-04-01 04:09:49][notice]Dumping table wp_mailpoet_log is complete. Start replacing row(s).
+[2022-04-01 04:09:49][notice]Count of rows in wp_mailpoet_log: 0
+[2022-04-01 04:09:49][notice]Drop table if exist
+[2022-04-01 04:09:49][notice]Create table wp_mailpoet_mapping_to_external_entities
+[2022-04-01 04:09:51][notice]Dumping table wp_mailpoet_mapping_to_external_entities is complete. Start replacing row(s).
+[2022-04-01 04:09:51][notice]Count of rows in wp_mailpoet_mapping_to_external_entities: 0
+[2022-04-01 04:09:51][notice]Drop table if exist
+[2022-04-01 04:09:51][notice]Create table wp_mailpoet_newsletter_links
+[2022-04-01 04:09:52][notice]Dumping table wp_mailpoet_newsletter_links is complete. Start replacing row(s).
+[2022-04-01 04:09:52][notice]Count of rows in wp_mailpoet_newsletter_links: 0
+[2022-04-01 04:09:52][notice]Drop table if exist
+[2022-04-01 04:09:52][notice]Create table wp_mailpoet_newsletter_option
+[2022-04-01 04:09:53][notice]Dumping table wp_mailpoet_newsletter_option is complete. Start replacing row(s).
+[2022-04-01 04:09:53][notice]Count of rows in wp_mailpoet_newsletter_option: 0
+[2022-04-01 04:09:53][notice]Drop table if exist
+[2022-04-01 04:09:53][notice]Create table wp_mailpoet_newsletter_option_fields
+[2022-04-01 04:09:57][notice]Dumping table wp_mailpoet_newsletter_option_fields is complete. Start replacing row(s).
+[2022-04-01 04:09:57][notice]Count of rows in wp_mailpoet_newsletter_option_fields: 22
+[2022-04-01 04:09:57][notice]Replace the row in 0 line.
+[2022-04-01 04:09:57][notice]finish replace rows
+[2022-04-01 04:09:57][notice]Drop table if exist
+[2022-04-01 04:09:57][notice]Create table wp_mailpoet_newsletter_posts
+[2022-04-01 04:09:58][notice]Dumping table wp_mailpoet_newsletter_posts is complete. Start replacing row(s).
+[2022-04-01 04:09:58][notice]Count of rows in wp_mailpoet_newsletter_posts: 0
+[2022-04-01 04:09:58][notice]Drop table if exist
+[2022-04-01 04:09:58][notice]Create table wp_mailpoet_newsletter_segment
+[2022-04-01 04:09:59][notice]Dumping table wp_mailpoet_newsletter_segment is complete. Start replacing row(s).
+[2022-04-01 04:09:59][notice]Count of rows in wp_mailpoet_newsletter_segment: 0
+[2022-04-01 04:09:59][notice]Drop table if exist
+[2022-04-01 04:09:59][notice]Create table wp_mailpoet_newsletter_templates
+[2022-04-01 04:10:14][notice]Dumping table wp_mailpoet_newsletter_templates is complete. Start replacing row(s).
+[2022-04-01 04:10:14][notice]Count of rows in wp_mailpoet_newsletter_templates: 76
+[2022-04-01 04:10:14][notice]Replace the row in 0 line.
+[2022-04-01 04:10:29][notice]finish replace rows
+[2022-04-01 04:10:29][notice]Drop table if exist
+[2022-04-01 04:10:29][notice]Create table wp_mailpoet_newsletters
+[2022-04-01 04:10:31][notice]Dumping table wp_mailpoet_newsletters is complete. Start replacing row(s).
+[2022-04-01 04:10:31][notice]Count of rows in wp_mailpoet_newsletters: 0
+[2022-04-01 04:10:31][notice]Drop table if exist
+[2022-04-01 04:10:31][notice]Create table wp_mailpoet_scheduled_task_subscribers
+[2022-04-01 04:10:32][notice]Dumping table wp_mailpoet_scheduled_task_subscribers is complete. Start replacing row(s).
+[2022-04-01 04:10:32][notice]Count of rows in wp_mailpoet_scheduled_task_subscribers: 0
+[2022-04-01 04:10:32][notice]Drop table if exist
+[2022-04-01 04:10:32][notice]Create table wp_mailpoet_scheduled_tasks
+[2022-04-01 04:10:53][notice]Dumping table wp_mailpoet_scheduled_tasks is complete. Start replacing row(s).
+[2022-04-01 04:10:53][notice]Count of rows in wp_mailpoet_scheduled_tasks: 144
+[2022-04-01 04:10:53][notice]Replace the row in 0 line.
+[2022-04-01 04:10:53][notice]finish replace rows
+[2022-04-01 04:10:53][notice]Drop table if exist
+[2022-04-01 04:10:53][notice]Create table wp_mailpoet_segments
+[2022-04-01 04:10:55][notice]Dumping table wp_mailpoet_segments is complete. Start replacing row(s).
+[2022-04-01 04:10:55][notice]Count of rows in wp_mailpoet_segments: 3
+[2022-04-01 04:10:55][notice]Replace the row in 0 line.
+[2022-04-01 04:10:55][notice]finish replace rows
+[2022-04-01 04:10:55][notice]Drop table if exist
+[2022-04-01 04:10:55][notice]Create table wp_mailpoet_sending_queues
+[2022-04-01 04:10:56][notice]Dumping table wp_mailpoet_sending_queues is complete. Start replacing row(s).
+[2022-04-01 04:10:56][notice]Count of rows in wp_mailpoet_sending_queues: 0
+[2022-04-01 04:10:56][notice]Drop table if exist
+[2022-04-01 04:10:56][notice]Create table wp_mailpoet_settings
+[2022-04-01 04:11:00][notice]Dumping table wp_mailpoet_settings is complete. Start replacing row(s).
+[2022-04-01 04:11:00][notice]Count of rows in wp_mailpoet_settings: 17
+[2022-04-01 04:11:00][notice]Replace the row in 0 line.
+[2022-04-01 04:11:00][notice]finish replace rows
+[2022-04-01 04:11:00][notice]Drop table if exist
+[2022-04-01 04:11:00][notice]Create table wp_mailpoet_statistics_bounces
+[2022-04-01 04:11:01][notice]Dumping table wp_mailpoet_statistics_bounces is complete. Start replacing row(s).
+[2022-04-01 04:11:01][notice]Count of rows in wp_mailpoet_statistics_bounces: 0
+[2022-04-01 04:11:01][notice]Drop table if exist
+[2022-04-01 04:11:01][notice]Create table wp_mailpoet_statistics_clicks
+[2022-04-01 04:11:03][notice]Dumping table wp_mailpoet_statistics_clicks is complete. Start replacing row(s).
+[2022-04-01 04:11:03][notice]Count of rows in wp_mailpoet_statistics_clicks: 0
+[2022-04-01 04:11:03][notice]Drop table if exist
+[2022-04-01 04:11:03][notice]Create table wp_mailpoet_statistics_forms
+[2022-04-01 04:11:04][notice]Dumping table wp_mailpoet_statistics_forms is complete. Start replacing row(s).
+[2022-04-01 04:11:04][notice]Count of rows in wp_mailpoet_statistics_forms: 0
+[2022-04-01 04:11:04][notice]Drop table if exist
+[2022-04-01 04:11:04][notice]Create table wp_mailpoet_statistics_newsletters
+[2022-04-01 04:11:05][notice]Dumping table wp_mailpoet_statistics_newsletters is complete. Start replacing row(s).
+[2022-04-01 04:11:05][notice]Count of rows in wp_mailpoet_statistics_newsletters: 0
+[2022-04-01 04:11:05][notice]Drop table if exist
+[2022-04-01 04:11:05][notice]Create table wp_mailpoet_statistics_opens
+[2022-04-01 04:11:07][notice]Dumping table wp_mailpoet_statistics_opens is complete. Start replacing row(s).
+[2022-04-01 04:11:07][notice]Count of rows in wp_mailpoet_statistics_opens: 0
+[2022-04-01 04:11:07][notice]Drop table if exist
+[2022-04-01 04:11:07][notice]Create table wp_mailpoet_statistics_unsubscribes
+[2022-04-01 04:11:09][notice]Dumping table wp_mailpoet_statistics_unsubscribes is complete. Start replacing row(s).
+[2022-04-01 04:11:09][notice]Count of rows in wp_mailpoet_statistics_unsubscribes: 0
+[2022-04-01 04:11:09][notice]Drop table if exist
+[2022-04-01 04:11:09][notice]Create table wp_mailpoet_statistics_woocommerce_purchases
+[2022-04-01 04:11:11][notice]Dumping table wp_mailpoet_statistics_woocommerce_purchases is complete. Start replacing row(s).
+[2022-04-01 04:11:11][notice]Count of rows in wp_mailpoet_statistics_woocommerce_purchases: 0
+[2022-04-01 04:11:11][notice]Drop table if exist
+[2022-04-01 04:11:11][notice]Create table wp_mailpoet_stats_notifications
+[2022-04-01 04:11:12][notice]Dumping table wp_mailpoet_stats_notifications is complete. Start replacing row(s).
+[2022-04-01 04:11:12][notice]Count of rows in wp_mailpoet_stats_notifications: 0
+[2022-04-01 04:11:12][notice]Drop table if exist
+[2022-04-01 04:11:12][notice]Create table wp_mailpoet_subscriber_custom_field
+[2022-04-01 04:11:13][notice]Dumping table wp_mailpoet_subscriber_custom_field is complete. Start replacing row(s).
+[2022-04-01 04:11:13][notice]Count of rows in wp_mailpoet_subscriber_custom_field: 0
+[2022-04-01 04:11:13][notice]Drop table if exist
+[2022-04-01 04:11:13][notice]Create table wp_mailpoet_subscriber_ips
+[2022-04-01 04:11:15][notice]Dumping table wp_mailpoet_subscriber_ips is complete. Start replacing row(s).
+[2022-04-01 04:11:15][notice]Count of rows in wp_mailpoet_subscriber_ips: 0
+[2022-04-01 04:11:15][notice]Drop table if exist
+[2022-04-01 04:11:15][notice]Create table wp_mailpoet_subscriber_segment
+[2022-04-01 04:11:17][notice]Dumping table wp_mailpoet_subscriber_segment is complete. Start replacing row(s).
+[2022-04-01 04:11:17][notice]Count of rows in wp_mailpoet_subscriber_segment: 3
+[2022-04-01 04:11:17][notice]Replace the row in 0 line.
+[2022-04-01 04:11:17][notice]finish replace rows
+[2022-04-01 04:11:17][notice]Drop table if exist
+[2022-04-01 04:11:17][notice]Create table wp_mailpoet_subscribers
+[2022-04-01 04:11:20][notice]Dumping table wp_mailpoet_subscribers is complete. Start replacing row(s).
+[2022-04-01 04:11:20][notice]Count of rows in wp_mailpoet_subscribers: 2
+[2022-04-01 04:11:20][notice]Replace the row in 0 line.
+[2022-04-01 04:11:20][notice]finish replace rows
+[2022-04-01 04:11:20][notice]Drop table if exist
+[2022-04-01 04:11:20][notice]Create table wp_mailpoet_user_agents
+[2022-04-01 04:11:21][notice]Dumping table wp_mailpoet_user_agents is complete. Start replacing row(s).
+[2022-04-01 04:11:21][notice]Count of rows in wp_mailpoet_user_agents: 0
+[2022-04-01 04:11:21][notice]Drop table if exist
+[2022-04-01 04:11:21][notice]Create table wp_mailpoet_user_flags
+[2022-04-01 04:11:22][notice]Dumping table wp_mailpoet_user_flags is complete. Start replacing row(s).
+[2022-04-01 04:11:22][notice]Count of rows in wp_mailpoet_user_flags: 0
+[2022-04-01 04:11:22][notice]Drop table if exist
+[2022-04-01 04:11:23][notice]Create table wp_options
+[2022-04-01 04:13:12][notice]Dumping table wp_options is complete. Start replacing row(s).
+[2022-04-01 04:13:12][notice]Count of rows in wp_options: 749
+[2022-04-01 04:13:12][notice]Replace the row in 0 line.
+[2022-04-01 04:13:14][notice]finish replace rows
+[2022-04-01 04:13:14][notice]Drop table if exist
+[2022-04-01 04:13:15][notice]Create table wp_postmeta
+[2022-04-01 04:24:39][notice]clean file:/var/www/html/custom-wp-cake.local/httpdocs/wp-content/wpvividbackups/sunshinessweettooth.com_wpvivid-62467823ea8b5_2022-04-01-03-57_backup_db.zip
+[2022-04-01 04:24:39][error]restore failed error unknown

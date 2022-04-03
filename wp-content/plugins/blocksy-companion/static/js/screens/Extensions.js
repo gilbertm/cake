@@ -128,37 +128,46 @@ const Extensions = () => {
 		if (verbose) {
 			setIsLoading(true)
 		}
+
 		setExtsSyncLoading(true)
 
-		try {
-			const response = await fetch(
-				`${wp.ajax.settings.url}?action=blocksy_extensions_status`,
+		const response = await fetch(
+			`${wp.ajax.settings.url}?action=blocksy_extensions_status`,
 
-				{
-					method: 'POST',
-					...(extension && extAction
-						? {
-								body: JSON.stringify({
-									extension,
-									extAction,
-								}),
-						  }
-						: {}),
-				}
-			)
-
-			if (response.status === 200) {
-				const { success, data } = await response.json()
-
-				if (success) {
-					setExtsStatus(data)
-					exts_status_cache = data
-				}
+			{
+				method: 'POST',
+				...(extension && extAction
+					? {
+							body: JSON.stringify({
+								extension,
+								extAction,
+							}),
+					  }
+					: {}),
 			}
-		} catch (e) {}
+		)
+
+		if (response.status !== 200) {
+			return
+		}
+
+		const { success, data } = await response.json()
+
+		if (!success) {
+			return
+		}
 
 		setExtsSyncLoading(false)
 		setIsLoading(false)
+
+		setExtsStatus(data)
+		exts_status_cache = data
+
+		if (extension) {
+			return data[extension]
+		}
+
+		return data
 	}
 
 	useEffect(() => {
@@ -227,7 +236,10 @@ const Extensions = () => {
 									className="ct-loading-text">
 									<span />
 
-									{__('Loading Extensions Status...', 'blocksy-companion')}
+									{__(
+										'Loading Extensions Status...',
+										'blocksy-companion'
+									)}
 								</animated.p>
 							)
 						}
@@ -294,17 +306,21 @@ const Extensions = () => {
 													onExtsSync={(
 														payload = {}
 													) => {
-														exts_status[
-															ext.name
-														].__object = !exts_status[
-															ext.name
-														].__object
+														if (
+															!payload.extAction
+														) {
+															exts_status[
+																ext.name
+															].__object = !exts_status[
+																ext.name
+															].__object
 
-														setExtsStatus(
-															exts_status
-														)
+															setExtsStatus(
+																exts_status
+															)
+														}
 
-														syncExts({
+														return syncExts({
 															...payload,
 															extension: ext.name,
 														})

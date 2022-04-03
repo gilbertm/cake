@@ -4,17 +4,17 @@
  * Description: Allows you to insert elementor pages and library templates anywhere using shortcodes.
  * Plugin URI: https://www.elementoraddons.com/
  * Author: WPVibes
- * Version: 1.2.4
+ * Version: 1.2.5
  * Author URI: https://wpvibes.com/
- * Elementor tested up to: 3.2.3
- * Elementor Pro tested up to: 3.2.2
+ * Elementor tested up to: 3.5.5
+ * Elementor Pro tested up to: 3.6.2
  * Text Domain: wts_ae
  *
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define( 'AE_VERSION', '1.2.4' );
+define( 'AE_VERSION', '1.2.5' );
 
 define( 'WTS_AE__FILE__', __FILE__ );
 define( 'WTS_AE_PLUGIN_BASE', plugin_basename( WTS_AE__FILE__ ) );

@@ -30,7 +30,9 @@ function blocksy_ext_cookies_consent_output($forced = false) {
 		__('We use cookies to ensure that we give you the best experience on our website.', 'blocksy-companion')
 	);
 
-	$button_text = get_theme_mod('cookie_consent_button_text', __('Accept', 'blocksy-companion'));
+	$accept_button_text = get_theme_mod('cookie_consent_button_text', __('Accept', 'blocksy-companion'));
+	$decline_button_text = get_theme_mod('cookie_consent_decline_button_text', __('Decline', 'blocksy-companion'));
+
 	$period = get_theme_mod('cookie_consent_period', 'forever');
 	$type = get_theme_mod('cookie_consent_type', 'type-1');
 
@@ -52,12 +54,11 @@ function blocksy_ext_cookies_consent_output($forced = false) {
 				<div class="ct-cookies-content"><?php echo wp_kses_post($content) ?></div>
 			<?php } ?>
 
-			<button type="submit" class="ct-button ct-accept"><?php echo esc_html($button_text) ?></button>
+			<div class="ct-button-group">
+				<button type="submit" class="ct-button ct-cookies-accept-button"><?php echo esc_html($accept_button_text) ?></button>
 
-			<?php if ($type === 'type-1' || is_customize_preview()) { ?>
-				<button class="ct-close">×</button>
-			<?php } ?>
-
+				<button type="submit" class="ct-button ct-cookies-decline-button"><?php echo esc_html($decline_button_text) ?></button>
+			</div>
 		</div>
 	</div>
 	<?php

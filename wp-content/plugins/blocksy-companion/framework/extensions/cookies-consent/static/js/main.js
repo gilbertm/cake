@@ -1,6 +1,39 @@
 import ctEvents from 'ct-events'
 import cookie from 'js-cookie'
 
+const onKeydown = (event) => {
+	if (event.keyCode !== 27) return
+	hideCookieConsent(document.querySelector('.cookie-notification'))
+}
+
+const showCookieConsent = (node) => {
+	document.addEventListener('keyup', onKeydown)
+
+	requestAnimationFrame(() => {
+		node.classList.remove('ct-fade-in-start')
+		node.classList.add('ct-fade-in-end')
+
+		whenTransitionEnds(node, () => {
+			node.classList.remove('ct-fade-in-end')
+		})
+	})
+}
+
+const hideCookieConsent = (node) => {
+	document.removeEventListener('keyup', onKeydown)
+
+	node.classList.add('ct-fade-start')
+
+	requestAnimationFrame(() => {
+		node.classList.remove('ct-fade-start')
+		node.classList.add('ct-fade-end')
+
+		whenTransitionEnds(node, () => {
+			node.parentNode.removeChild(node)
+		})
+	})
+}
+
 export const onDocumentLoaded = (cb) => {
 	if (/comp|inter|loaded/.test(document.readyState)) {
 		cb()
@@ -19,19 +52,12 @@ const initCookies = () => {
 		return
 	}
 
-	requestAnimationFrame(() => {
-		notification.classList.remove('ct-fade-in-start')
-		notification.classList.add('ct-fade-in-end')
-
-		whenTransitionEnds(notification, () => {
-			notification.classList.remove('ct-fade-in-end')
-		})
-	})
+	showCookieConsent(notification)
 	;[...notification.querySelectorAll('button')].map((el) => {
 		el.addEventListener('click', (e) => {
 			e.preventDefault()
 
-			if (el.classList.contains('ct-accept')) {
+			if (el.classList.contains('ct-cookies-accept-button')) {
 				const periods = {
 					onehour: 36e5,
 					oneday: 864e5,
@@ -52,16 +78,7 @@ const initCookies = () => {
 				})
 			}
 
-			notification.classList.add('ct-fade-start')
-
-			requestAnimationFrame(() => {
-				notification.classList.remove('ct-fade-start')
-				notification.classList.add('ct-fade-end')
-
-				whenTransitionEnds(notification, () => {
-					notification.parentNode.removeChild(notification)
-				})
-			})
+			hideCookieConsent(notification)
 		})
 	})
 }

@@ -127,7 +127,7 @@ abstract class CacheBase {
 		$upload_dir  = wpforms_upload_dir();
 		$upload_path = ! empty( $upload_dir['path'] )
 			? trailingslashit( wp_normalize_path( $upload_dir['path'] ) )
-			: WP_CONTENT_DIR . 'uploads/wpforms/';
+			: trailingslashit( WP_CONTENT_DIR ) . 'uploads/wpforms/';
 
 		return $upload_path . 'cache/';
 	}
@@ -222,12 +222,14 @@ abstract class CacheBase {
 
 		$tasks = wpforms()->get( 'tasks' );
 
-		if ( empty( $tasks->is_scheduled( $this->settings['update_action'] ) ) ) {
-			$tasks->create( $this->settings['update_action'] )
-				  ->recurring( time() + $this->settings['cache_ttl'], $this->settings['cache_ttl'] )
-				  ->params()
-				  ->register();
+		if ( $tasks->is_scheduled( $this->settings['update_action'] ) !== false ) {
+			return;
 		}
+
+		$tasks->create( $this->settings['update_action'] )
+			  ->recurring( time() + $this->settings['cache_ttl'], $this->settings['cache_ttl'] )
+			  ->params()
+			  ->register();
 	}
 
 	/**

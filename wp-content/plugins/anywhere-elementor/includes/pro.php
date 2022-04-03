@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 if ( ! function_exists( 'wpv_ae' ) ) {
     // Create a helper function for easy SDK access.
@@ -26,7 +26,9 @@ if ( ! function_exists( 'wpv_ae' ) ) {
                     'support'        => true,
                     'account'        => false
                 ),
-                
+                // Set the SDK to work in a sandbox mode (for development & testing).
+                // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
+                //'secret_key'          => 'sk_a%6SP3s9b&Py?!-R?]A}4}>kX~PWk',
             ) );
         }
 

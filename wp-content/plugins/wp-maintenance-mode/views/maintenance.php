@@ -27,7 +27,12 @@ defined( 'ABSPATH' ) || exit;
 		<meta name="description" content="<?php echo esc_attr( $description ); ?>" />
 		<meta name="keywords" content="<?php echo esc_attr( $keywords ); ?>" />
 		<meta name="robots" content="<?php echo esc_attr( $robots ); ?>" />
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo esc_url( WPMM_URL . 'assets/images/custom/favicon.png' ); ?>" alt="">
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 		<?php
 		do_action( 'wm_head' ); // this hook will be removed in the next versions
 		do_action( 'wpmm_head' );
@@ -43,18 +48,24 @@ defined( 'ABSPATH' ) || exit;
 			 */
 			if ( ! empty( $text ) && $this->plugin_settings['bot']['status'] === 0 ) {
 				?>
-				
-	<section class="text-center">
+	<section class="header position-fixed w-100" style="z-index:1">
+		<div class="row p-3">
+			<div class="col" style="display: flex;align-items: center;flex-wrap: wrap;"><img src="<?php echo esc_url( WPMM_URL . 'assets/images/custom/logo.png' ); ?>" alt="" style="max-height:125px" />
+			 <a href="https://m.facebook.com/pg/sweettoothbysunshine/reviews/?ref=bookmarks&mt_nav=0" target="_blank"><img src="<?php echo esc_url( WPMM_URL . 'assets/images/custom/facebook.png' ); ?>" alt="" style="padding:10px; max-height:75px" /></a> </div>
+		</div>
+	</section>
+	
+	<section class="main text-center">
       <div class="row">
+
         <div class="col-12">
-          <div class="card---hero-banner card m-0 p-0 border-0">
+          <div class="card---hero-banner card m-0 p-0 border-0 bg-transparent">
             <div class="d-none d-md-block">
-              <img src="https://custom-wp-cake.local/wp-content/uploads/2022/01/cake-1920x1080-1.jpg" alt="" />
+             <img src="<?php echo esc_url( WPMM_URL . 'assets/images/custom/cake-1920x1080.jpg' ); ?>" alt="" />
             </div>
             <div class="d-md-none">
               <div class="field-primary-hero-image-mobile">
-                <img src="https://custom-wp-cake.local/wp-content/uploads/2022/01/cake-1920x1080-1.jpg" alt="" />
-				<?php /* <img src="https://custom-wp-cake.local/wp-content/uploads/2022/01/cake-768x1024-1.jpg" alt="" /> */ ?>
+               <img src="<?php echo esc_url( WPMM_URL . 'assets/images/custom/brochure-768x768.jpg' ); ?>" alt="" />
               </div>
             </div>
             <div class="d-none d-md-block card-img-overlay border-0 p-0 m-0">
@@ -62,15 +73,53 @@ defined( 'ABSPATH' ) || exit;
                 <div class="row justify-content-center h-100">
                   <div class="col-8 col-md-8 col-lg-5 bg-transparent text-white">
                     <div id="floating-text" class="card border-0 h-100 bg-transparent text-white text-left w-100 ten-percent">
-                      <div class="m-auto p-3 p-md-5 overlayed">
+                      <div class="m-auto p-3 p-md-3 overlayed">
                        
-						
+				
 						<!-- Text -->
 						<?php echo $text; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				
 			<div class="wrap">
 			
-						<?php if ( ! empty( $this->plugin_settings['modules']['countdown_status'] ) && $this->plugin_settings['modules']['countdown_status'] === 1 ) { ?>
+			<?php if ( ! empty( $this->plugin_settings['modules']['social_status'] ) && $this->plugin_settings['modules']['social_status'] === 1 ) { ?>
+				<!-- Social networks -->        
+				<div class="social" data-target="<?php echo ! empty( $this->plugin_settings['modules']['social_target'] ) ? 1 : 0; ?>">
+					<?php if ( ! empty( $this->plugin_settings['modules']['social_twitter'] ) ) { ?>
+						<a class="tw" href="<?php echo esc_url( $this->plugin_settings['modules']['social_twitter'] ); ?>">twitter</a>
+					<?php } ?>
+
+					<?php if ( ! empty( $this->plugin_settings['modules']['social_facebook'] ) ) { ?>
+						<a class="fb" href="<?php echo esc_url( $this->plugin_settings['modules']['social_facebook'] ); ?>">facebook</a>
+					<?php } ?>
+
+					<?php if ( ! empty( $this->plugin_settings['modules']['social_instagram'] ) ) { ?>
+						<a class="instagram" href="<?php echo esc_url( $this->plugin_settings['modules']['social_instagram'] ); ?>">instagram</a>
+					<?php } ?>    
+
+					<?php if ( ! empty( $this->plugin_settings['modules']['social_pinterest'] ) ) { ?>
+						<a class="pin" href="<?php echo esc_url( $this->plugin_settings['modules']['social_pinterest'] ); ?>">pinterest</a>
+					<?php } ?>
+
+					<?php if ( ! empty( $this->plugin_settings['modules']['social_github'] ) ) { ?>
+						<a class="git" href="<?php echo esc_url( $this->plugin_settings['modules']['social_github'] ); ?>">github</a>
+					<?php } ?>
+
+					<?php if ( ! empty( $this->plugin_settings['modules']['social_dribbble'] ) ) { ?>
+						<a class="dribbble" href="<?php echo esc_url( $this->plugin_settings['modules']['social_dribbble'] ); ?>">dribbble</a>
+					<?php } ?>
+
+					<?php if ( ! empty( $this->plugin_settings['modules']['social_google+'] ) ) { ?>
+						<a class="gplus" href="<?php echo esc_url( $this->plugin_settings['modules']['social_google+'] ); ?>">google plus</a>
+					<?php } ?>
+
+					<?php if ( ! empty( $this->plugin_settings['modules']['social_linkedin'] ) ) { ?>
+						<a class="linkedin" href="<?php echo esc_url( $this->plugin_settings['modules']['social_linkedin'] ); ?>">linkedin</a>
+					<?php } ?>
+				</div>
+			<?php } ?>
+			
+			
+						<?php if ( ! empty( $this->plugin_settings['modules']['countdown_status'] ) && $this->plugin_settings['modules']['countdown_status'] === 1 && false ) { ?>
 				<!-- Countdown -->
 				<div class="countdown" data-start="<?php echo esc_attr( date( 'F d, Y H:i:s', strtotime( $countdown_start ) ) ); ?>" data-end="<?php echo esc_attr( date( 'F d, Y H:i:s', $countdown_end ) ); ?>"></div>
 			<?php } ?>
@@ -114,42 +163,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php } ?>
 			
 			
-			<?php if ( ! empty( $this->plugin_settings['modules']['social_status'] ) && $this->plugin_settings['modules']['social_status'] === 1 ) { ?>
-				<!-- Social networks -->        
-				<div class="social" data-target="<?php echo ! empty( $this->plugin_settings['modules']['social_target'] ) ? 1 : 0; ?>">
-					<?php if ( ! empty( $this->plugin_settings['modules']['social_twitter'] ) ) { ?>
-						<a class="tw" href="<?php echo esc_url( $this->plugin_settings['modules']['social_twitter'] ); ?>">twitter</a>
-					<?php } ?>
-
-					<?php if ( ! empty( $this->plugin_settings['modules']['social_facebook'] ) ) { ?>
-						<a class="fb" href="<?php echo esc_url( $this->plugin_settings['modules']['social_facebook'] ); ?>">facebook</a>
-					<?php } ?>
-
-					<?php if ( ! empty( $this->plugin_settings['modules']['social_instagram'] ) ) { ?>
-						<a class="instagram" href="<?php echo esc_url( $this->plugin_settings['modules']['social_instagram'] ); ?>">instagram</a>
-					<?php } ?>    
-
-					<?php if ( ! empty( $this->plugin_settings['modules']['social_pinterest'] ) ) { ?>
-						<a class="pin" href="<?php echo esc_url( $this->plugin_settings['modules']['social_pinterest'] ); ?>">pinterest</a>
-					<?php } ?>
-
-					<?php if ( ! empty( $this->plugin_settings['modules']['social_github'] ) ) { ?>
-						<a class="git" href="<?php echo esc_url( $this->plugin_settings['modules']['social_github'] ); ?>">github</a>
-					<?php } ?>
-
-					<?php if ( ! empty( $this->plugin_settings['modules']['social_dribbble'] ) ) { ?>
-						<a class="dribbble" href="<?php echo esc_url( $this->plugin_settings['modules']['social_dribbble'] ); ?>">dribbble</a>
-					<?php } ?>
-
-					<?php if ( ! empty( $this->plugin_settings['modules']['social_google+'] ) ) { ?>
-						<a class="gplus" href="<?php echo esc_url( $this->plugin_settings['modules']['social_google+'] ); ?>">google plus</a>
-					<?php } ?>
-
-					<?php if ( ! empty( $this->plugin_settings['modules']['social_linkedin'] ) ) { ?>
-						<a class="linkedin" href="<?php echo esc_url( $this->plugin_settings['modules']['social_linkedin'] ); ?>">linkedin</a>
-					<?php } ?>
-				</div>
-			<?php } ?>
+			
 		
 						<?php if ( ! empty( $this->plugin_settings['modules']['contact_status'] ) && $this->plugin_settings['modules']['contact_status'] === 1 ) { ?>
 				<!-- Contact -->
@@ -233,8 +247,8 @@ defined( 'ABSPATH' ) || exit;
               <div class="container-fluid h-100 m-0 p-0" dir="ltr" style="direction: ltr;">
                 <div class="row justify-content-center h-100">
                   <div class="col-12 bg-transparent text-white">
-                    <div id="floating-text" class="card border-0 h-100 text-white text-center w-100 p-3">
-                      <div class="m-auto p-0 small-screen text-dark">
+                    <div id="floating-text" class="card border-0 h-100 text-white text-center w-100 p-3 bg-dark">
+                      <div class="m-auto p-0 small-screen text-white">
                        
 					   <!-- Text -->
 						<?php echo $text; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
@@ -244,7 +258,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="wrap">
 			
 			
-						<?php if ( ! empty( $this->plugin_settings['modules']['countdown_status'] ) && $this->plugin_settings['modules']['countdown_status'] === 1 ) { ?>
+						<?php if ( ! empty( $this->plugin_settings['modules']['countdown_status'] ) && $this->plugin_settings['modules']['countdown_status'] === 1 && false ) { ?>
 				<!-- Countdown -->
 				<div class="countdown" data-start="<?php echo esc_attr( date( 'F d, Y H:i:s', strtotime( $countdown_start ) ) ); ?>" data-end="<?php echo esc_attr( date( 'F d, Y H:i:s', $countdown_end ) ); ?>"></div>
 			<?php } ?>

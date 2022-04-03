@@ -30,7 +30,7 @@ const render = () => {
 		).innerHTML = wp.customize('cookie_consent_content')()
 	}
 
-	notification.querySelector('button.ct-accept').innerHTML = wp.customize(
+	notification.querySelector('button.ct-cookies-accept-button').innerHTML = wp.customize(
 		'cookie_consent_button_text'
 	)()
 

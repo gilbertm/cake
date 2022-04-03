@@ -30,6 +30,7 @@ export const getNameForPlugin = (plugin) =>
 			'map-block-gutenberg': 'Map Block for Google Maps',
 
 			'mb-custom-post-type': 'MB Custom Post Types & Custom Taxonomies',
+			'leadin': 'HubSpot',
 		}[plugin] || plugin
 	).replace(/\b\w/, (v) => v.toUpperCase()))
 
