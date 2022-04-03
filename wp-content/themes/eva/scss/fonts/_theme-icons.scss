@@ -1,0 +1,215 @@
+// Theme Icons
+
+.icon-style {
+  speak: none;
+  line-height: 1;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);   
+}
+
+// Header Icons
+
+header.site-header {
+	.header-wrapper {
+
+		.header-contact-icon {
+			&:before {
+				font-family: "icomoon";
+				content: "\e90b";
+				@extend .icon-style;
+			}
+		}
+
+		.tools {
+			.search-button {
+				i:before {
+					font-family: "icomoon";
+					content: "\e904";
+					@extend .icon-style;							
+				}				
+			}
+
+			.wishlist-button {
+				i:before {
+					font-family: "icomoon";
+					content: "\e903";
+					@extend .icon-style;							
+				}				
+			}
+
+			.myaccount-button {
+				i:before {
+					font-family: "icomoon";
+					content: "\e908";
+					@extend .icon-style;							
+				}				
+			}
+
+			.cart-button {
+				i:before {
+					font-family: "icomoon";
+					content: "\e900";
+					@extend .icon-style;							
+				}				
+			}
+		}
+	}
+}
+
+#header-top-bar {
+	.topbar_myaccount {
+		i.myaccount-button-icon:before {
+			font-family: "icomoon";
+			content: "\e908";
+			@extend .icon-style;							
+		}
+
+		i.login-button-icon:before {
+			font-family: "icomoon";
+			content: "\e906";
+			@extend .icon-style;							
+		}						
+	}
+
+		.header-contact-icon {
+			&:before {
+				font-family: "icomoon";
+				content: "\e90b";
+				@extend .icon-style;
+			}
+		}
+}
+
+.mob_inputbox form::after {
+	font-family: "icomoon";
+	content: "\e904";
+	@extend .icon-style;
+}
+
+.offcanvas_aside .offcanvas_close,
+.cd-main-search .close {
+	&:before {
+		font-family: "icomoon";
+		content: "\e901";
+		@extend .icon-style;
+	}
+}
+
+// Off-canvas Navigation
+
+.mm-menu {
+	.wishlist-button a span:before {
+		font-family: "icomoon";
+		content: "\e903";
+		@extend .icon-style;
+	}
+	.login-button a span:before {
+		font-family: "icomoon";
+		content: "\e906";
+		@extend .icon-style;
+	}
+	.account-button a span:before {
+		font-family: "icomoon";
+		content: "\e908";
+		@extend .icon-style;
+	}
+	.logout-button a span:before {
+		font-family: "icomoon";
+		content: "\e905";
+		@extend .icon-style;
+	}
+}
+
+.page-header .list_shop_categories li i.backtoall::before {
+		font-family: "icomoon";
+		content: "\e912";
+		@extend .icon-style;	
+}
+
+.page-header .list_shop_categories.mobile li a i::before {
+		font-family: "icomoon";
+		content: "\e913";
+		@extend .icon-style;
+}
+
+.page-header .list_shop_categories.mobile.active li a i::before {
+		font-family: "icomoon";
+		content: "\e910";
+		@extend .icon-style;
+}
+
+.empty-cart-offcanvas-box::before,
+.empty-cart-box::before {
+		font-family: "icomoon";
+		content: "\e917";
+		@extend .icon-style;	
+}
+
+// Swiper slider
+
+.swiper-button-prev {
+	&:before {
+        font-family: "icomoon";
+        content: "\e916";
+        @extend .icon-style;		
+	}
+}
+
+.swiper-button-next {
+	&:before {
+        font-family: "icomoon";
+        content: "\e915";
+        @extend .icon-style;		
+	}
+}
+
+.woocommerce .top_bar_shop .catalog-ordering .shop-filter span::before {
+	font-family: "icomoon";
+	content: "\e91a";
+	// @extend .icon-style;
+}
+
+// Select 2
+
+.select2-container .select2-selection .select2-selection__arrow::after,
+.select2-container .select2-choice .select2-arrow::after {
+	font-family: "icomoon";
+	content: "\e913";
+	@extend .icon-style;
+}
+
+.select2-container.select2-container--open .select2-selection .select2-selection__arrow::after,
+.select2-container.select2-dropdown-open .select2-choice .select2-arrow::after {
+	font-family: "icomoon";
+	content: "\e910";
+	@extend .icon-style;
+}
+
+.add_to_wishlist::before,
+.products .yith-wcwl-wishlistaddedbrowse a::before,
+.products .yith-wcwl-wishlistexistsbrowse a::before,
+.yith-wcwl-wishlistaddedbrowse a::before,
+.yith-wcwl-wishlistexistsbrowse a::before {
+	font-family: "icomoon";
+	content: "\e90c";
+	@extend .icon-style;	
+}
+
+
+.fr-close-icon::before {
+    content: "\e901";
+    font-family: 'icomoon';
+    @extend .icon-style; 
+}
+
+.woocommerce ul.products li .eva_product_quick_view_button::before {
+	font-family: "icomoon";
+	content: "\e907";
+	@extend .icon-style;	
+}

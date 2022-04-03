@@ -1,0 +1,27 @@
+table {
+    
+    width: 100%;
+
+    tr {
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    th {
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: rem-calc(14);
+        font-weight: 600;
+        text-align: left;
+        color: #000;
+        padding: rem-calc(20) 0;
+    }
+    
+    td {
+        padding: rem-calc(20) 0;
+    }
+
+    thead th {
+        padding: rem-calc(20) 0;
+    }    
+    
+}

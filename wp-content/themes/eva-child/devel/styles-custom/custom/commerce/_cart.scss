@@ -1,0 +1,28 @@
+.cart_totals  {
+
+    .total-title,
+    .shipping-calculator-button {
+        font-family:'Rubik', Arial, Helvetica, sans-serif;
+    }
+
+    .shipping-calculator-button {
+        font-size:0.8rem;
+    }
+
+}
+
+.empty-cart-box {
+    span {
+        background: #efefef;
+        left: 0;
+      }
+}
+
+.cart-empty-text {
+    font-family: 'Yellowtail', Arial, Helvetica, sans-serif;
+    text-transform:capitalize;
+}
+
+
+@import
+"cart_media";

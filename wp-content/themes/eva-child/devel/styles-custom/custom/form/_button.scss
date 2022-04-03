@@ -1,0 +1,241 @@
+.woocommerce {
+    .woocommerce-MyAccount-content,
+    .track-order-container,
+    .widget_shopping_cart_content,
+    .return-to-shop,
+    .wc-proceed-to-checkout,
+    .actions {
+        .button {
+            transform: none;
+            border: 1px solid rgba(255,20,154,1);
+            color: rgba(255,20,154,1);
+            background:none;
+            color:rgba(255,20,154,1);
+            font-family:'Rubik', Arial, Helvetica, sans-serif;
+            font-weight:500;
+            box-shadow: 3px 3px 0px 0px rgba(255,20,154, 0.15), inset 2px 2px 0px 0px rgba(255,255,255,1);
+            overflow:hidden;
+
+            span:before,
+            span:after,
+            &:before {
+                border: 0 !important;
+                width:0 !important;
+            }
+
+            &:hover {
+                box-shadow:none;
+
+                &::after {
+                    left: 120%;
+                    transition: all 1s cubic-bezier(.19,1,.22,1);
+                }
+            }
+
+            &:after {
+                background: #ff149a;
+                content: "";
+                height: 155px;
+                left: -75px;
+                opacity: .2;
+                position: absolute;
+                top: -50px;
+                transform: rotate(35deg);
+                transition: all 550ms cubic-bezier(.19,1,.22,1);
+                width: 50px;
+                z-index: -10;
+            }
+        }
+    }
+
+    .widget_shopping_cart_content,
+    .return-to-shop {
+        .button {
+            span {
+                color: rgba(255,20,154,1) !important;
+                font-weight:500;
+            }
+
+            &.cart-but {
+                span {
+                    background: rgba(255,20,154,0.1);
+                }
+            }
+        }
+    }
+}
+
+.product_after_shop_loop_buttons .added_to_cart,
+.woocommerce ul.products li.product .product_after_shop_loop .button {
+  -webkit-transform:none;
+  transform: none;
+  border: 1px solid rgba(255,20,154,1);
+  overflow: hidden;
+  position: relative;
+  background:transparent;
+  color: rgba(255,20,154,1);
+  cursor: pointer;
+  margin: 0 0 2em;
+  /* max-width: 160px;*/
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%; 
+  padding:0.5rem 1rem;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.woocommerce ul.products li.product .product_after_shop_loop .button:hover {
+    -webkit-transform:none;
+    transform: none;
+  }
+    
+  .woocommerce ul.products li.product .product_after_shop_loop .button  span {
+      z-index: 20;
+    }
+  
+  .woocommerce ul.products li.product .product_after_shop_loop .button:after {
+    background: rgba(255,20,154,1);;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+  
+  .woocommerce ul.products li.product .product_after_shop_loop .button:hover:after {
+      left: 120%;
+      transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+.custom-pill {
+
+    .yith-wcwl-add-to-wishlist {
+        height: auto;
+        display: inline-block;
+      }
+    .button-wrapper {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 10px;
+        white-space:nowrap;
+
+        .price,
+        .ins {
+            font-size: inherit !important;
+            line-height: inherit !important;
+            letter-spacing: inherit !important;
+          }
+    }
+    
+    .button-wrapper .pill {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        color: #111;
+        text-decoration: none;
+        border: 1px solid #aaa;
+        font-size: 12px !important;
+        line-height: inherit !important;
+        letter-spacing: 0 !important;
+        font-weight: 400 !important;
+        padding:0 !important;
+        line-height:1rem !important;
+
+        &:not(.add-cart) {
+            padding: 5px 10px !important;
+        }
+
+        &.add-wish {
+            i {
+                display:none !important;
+            }
+            a {
+                &:before {
+                    color:rgba(0,0,0,0.5) !important;
+                }
+            }
+            .exists {
+                a {
+                    &:before {
+                        color: #ff149a !important;
+                    }
+                }
+            }
+        }
+        
+        &.add-cart {
+            border-right:0;
+
+
+            .added_to_cart,
+            .button {    
+                padding: 5px 10px !important;
+                letter-spacing:0 !important;          
+                border: none !important;
+                line-height:1.1rem !important;
+                background: none !important;
+                box-shadow: none !important;
+                font-size:12px !important;
+                margin: 0 !important;
+                transform: none !important;
+                translate: none !important;
+                &:after {
+                    content:none !important;
+                }
+            }        
+        }
+    }
+    
+    
+    .button-wrapper .pill:nth-of-type(1) {
+        border-radius: 50px 0 0 50px;
+        border-right: none;
+        font-weight:500 !important;
+    }
+    
+    .button-wrapper .pill:nth-of-type(3) {
+        border-radius: 0px 50px 50px 0;
+    }
+
+    .button-wrapper .pill
+    {
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -10px;
+            width: 0%;
+            background: rgba(255, 20, 153, 0.5);
+            height: 100%;
+            z-index: -1;
+            transition: width 0.3s ease-in-out;
+            transform: skew(-25deg);
+            transform-origin: right;
+        }
+
+        &:hover bdi,
+        &:hover i,
+        &:hover a:before,
+        &:hover a {
+            color: #fff !important;
+            transition: all 0.5s ease;
+        }
+
+        &:hover:after {
+            width: 150%;
+            left: -10px;
+            transform-origin: left;
+            
+        }
+    }
+}
+
+
+@import
+"button_media";

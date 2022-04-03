@@ -1,0 +1,31 @@
+/* widgets */
+
+footer .widget-area .widget h3.widget-title {
+    font-family: 'Yellowtail', sans-serif;
+    text-transform:capitalize;
+    font-size:1.25rem;
+    margin-bottom:10px;
+  }
+
+
+#mc_embed_signup {
+    .optionalParent {
+        text-align:left;
+        margin-top:1rem;
+    }
+
+    #mc-embedded-subscribe {
+        width: auto !important;
+    }
+
+    .minimal-form-input input[type="email"] {
+        padding:5px;
+    }
+
+    p {
+        margin:0;
+    }
+}
+
+@import
+"common_media";

@@ -1,0 +1,794 @@
+.blog-content-area {
+  article {
+    margin-bottom: rem-calc(40);
+    border-top: 1px solid #f0f0f0;
+    padding-top: 40px;
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+    @include breakpoint(small only) {
+      margin-bottom: rem-calc(0);
+    }
+
+    .single & {
+      margin-bottom: 0;
+    }
+
+    &.sticky {
+      position: relative;
+      h2.entry-title {
+        i {
+          font-weight: normal;
+          font-size: 38px;
+          color: $maincolor;
+        }
+      }
+    }
+  }
+
+  .post-section {
+    position: relative;
+    @include clearfix;
+
+    .post_header_date {
+      margin-top: rem-calc(20);
+      a {
+        color: #666;
+        font-size: rem-calc(14);
+        line-height: rem-calc(14);
+      }
+    }
+
+    h2.entry-title {
+      font-size: rem-calc(44);
+      line-height: rem-calc(46);
+      margin-bottom: rem-calc(35);
+      a {
+        font-size: rem-calc(44);
+        line-height: rem-calc(46);
+        // font-weight: 600;
+        @include breakpoint(small only) {
+          font-size: rem-calc(34);
+          line-height: rem-calc(40);
+        }
+      }
+    }
+  }
+
+  ul.post-categories {
+    margin: 0;
+    list-style: none;
+    @include clearfix;
+
+    li {
+      float: left;
+      font-size: 11px;
+      background-color: $maincolor;
+      padding: rem-calc(3) rem-calc(10);
+      margin-right: rem-calc(10);
+
+      a {
+        font-size: rem-calc(11);
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .entry-thumbnail {
+    margin-bottom: rem-calc(20);
+    position: relative;
+    list-style: none;
+
+    .single & {
+      margin-bottom: 40px;
+    }
+    @include breakpoint(small only) {
+      margin-left: rem-calc(-40);
+      margin-right: rem-calc(-40);
+    }
+
+    ul.post-categories {
+      z-index: 5;
+      position: absolute;
+      top: rem-calc(20);
+      left: rem-calc(20);
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .entry-content {
+    position: relative;
+    padding-bottom: rem-calc(50);
+    .single & {
+      padding-bottom: 0px;
+    }
+
+    img {
+      // margin-top: rem-calc(15);
+      // margin-bottom: rem-calc(15);
+    }
+    p {
+      // color: #666;
+      body.single-post & {
+        // color: #000;
+      }
+    }
+
+    .entry-meta {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 30px;
+      margin-top: 50px;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      // font-weight: 500;
+      a {
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+        &:hover {
+          border-bottom: 1px solid rgba(0, 0, 0, 0);
+        }
+      }
+
+      .edit-link {
+        a {
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+          &:before {
+            content: '\f044';
+            font-family: 'fontawesome';
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .morelink {
+      // margin-top: 15px;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include breakpoint(small only) {
+        position: relative;
+        display: block;
+      }
+      a {
+        font-weight: bold;
+        font-weight: 600;
+        font-size: rem-calc(18);
+        &:hover {
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+
+    .comment-link {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      @include breakpoint(small only) {
+        margin-top: 10px;
+        position: relative;
+        display: block;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      a,
+      a:hover {
+        font-size: rem-calc(14);
+        font-weight: 500;
+        border-bottom: none;
+      }
+
+      a:hover {
+        @include opacity(0.6);
+      }
+
+      p {
+        &:before {
+          font-size: rem-calc(16);
+          font-family: 'icomoon';
+          content: '\e921';
+          margin-right: rem-calc(10);
+          color: $maincolor;
+        }
+      }
+    }
+  }
+
+  .post_header_meta {
+    margin-top: rem-calc(25);
+
+    &::before {
+      content: '';
+      display: block;
+      background: none repeat scroll 0 0 $maincolor;
+      height: 3px;
+      margin: rem-calc(24) auto rem-calc(22);
+      width: rem-calc(100);
+    }
+
+    span {
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-right: rem-calc(30);
+      font-size: rem-calc(14);
+      @include breakpoint(small only) {
+        &.post_date,
+        &.post_categories {
+          display: block;
+          width: 100%;
+          margin-bottom: 8px;
+          margin-right: 0;
+        }
+      }
+      a {
+        font-size: rem-calc(14);
+        letter-spacing: 2px;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        &:hover {
+          border-bottom: 1px solid rgba(0, 0, 0, 0);
+        }
+      }
+    }
+    .post_date {
+      &:before {
+        color: $maincolor;
+        font-family: 'icomoon';
+        content: '\e923';
+        margin-right: rem-calc(5);
+      }
+    }
+
+    .post_categories {
+      &:before {
+        color: $maincolor;
+        font-family: 'icomoon';
+        content: '\e922';
+        margin-right: rem-calc(5);
+      }
+    }
+
+    .box-share-master-container {
+      display: inline-block;
+      i {
+        color: $maincolor;
+        margin-right: rem-calc(5);
+      }
+      a span {
+        font-size: rem-calc(14);
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.category-no-img ul.post-categories {
+  margin-left: rem-calc(-10);
+}
+
+#nav-below {
+  border-top: 4px solid #f0f0f0;
+  padding-top: rem-calc(30);
+  margin: rem-calc(30) 0 rem-calc(50) 0;
+  .nav-previous,
+  .nav-next {
+    a {
+      font-weight: 600;
+      &:hover {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  .nav-previous {
+    font-size: rem-calc(20);
+    line-height: rem-calc(24);
+  }
+  .nav-next {
+    font-size: rem-calc(20);
+    line-height: rem-calc(24);
+    margin-bottom: rem-calc(5);
+  }
+  .nav-previous a,
+  .nav-next a {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #000;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .nav-left {
+    border-right: 1px solid #f0f0f0;
+    text-align: right;
+    padding-right: 50px;
+
+    .nav-previous {
+      margin-bottom: 10px;
+      padding-left: 50px;
+    }
+
+    @include breakpoint(small only) {
+      border-right: none;
+      padding: 0;
+      text-align: center;
+      margin-bottom: 20px;
+      .nav-previous {
+        padding: 0;
+      }
+    }
+  }
+
+  .nav-right {
+    text-align: left;
+    padding-left: 50px;
+    .nav-next {
+      margin-bottom: 10px;
+      padding-right: 50px;
+    }
+    @include breakpoint(small only) {
+      padding: 0;
+      text-align: center;
+      .nav-next {
+        padding: 0;
+      }
+    }
+  }
+
+  .nav-previous-title,
+  .nav-next-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: $maincolor;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .nav-previous-title {
+    span {
+      &:before {
+        font-size: 14px;
+        font-family: 'FontAwesome';
+        content: '\f104';
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .nav-next-title {
+    span {
+      &:after {
+        font-size: 14px;
+        font-family: 'FontAwesome';
+        content: '\f105';
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+/**********************************************************************************/
+/* Comments ***********************************************************************/
+/**********************************************************************************/
+
+.comments_section {
+  .comments-area {
+    margin: 30px 0 10px;
+    .comments-title {
+      // color: $maincolor;
+      font-size: 24px;
+      line-height: 34px;
+      // letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-align: left;
+      margin-bottom: 30px;
+      span {
+        font-weight: 600;
+      }
+    }
+
+    article {
+      padding: 30px 0;
+      margin: 0;
+      border-top: 1px solid #f0f0f0;
+      // &:first-child {
+      // 	border-top: none;
+      // }
+    }
+
+    .comment-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      ul.children {
+        list-style: none;
+        margin: 0 0 1em 90px;
+        @include breakpoint(small only) {
+          list-style: none;
+          margin: 0 0 1em 0;
+        }
+      }
+      .comment-body {
+        margin-bottom: 30px;
+      }
+    }
+
+    .comment-content {
+      padding: 0 0 0 90px;
+      position: relative;
+
+      @include breakpoint(small only) {
+        padding: 0 0 0 70px;
+      }
+
+      .comment-author-avatar {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        @include border-radius(50%);
+        img {
+          width: 70px;
+          height: 70px;
+        }
+
+        @include breakpoint(small only) {
+          width: 50px;
+          height: 50px;
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .comment-author {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        margin-right: 10px;
+
+        a {
+          color: #000;
+          font-size: 18px;
+          line-height: 20px;
+          font-weight: 600;
+          // margin-right: 10px;
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+
+      .comment-metadata {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 18px;
+        a {
+          color: rgba(0, 0, 0, 0.5);
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+
+      .comment-text {
+        // border-top: 1px solid #f0f0f0;
+        // padding-top: 15px;
+        margin: 7px 0 0 0;
+        // color: rgba(0,0,0,0.6);
+      }
+
+      .comment-reply,
+      .comment-edit-link {
+        a {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #000;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+          font-weight: 900;
+          letter-spacing: 1.5px;
+          &:hover {
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+          }
+        }
+
+        i {
+          display: none;
+          color: $maincolor;
+          font-size: 12px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .comment-respond {
+    margin: 30px 0;
+    h3.comment-reply-title {
+      vertical-align: top;
+      font-size: 24px;
+      line-height: 24px;
+      // letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: left;
+
+      &:before {
+        font-size: 20px;
+        font-weight: normal;
+        margin-right: 10px;
+        color: $maincolor;
+        font-family: 'icomoon';
+        content: '\e921';
+      }
+
+      small {
+        vertical-align: top;
+        margin-top: 12px;
+        display: inline-block;
+        margin-left: 10px;
+        @include breakpoint(small only) {
+          display: block;
+          margin-left: 0;
+          margin-bottom: 20px;
+        }
+        a {
+          vertical-align: top;
+          font-size: 11px;
+          line-height: 12px;
+          font-weight: 600;
+          letter-spacing: 2px;
+          padding: 5px 12px;
+          // text-transform: capitalize;
+          background-color: $maincolor;
+          &:hover {
+            @include opacity(0.8);
+          }
+        }
+      }
+    }
+
+    .comment-notes {
+      .required {
+        font-weight: bold;
+        font-size: 120%;
+      }
+    }
+  }
+}
+
+.logged-in-as,
+.comment-notes {
+  color: #999;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.form-submit {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/**********************************************************************************/
+/* Post Formats *******************************************************************/
+/**********************************************************************************/
+
+// Aside Post
+
+.format-aside {
+  .entry-content {
+    p {
+      color: #000;
+      font-size: 26px;
+      line-height: 36px;
+      font-weight: 300;
+      @include breakpoint(small only) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .post_header_date {
+    margin-bottom: rem-calc(10);
+    a {
+      color: #666;
+      font-size: rem-calc(14);
+      line-height: rem-calc(14);
+    }
+  }
+}
+
+// Gallery Post
+
+.format-gallery .entry-content .gallery:first-of-type {
+  display: none;
+}
+
+.gallery-slider-wrapper {
+  visibility: hidden;
+  opacity: 0;
+  margin-bottom: 30px;
+  .blog-isotop-container & {
+    margin-bottom: 0px;
+  }
+}
+
+// Link Post
+
+.blog-content-area {
+  .format-link {
+    .entry-content {
+      .entry-title {
+        display: none;
+        .single & {
+          display: block;
+        }
+      }
+    }
+    .entry-title {
+      a {
+        font-size: 44px !important;
+        line-height: 44px !important;
+        font-weight: 600;
+        @include breakpoint(small only) {
+          font-size: 24px !important;
+          line-height: 26px !important;
+        }
+      }
+
+      i {
+        color: $maincolor;
+        font-size: 40px;
+        margin-right: 10px;
+        @include breakpoint(small only) {
+          display: none;
+          font-size: 20px;
+        }
+      }
+
+      .post-link-url {
+        display: block;
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 28px !important;
+        line-height: 34px !important;
+        font-weight: 300;
+        @include breakpoint(small only) {
+          font-size: 16px !important;
+          line-height: 22px !important;
+        }
+        &:hover {
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
+}
+
+// Quote Post
+
+.format-quote {
+  .entry-content {
+    blockquote {
+      background-color: $maincolor;
+      position: relative;
+      margin: 0;
+      padding: 50px 80px;
+      margin-bottom: 10px;
+      border-left: none;
+
+      @include breakpoint(small only) {
+        padding: 40px 30px;
+        margin: 0px -40px;
+        margin-bottom: 20px;
+      }
+
+      .entry-thumbnail {
+        width: 130px;
+        height: 130px;
+        @include border-radius(50%);
+        overflow: hidden;
+        margin: 0 auto 30px auto;
+        img {
+          margin-bottom: 20px;
+        }
+      }
+
+      &::after {
+        font-size: 38px;
+        color: #000;
+        position: absolute;
+        bottom: 10px;
+        right: 30px;
+        font-family: 'icomoon';
+        content: '\e926';
+        @include breakpoint(small only) {
+          font-size: 28px;
+          bottom: 20px;
+        }
+      }
+
+      p {
+        color: #000;
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0;
+
+        @include breakpoint(small only) {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 30px;
+        }
+      }
+
+      cite {
+        margin-top: 20px;
+        color: #000;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Video Post
+
+.video-container {
+  margin-bottom: 40px;
+  text-align: center;
+
+  @include breakpoint(small only) {
+    margin: 0 -40px;
+    margin-bottom: 30px;
+  }
+
+  .video-container iframe {
+    margin: 0 auto;
+  }
+}
+
+.entry-content:after {
+  content: '';
+  display: table;
+  table-layout: fixed;
+}
+
+.entry-content:after {
+  clear: both;
+}

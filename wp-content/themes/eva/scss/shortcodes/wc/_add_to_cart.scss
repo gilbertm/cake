@@ -1,0 +1,211 @@
+.wpb_wrapper {
+	.add_to_cart_inline {
+		border: none !important;
+		padding: 0 0 35px !important;
+		margin: 0;		
+
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.amount	{
+			display: inline-block;
+			font-size: 30px;
+			line-height: 1;
+			// margin-bottom: 10px;			
+			position: relative;
+		}
+
+		del .amount {
+			color: inherit;
+			font-size: 22px;
+			@include opacity(0.5);
+			display: inline;
+		}
+
+		ins	{
+			background-color: transparent;
+		}
+
+		.add_to_cart_separator {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		a.button {
+			margin-top: 20px;
+			&.added, .button-loader {
+				display: none;
+			}
+			&.loading .button-loader {
+				display: block;
+			}			
+		}
+
+	.button {
+		border-radius: 0 !important;
+		padding: 11px 20px !important;
+		font-size: 11px !important;
+		line-height: 14px !important;
+		font-weight: normal;
+		font-weight: 500;
+		height: auto !important;
+
+		span.button-loader {
+			margin-top: 2px !important;
+			width: 10px !important;
+			height: 10px !important;				
+		}
+
+		&.vc_btn_sm {
+			span.button-loader {
+				margin-top: 2px !important;
+				width: 11px !important;
+				height: 11px !important;				
+			}			
+		}
+
+		&.vc_btn_md {
+			span.button-loader {
+				margin-top: 2px !important;
+				width: 12px !important;
+				height: 12px !important;				
+			}			
+		}
+
+		&.vc_btn_lg {
+			span.button-loader {
+				margin-top: 2px !important;
+				width: 14px !important;
+				height: 14px !important;				
+			}			
+		}
+
+		&.vc_btn_xs,
+		&.vc_btn_sm,
+		&.vc_btn_md,
+		&.vc_btn_lg	{
+			border-radius: 0;
+			font-size: 12px;
+			font-weight: bold;
+			font-weight: 500;
+			text-transform: uppercase;
+			text-align: center;
+			height: auto;
+			width: auto;
+			position: relative;
+
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			
+			transition: padding 0.3s, min-width 0.3s, opacity 0.3s;
+			-webkit-transition: padding 0.3s, min-width 0.3s, opacity 0.3s;
+		}	
+
+
+		&:hover	{
+			@include opacity(0.8);
+		}
+
+		&.vc_btn_rounded:before,
+		&.vc_btn_rounded_outlined:before,
+		&.vc_btn_rounded_outlined .outlined_background,
+		&.vc_btn_rounded_outlined,
+		&.vc_btn_sm.vc_btn_rounded,
+		&.vc_btn_md.vc_btn_rounded,
+		&.vc_btn_lg.vc_btn_rounded,
+		&.vc_btn_xs.vc_btn_rounded_outlined,
+		&.vc_btn_sm.vc_btn_rounded_outlined,
+		&.vc_btn_md.vc_btn_rounded_outlined,
+		&.vc_btn_lg.vc_btn_rounded_outlined	{
+			@include border-radius(100px !important);
+			// border:0;
+		}
+
+		// &.vc_btn_xs {padding: 8px 16px 7px;}
+
+		// &.vc_btn_xs:hover{padding: 8px 26px 7px;}
+
+		&.vc_btn_sm {
+			font-weight: 500 !important;
+			font-size: 12px !important;
+			line-height: 16px !important;
+			padding: 13px 25px !important;
+		}
+
+		// &.vc_btn_sm:hover	{padding: 15px 34px 13px;}
+
+		&.vc_btn_md {
+			font-weight: 500 !important;
+			font-size: 14px !important;
+			line-height: 18px !important;
+			padding: 16px 35px !important;
+		}
+
+		// &.vc_btn_md:hover	{padding: 22px 46px 19px;}
+
+		&.vc_btn_lg {
+			font-weight: 500 !important;
+			font-size: 18px !important;
+			line-height: 20px !important;
+			padding: 20px 50px !important;
+		}
+
+		// &.vc_btn_lg:hover {padding: 30px 58px 27px;}
+
+		&.vc_btn_xs.vc_btn_square_outlined,
+		&.vc_btn_sm.vc_btn_square_outlined,
+		&.vc_btn_md.vc_btn_square_outlined,
+		&.vc_btn_lg.vc_btn_square_outlined,
+		&.vc_btn_xs.vc_btn_rounded_outlined,
+		&.vc_btn_sm.vc_btn_rounded_outlined,
+		&.vc_btn_md.vc_btn_rounded_outlined,
+		&.vc_btn_lg.vc_btn_rounded_outlined
+		{
+			position: relative;
+			// background: none !important;
+		}
+
+		&.vc_btn_square_outlined,
+		&.vc_btn_rounded_outlined,
+		&.vc_btn_xs.vc_btn_square_outlined,
+		&.vc_btn_xs.vc_btn_rounded_outlined
+		{
+			border: 1px solid;
+		}
+
+		&.vc_btn_sm.vc_btn_square_outlined,
+		&.vc_btn_md.vc_btn_square_outlined,
+		&.vc_btn_sm.vc_btn_rounded_outlined,
+		&.vc_btn_md.vc_btn_rounded_outlined	{
+			border: 2px solid;
+		}	
+
+		&.vc_btn_lg.vc_btn_square_outlined,
+		&.vc_btn_lg.vc_btn_rounded_outlined	{
+			border: 3px solid;
+		}	
+
+	}
+
+	}
+}
+
+.add_to_cart_inline .add_to_cart_button:focus
+{
+	border:0;
+}
+
+
+.wpb_wrapper .product.woocommerce  .add_to_cart_button.added:first-of-type
+{
+	/*display: none;*/
+}
+
+.shortcode_single_product li {
+	width:100% !important;
+}

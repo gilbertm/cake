@@ -1,0 +1,156 @@
+/* -------------------------------- 
+	Checkout
+-------------------------------- */
+
+
+.woocommerce-checkout:not(.woocommerce-order-received) {
+
+	.checkout_coupon_button,
+	.checkout_login_button {
+		&:before {
+			float: right;
+			margin-left: 10px;
+			@include breakpoint(small only) {
+				float: none;
+				text-align: left;
+				margin-left: 0px;
+			}
+		}
+		a.showlogin,
+		a.showcoupon {
+			line-height: 1.8 ;
+			float: left;
+			margin-right: 15px;
+			@include breakpoint(small only) {
+				float: none;
+				margin-right: 0;
+			}
+		}
+		
+	}
+
+
+	.woocommerce-checkout {
+		.checkout_left_wrapper {
+			.form-row-first {
+				float: right;
+				padding-right: 0;
+				padding-left: rem-calc(10);  
+				@include breakpoint(small only) {
+					padding-left: 0;
+				}
+			}
+
+			.form-row-last {
+				float: left;
+				padding-left: rem-calc(0);
+				padding-right: rem-calc(10);
+				@include breakpoint(small only) {
+					padding-right: 0;
+				}				
+			}			
+		}
+		.checkout_right_wrapper {
+			padding-right: 3.125rem;
+			padding-left: 0;
+
+			@include breakpoint(medium down) {
+				padding-right: 0;
+			}
+			.order_review_wrapper {
+				h2 {
+					left: auto;
+					right: 20px;					
+				}
+				.payment_methods > li {
+					label {
+						margin-left: 0;
+						margin-right: 5px;
+					}
+					a {
+						float: left;
+					}
+					img {
+				    	margin: 0 0.625rem 0 0;
+				    	float: left;						
+					}
+
+				}				
+				.woocommerce-checkout-review-order-table {
+					tbody {
+						td.product-name {
+							padding-left: 20px;
+							padding-right: 0px;
+						}
+					}
+					text-align: right;
+					th,td {
+						text-align: right;
+					}
+					tfoot {
+						tr.order-total {
+							td {
+								small {
+									margin-top: 10px;
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}	
+		}
+	}  
+}
+
+#add_payment_method,
+.woocommerce-checkout {
+	#payment {
+		ul.payment_methods {
+			li {
+				.stripe-credit-card-brand,
+				.stripe-visa-brand,
+				.stripe-mastercard-brand {
+					right: auto;
+					left: 10px;
+				}
+			}
+		}
+	}
+}
+
+.woocommerce-checkout:not(.woocommerce-order-received) {
+	.woocommerce-checkout {
+		.checkout_right_wrapper {
+			.order_review_wrapper {
+				.payment_methods {
+					> li {
+						.form-row-first {
+							float: right;
+							padding-right: 0;	
+							padding-left: rem-calc(10);	
+							@include breakpoint(small only) {
+								float: none;
+								width: 100%;
+								padding-left: 0;
+							}												
+						}
+						.form-row-last {
+							float: left;
+							padding-left: 0;
+							padding-right: rem-calc(10);
+							@include breakpoint(small only) {
+								float: none;
+								width: 100%;
+								padding-right: 0;
+							}							
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

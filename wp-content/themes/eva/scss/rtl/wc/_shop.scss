@@ -1,0 +1,41 @@
+/* -------------------------------- 
+	Shop Catalog
+-------------------------------- */
+
+.woocommerce {
+	.top_bar_shop {
+		.woocommerce-result-count {
+			float: right;
+		}
+		.shop-ordering {
+		    float: left;
+		}
+		// .catalog-ordering .woocommerce-result-count {
+		//     float: left;
+		// }		
+	}
+
+	ul.products li.product .shop_product_metas h3 {
+	    padding-right: 0;
+	    padding-left: 24px;
+	}	
+
+	ul.products li.product .shop_product_metas,
+	.product-category-listing {
+	    text-align: right;
+	}
+}
+
+#products-carousel #products .product {
+	text-align: right;
+}
+
+.eva_ajax_load_button a,
+.eva_ajax_load_more_loader a {
+    padding-left: 0;
+    padding-right: 26px;
+	i {
+	    left: auto;
+	    right: 0;
+	}
+}

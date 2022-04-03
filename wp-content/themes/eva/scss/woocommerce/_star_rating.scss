@@ -1,0 +1,114 @@
+.woocommerce {
+	.star-rating {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        height: 1em;
+        line-height: 1;
+        font-size: 1em;
+        font-size: rem-calc(14);
+        width: 67px;
+        top: 0;
+        font-family: "FontAwesome";
+
+        &:before {
+            content: "\f006\f006\f006\f006\f006";
+            float: left;
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 67px;
+            color:$maincolor;
+        }
+
+        span {
+            overflow: hidden;
+            float: left;
+            top: 0;
+            left: 0;
+            position: absolute;
+            padding-top: 1.5em;
+            width: 67px;
+        }
+
+        span:before {
+            content: "\f005\f005\f005\f005\f005";
+            top: 0;
+            position: absolute;
+            left: 0;
+            width: 67px;
+            color:$maincolor;
+        }
+    }
+
+    // p.stars {
+
+    // 	display: inline-block;
+
+    // 	span { display: flex; }
+
+    //     a {
+    //         position: relative;
+    //         height: 1em;
+    //         width: 1em;
+    //         text-indent: -999em;
+    //         display: inline-block;
+    //         text-decoration: none;
+    //         transition: none;
+
+    //         &:before {
+    //             display: block;
+    //             position: absolute;
+    //             top: 0;
+    //             left: 0;
+    //             width: 1em;
+    //             height: 1em;
+    //             line-height: 1;
+    //             font-family: "FontAwesome";
+    //             content: "\f005";
+    //             text-indent: 0;
+    //             transition: all 0.3s ease;
+    //         }
+
+    //         &:hover {
+
+    //             color: #e5b674;
+
+    //             ~ a:before {
+    //                 content: "\f005";
+    //                 color: #000;
+    //             }
+    //         }
+    //     }
+
+    //     &:hover {
+    //         a {
+    //             &:before {
+    //                 content: "\f005";
+    //                 color: #e5b674;
+    //             }
+    //         }
+    //     }
+
+    //     &.selected {
+    //         a.active {
+    //             &:before {
+    //                 content: "\f005";
+    //                 color: #e5b674;
+    //             }
+
+    //             ~ a:before {
+    //                 content: "\f005";
+    //                 color: #000;
+    //             }
+    //         }
+
+    //         a:not(.active) {
+    //             &:before {
+    //                 content: "\f005";
+    //                 color: #e5b674;
+    //             }
+    //         }
+    //     }
+    // }
+}

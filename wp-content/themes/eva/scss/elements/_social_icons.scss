@@ -1,0 +1,76 @@
+.social-icons {
+	margin: 0;
+	padding:0;
+	display: block;
+	list-style: none;
+
+	li {
+		display: inline-block; 
+		padding:0;
+		margin: 0;
+		text-align:center; 	
+
+		a {
+		  text-decoration:none;
+
+		  &:before {
+			  font-family: 'FontAwesome';  
+			  font-weight: normal;
+			  font-style: normal;
+			  display: inline-block;
+			  color: $maincolor;
+			  font-size:24px;
+			  width:45px;
+			  height:35px;
+			  @include transition(transform .3s ease);
+		  }
+		  &:hover {
+		  	&:before {
+		  		@include transform(scale(1.4))
+		  	}
+		  }
+		}
+		
+		&.twitter a:before{color: #54c1de;content: "\f099";}
+		&.facebook a:before{color: #6686b7;content: "\f09a";}
+		&.googleplus a:before{color: #e55e4b;content: "\f0d5";}
+		&.pinterest a:before{color: #ff5e64;content: "\f0d2";}
+		&.vimeo a:before{color: #4abae0;content: "\f27d";}
+		&.youtube a:before{color: #ef4343;content: "\f167";}
+		&.flickr a:before{color: #ff539b;content: "\f16e";}
+		&.skype a:before{color: #3bb1ee;content: "\f17e";}
+		&.behance a:before{color: #31ade1;content: "\f1b4";}
+		&.dribbble a:before{color: #f5a1b9;content: "\f17d";}
+		&.tumblr a:before{color: #486b89;content: "\f173";}
+		&.linkedin a:before{color: #50a5c1;content: "\f0e1";}
+		&.github a:before{color: #dfdfdf;content: "\f09b";}
+		&.vine a:before{color: #00D9A3;content: "\f1ca";}
+		&.instagram a:before{color: #34648B;content: "\f16d";}
+		&.dropbox a:before{color: #007EE5;content: "\f16b";}
+		&.rss a:before{color: #fbba54;content: "\f09e";}
+		&.email a:before{color: #666666;content: "\f0e0";}
+		&.stumbleupon a:before{color: #fe7143;content: "\f1a4";}
+		&.paypal a:before{color: #34aad2;content: "\f1ed";}
+		&.foursquare a:before{color: #0732A2;content: "\f180";}
+		&.soundcloud a:before{color: #FF4D00;content: "\f1be";}
+		&.spotify a:before{background-color: #648F00;content: "\f1bc";}
+		&.vk a:before{color: #55779b;content: "\f189";}
+		&.android a:before{color: #97C024;content: "\f17b";}
+		&.apple a:before{color: #333333;content: "\f179";}
+		&.windows a:before{color: #00ADEF;content: "\f17a";}
+		&.whatsapp a:before{color: #43d854;content: "\f232";}
+		&.telegram a:before{color: #31ade1;content: "\f2c6";}		  
+
+		
+	}	
+}
+
+
+
+.offcanvas_aside_left {
+	.social-icons {
+		li a:before {
+			color: $maincolor
+		}
+	}
+}

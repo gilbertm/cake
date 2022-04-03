@@ -1,0 +1,98 @@
+/* -------------------------------- 
+	Elements
+-------------------------------- */
+
+.products {
+	.shop_product_metas {
+		.yith-wcwl-add-to-wishlist {
+			left: 0;
+			right: auto;
+		}
+	}
+}
+
+.select2-container .select2-selection .select2-selection__rendered {
+	text-align: right;
+}
+
+.btn1 {
+	span {
+		i {
+			margin-right: 0px;
+			margin-left: 10px;
+		}
+	}
+}
+
+.shortcode_icon_box.icon_position_left {
+    padding-left: 0;
+    padding-right: 3.125rem;
+}
+
+.shortcode_icon_box.shortcode_icon_box.icon_position_left .icon_wrapper {
+    left: auto;
+    right: 0;
+}
+
+.shortcode_icon_box.shortcode_icon_box.icon_position_left .icon_box_content,
+.shortcode_icon_box.shortcode_icon_box.icon_position_left .icon_box_title {
+    padding-left: 0;
+    padding-right: 2.8125rem;
+}
+
+.shortcode_icon_box.shortcode_icon_box.icon_position_left .icon_box_read_more {
+    margin-left: 0;
+    margin-right: 2.8125rem;
+}
+
+.vc_toggle.vc_toggle_simple .vc_toggle_title .vc_toggle_icon {
+  left: auto;
+  right: 0;
+}
+
+.vc_toggle.vc_toggle_default .vc_toggle_content,
+.vc_toggle.vc_toggle_default .vc_toggle_title,
+.vc_toggle.vc_toggle_round .vc_toggle_content, 
+.vc_toggle.vc_toggle_round .vc_toggle_title,
+.vc_toggle.vc_toggle_rounded .vc_toggle_content,
+.vc_toggle.vc_toggle_rounded .vc_toggle_title,
+.vc_toggle.vc_toggle_simple .vc_toggle_content,
+.vc_toggle.vc_toggle_simple .vc_toggle_title,
+.vc_toggle.vc_toggle_square .vc_toggle_content,
+.vc_toggle.vc_toggle_square .vc_toggle_title {
+    padding-left: auto;
+    padding-right: 33px;
+}
+
+
+/* -------------------------------- 
+  Size Chart
+-------------------------------- */
+
+.offcanvas_sizechart {
+  .vc_toggle.vc_toggle_active > .vc_toggle_content {
+    padding-left: 33px;
+    padding-right: 0;
+  }
+  .vc_toggle.vc_toggle_round .vc_toggle_title {
+    padding-right: 0;
+  }
+
+}
+
+/* -------------------------------- 
+  Wishlist
+-------------------------------- */
+#yith-wcwl-form  {
+  table.wishlist_table {
+    th {
+      text-align: right;
+    }
+    tbody {
+      td {
+        text-align: right;
+      }
+    }
+  }
+}
+

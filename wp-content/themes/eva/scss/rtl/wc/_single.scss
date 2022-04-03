@@ -1,0 +1,245 @@
+/* -------------------------------- 
+	Single Product
+-------------------------------- */
+
+.product-images-wrapper {
+  .swiper-container {
+    .swiper-button-prev {
+      right: 0;
+      &:before {
+        content: "\e915";
+      }
+    }
+
+    .swiper-button-next {
+      right: auto;
+      left: 0;
+       &:before {
+        content: "\e916";
+      }     
+    }
+
+    &:hover {
+      .swiper-button-prev {
+        right: 5%;
+      }
+
+      .swiper-button-next {
+        right: auto;
+        left: 5%;
+      }      
+    }
+
+  }
+}
+
+#product-images-carousel,
+#products-carousel #products {
+	&.owl-theme {
+		.owl-nav {
+			.owl-prev {
+				left: auto;
+				right: 0;
+                &:before {
+                    content: "\e915";
+                }				
+			}
+
+			.owl-next {
+				right: auto;
+				left: 0;
+                &:before {
+                    content: "\e916";
+                }				
+			}
+		}
+	}
+
+	&:hover {
+		&.owl-theme {
+			.owl-nav {
+                .owl-prev {
+                    left: auto;
+                    right: -55px;
+                    @include breakpoint(1280 down) {
+                        left: auto;
+                        right: -35px;
+                    }
+                }  
+                .owl-next {
+                    right: auto;
+                    left: -50px;
+                    @include breakpoint(1280 down) {
+                        right: auto;
+                        left: -30px;
+                    }                    
+                }				
+			}
+		}
+	}
+}
+
+
+.woocommerce .woocommerce-tabs .shop_attributes th {
+    text-align: right;
+}
+
+.woocommerce .woocommerce-tabs ul.tabs li a sup {
+    right: auto;
+    left: -12px;
+    padding: 0 3px 0 0;
+}
+
+.product_infos {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.woocommerce .cart .quantity {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.top_bar_shop_single  {
+
+	.back-btn {
+		float: right;
+		padding-left: 0;
+		padding-right: 22px;
+
+		&:before {
+		    left: auto;
+		    right: 0;
+		    content: "\e911";
+		}		
+	}
+
+	.products-nav {
+	    float: left;
+	    .product-btn {
+	    	&.product-prev {
+	    		.thb-wrapper {
+	    			right:auto;
+	    			left: -20px;
+	    		}
+	    	}
+	    	&.product-next {
+	    		.thb-wrapper {
+	    			right:auto;
+	    			left: 20px;
+	    		}
+	    	}
+			.no-touch &:hover {
+
+
+				> .thb-wrapper {
+					right: auto;
+					left: -1px;
+				}
+			}	    	
+	    }
+	}
+
+	.products-nav .product-short .product-thumb {
+	    float: right;
+	    margin: 2px 2px 0 10px;
+	}
+
+	.products-nav .product-short .price ins {
+   		display: inline-block;
+	}
+
+	.products-nav {
+		.product-short {
+			text-align: right;
+		}
+	}  
+}
+
+.product_infos {
+	.eva-size-chart {
+		margin-right: 0px;
+		margin-left: 10px;
+		a {
+			padding-left: 0px;
+			padding-right: 25px;
+			i {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+
+	.box-share-master-container {
+		margin-right: 0px;
+		margin-left: 10px;
+		a {
+			padding-left: 0px;
+			padding-right: 25px;			
+			i {
+				left: auto;
+				right: 0;
+			}
+		}
+	}	
+}
+
+.product_infos .woocommerce-product-rating .star-rating,
+.woocommerce .star-rating:before {
+    float: right;
+}
+
+.woocommerce .star-rating span:before {
+    left: auto;
+    right: 0;
+}
+
+.product_infos .woocommerce-product-rating .woocommerce-review-link {
+    float: right;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.woocommerce .star-rating span {
+    float: right;
+    left: auto;
+    right: -1px;
+}
+
+.arthref {
+  position: fixed;
+  top: 0;
+  left: auto;
+  right: 0;
+  z-index: 99; }
+
+.woocommerce {
+	.woocommerce-tabs {
+		#reviews {
+			#comments {
+				padding-right: 0px;
+				padding-left: 60px;
+				float: right;
+				h2 {
+					text-align: right;
+				}
+
+				.comment_container {
+					text-align: right;
+					.comment-text {
+                    	padding-left: 0;
+                    	padding-right: 90px;
+                    	@include breakpoint(small only) {
+                    		padding-left: 0;
+                    		padding-right: 70px;
+                    	}						
+					}
+				}
+                .avatar {
+                	left: auto;
+                	right: 0;					        	
+                } 				
+			}
+		}
+	}
+}

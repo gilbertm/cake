@@ -1,0 +1,315 @@
+ul.products {
+  list-style: none;
+}
+
+.product-category-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin-bottom: 30px;
+  }
+}
+
+/**********************************************************************************/
+/* Zoom Hover *********************************************************************/
+/**********************************************************************************/
+
+.product-category-list.zoom_hover {
+  li.category_grid_item {
+    position: relative;
+
+    @include breakpoint(small only) {
+      // width: 100%;
+    }
+
+    .category_grid_box {
+      height: 100%;
+      position: relative;
+      display: block;
+      overflow: hidden;
+      z-index: 1;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+
+      .category_item_bkg {
+        z-index: 1;
+        @include transform(scale(1));
+        @include transition(transform 2s ease);
+      }
+
+      .category_item_bkg_blank {
+        height: 300px;
+        background-color: #eee;
+        @include breakpoint(small only) {
+          height: 150px;
+        }
+      }
+
+      &:hover .category_item_bkg {
+        @include transform(scale(1.1));
+      }
+
+      .category_item {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        color: #fff;
+        position: relative;
+
+        .category_overlay {
+          z-index: 3;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(255, 255, 255, 0) 50%,
+            transparent 100%
+          );
+        }
+
+        .category_name {
+          z-index: 4;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          padding: 2.2em;
+          @include breakpoint(670px down) {
+            padding: 1.4em;
+          }
+
+          h3 {
+            margin: 0;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 28px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+            @include breakpoint(670px down) {
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
+          span {
+            display: inline-block;
+            @include opacity(0.8);
+            margin: 0 0 0.6em 0;
+            font-size: 12px;
+            line-height: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            @include breakpoint(670px down) {
+              margin: 0 0 0.2em 0;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.archive {
+  .product-category-list {
+    &.cat_one_col {
+      li.category_grid_item {
+        @include breakpoint(420px down) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/**********************************************************************************/
+/* Perspective View ***************************************************************/
+/**********************************************************************************/
+
+.tilter {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  // min-height: 120px;
+  margin: 0;
+  color: #fff;
+  flex: none;
+  perspective: 1000px;
+}
+
+.tilter * {
+  pointer-events: none;
+}
+
+.tilter:hover,
+.tilter:focus {
+  color: #fff;
+  outline: none;
+}
+
+.tilter__figure,
+.tilter__image,
+.tilter__image_blank {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tilter__image_blank {
+  height: 300px;
+  background-color: #eee;
+  @include breakpoint(small only) {
+    height: 150px;
+  }
+}
+
+.tilter__figure > * {
+  transform: translateZ(0px); /* Force correct stacking order */
+}
+
+.tilter__figure {
+  position: relative;
+}
+
+.tilter__figure::before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  box-shadow: 0 0px 20px rgba(35, 32, 39, 0.5);
+}
+
+.tilter__deco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tilter__deco--shine div {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    transparent 100%
+  );
+}
+
+.tilter__deco--overlay {
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.3) 5%,
+    rgba(0, 0, 0, 0.1) 50%,
+    transparent 100%
+  );
+}
+
+.tilter__deco--lines {
+  border: 0px solid rgba(255, 255, 255, 0.6);
+  @include opacity(0);
+  opacity: 0;
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  width: 91%;
+  height: 92%;
+  z-index: 10;
+  @include transition(border 0.3s, opacity 0.3s);
+}
+
+.tilter--1:hover .tilter__deco--lines {
+  @include opacity(1);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.tilter__caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2.2em;
+  @include breakpoint(800px down) {
+    padding: 1.6em;
+  }
+  @include breakpoint(670px down) {
+    padding: 1.2em;
+  }
+}
+
+.tilter__title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  @include breakpoint(800px down) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @include breakpoint(670px down) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.tilter__description {
+  display: inline-block;
+  // padding: 1px 7px;
+  // border: 1px solid rgba(255,255,255,.6);
+  @include opacity(0.8);
+  margin: 0 0 0.6em 0;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  @include breakpoint(800px down) {
+    margin: 0 0 0.2em 0;
+    letter-spacing: 2px;
+  }
+  @include breakpoint(670px down) {
+    margin: 0 0 0.2em 0;
+    letter-spacing: 2px;
+  }
+}
+
+/* Individual styles */
+
+/* Example 1 (Default) */
+.tilter--1 .tilter__figure::before {
+  box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0);
+  @include transition(box-shadow 0.6s);
+}
+
+.tilter--1:hover {
+  .tilter__figure::before {
+    box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+#products-carousel {
+  .product-category-list {
+    .category_grid_item {
+      padding: 0;
+    }
+  }
+}

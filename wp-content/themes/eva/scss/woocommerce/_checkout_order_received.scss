@@ -1,0 +1,294 @@
+.woocommerce-order-received {
+	.woocommerce {
+		// padding: rem-calc(30) 0;
+		// margin-bottom: rem-calc(50);
+		.thank_you_header_text {
+			// margin: 0px -500px 0;
+			// padding: 40px 500px 40px;
+			// background: $maincolor;
+			position: relative;	
+
+			p {
+				font-size: rem-calc(90);
+				line-height: rem-calc(100);
+				text-align: center;
+				@include breakpoint(small only) {
+					font-size: rem-calc(50);
+					line-height: rem-calc(50);					
+				}
+			}
+		}
+
+		ul {
+			&.order_details {
+				list-style: none; 
+				display: table; 
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				margin-bottom: rem-calc(80);
+				border-top: solid 6px $maincolor;
+				padding-top: rem-calc(30);
+				margin-top: rem-calc(20);
+
+				@include breakpoint(small only) {
+					margin-bottom: rem-calc(30);
+				}
+
+				li {
+		    		width: 25%;
+		    		display: table-cell;
+		    		float: none;
+		    		margin-bottom: 0;
+					text-align: left;
+					@include breakpoint(small only) {
+						display: block;
+						width: 100%;
+						margin-bottom: 15px;
+						text-align: center;
+					}
+					> strong {
+						font-size: rem-calc(20);
+						line-height: rem-calc(24);
+						width: 100%;
+						display: block;
+						text-transform: none;
+					}
+				}
+
+				&.bacs_details {
+					li {
+						width: 100%;
+					}
+				}			
+			}
+
+			&:empty {
+				display: none;
+			}
+		}
+
+		.order_detail_box {
+			margin: 70px 0;
+			padding: 45px 35px 25px;
+			border: 3px solid $maincolor;
+			position: relative;
+
+			@include breakpoint(small only) {
+				border: none;
+				padding: 0;
+			}
+
+			> h2 {
+				position: absolute;
+				top: -28px;
+				left: 20px;
+				display: inline-block;
+				font-size: rem-calc(34);
+				text-transform: uppercase;
+				margin: 0 auto;
+				padding: 0 10px;
+				letter-spacing: 2px;
+				background-color: #fff;	
+				@include breakpoint(small only) {
+					position: relative;
+					font-size: rem-calc(24);
+					margin-bottom: 20px;
+					left: 0;
+					top: 0;
+					padding: 0;
+				}			
+			}
+
+			header {
+				h2 {
+					margin-top: 30px;
+					display: inline-block;
+					font-size: rem-calc(34);
+					text-transform: uppercase;	
+					letter-spacing: 2px;	
+
+					@include breakpoint(small only) {
+						font-size: rem-calc(24);
+						margin-bottom: 20px;
+					}			
+				}
+			}
+
+			table.shop_table {
+
+				th,td {
+					vertical-align: top;
+				}
+				thead {
+
+				}
+				tbody {
+						td {
+							&.product-name {
+								font-size: 12px;
+								text-transform: uppercase;
+								padding-right: 20px;
+								strong {
+									@include opacity(.5);
+								}
+								.variation {
+									display: block;
+									margin-top: 10px;
+									margin-bottom: 0;
+									font-size: 12px;
+									line-height: 16px;
+									font-weight: 300;
+									text-transform: capitalize;
+
+									@include breakpoint(small only) {
+										display: block;
+									}								
+
+									@include opacity(0.8);
+
+									dt {
+										margin: 0;
+										padding: 0;
+										display: block;
+										float: left;
+										clear: both;
+										font-weight: 500;
+										margin-right: 5px;
+									}
+									dd {
+										position: relative;
+										margin: 0;
+										padding: 0;
+										display: block;
+										float: left;
+										clear: none;
+										p {
+											margin: 0;
+											padding: 0;
+											line-height: 16px;
+										}
+									}
+								}								
+							}
+						}
+				}
+				tfoot {
+						margin-top: 20px;
+						padding: 20px 0;
+						tr {
+							border: none;
+							&.cart-subtotal {
+								td {
+									font-size: 18px;
+								}
+							}
+
+							&:last-child {
+								.amount {
+									font-size: rem-calc(30);
+									line-height: 24px;
+									font-weight: 300;								
+								}								
+							}
+
+
+							th,td {
+								padding: 6px 0;
+							}
+
+							td {
+								vertical-align: top;
+								// padding: 0;
+							}
+							&:first-child {
+								th, td {
+									padding-top: 25px;
+								}
+							}	
+							&:last-child {
+								th, td {
+									padding-bottom: 25px;
+								}
+							}													
+						}
+
+						.shipping {
+							ul {
+								list-style: none;
+								margin: 0;
+							}
+							li {
+								label {
+									color: #000;
+									margin: 0 0 0 5px;
+									font-size: 14px;
+									text-transform: capitalize;
+									@include breakpoint(small only) {
+										font-size: 12px;
+									}
+								}
+								
+								input {
+									margin-bottom: 0;
+								}
+								.amount, .amount span {
+
+									font-weight: 300;
+									color: #000;
+								}
+							}
+						}	
+				}
+			}
+
+			table.customer_details {
+
+				th, td {
+					padding: 8px 0;
+				}
+
+				tr {
+					&:last-child {
+						border-bottom: none;
+					}
+				}				
+			}
+
+				.addresses {
+					margin-top: 40px;
+					margin-bottom: 40px;
+					@include clearfix;
+					.col-1, .col-2 {
+						width: 50%;
+						float: left;
+						margin-top: 0;
+
+						address {
+							@include opacity(0.6);
+						}
+
+						@include breakpoint(small only) {
+						 	width: 100%;
+						 	float: none;
+						}
+
+						header {
+							margin-top: 0;
+							h3 {
+								font-size: rem-calc(20);
+								text-transform: uppercase;
+							}
+						}
+					}
+
+					@include breakpoint(small only) {
+						 .col-2 {
+						 	margin-top: 30px;
+						 }
+					}
+
+				}			
+		}
+	}
+}

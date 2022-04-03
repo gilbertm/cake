@@ -1,0 +1,17 @@
+.offcanvas_aside_content .search-title,
+.offcanvas_aside_content .cart-title,
+.offcanvas_aside_content .woocommerce-mini-cart-item a {
+  font-family: 'Rubik', sans-serif !important;
+  text-transform:capitalize;
+}
+
+.offcanvas_aside_right .offcanvas_minicart .widget_shopping_cart_content .cart_list li a.remove,
+.offcanvas_aside_right .offcanvas_minicart .widget_shopping_cart_content .cart_list li a.remove i{
+  background:red;
+  color:white;
+}
+
+.offcanvas_aside_right .empty-cart-offcanvas-box span {
+  background: #efefef;
+  left: 0;
+}

@@ -1,0 +1,58 @@
+/* -------------------------------- 
+	Quick View
+-------------------------------- */
+
+.variation-select:after {
+    right: auto;
+    left: 0px;
+}
+
+.cd-quick-view {
+	.cd-item-info .product_infos h1 {
+	    text-align: right;
+	}
+
+	.cd-item-info .product_infos .cart .quantity {
+	    left: auto;
+	    right: 60px;
+	}	
+
+	.cd-item-info .product_infos .cart .single_add_to_cart_button {
+	    right: auto;
+	    left: 50px;
+	}
+
+	.cd-slider-wrapper {
+		.swiper-container {
+			.swiper-button-prev {
+				right: -35px;
+				left: auto;
+				&:before {
+					content: "\e915";
+				}
+			}
+			.swiper-button-next {
+			    right: auto;
+			    left: -35px;
+				&:before {
+					content: "\e916";
+				}			    
+			}			
+		}
+	}
+}
+
+.cd-quick-view.add-content {
+	.cd-slider-wrapper {
+		.swiper-container:hover  {
+			.swiper-button-prev {
+				right: 25px;
+				left: auto;
+			}
+			.swiper-button-next {
+		        right: auto;
+		        left: 25px;
+			}
+		}
+	}
+}

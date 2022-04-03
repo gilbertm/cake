@@ -1,0 +1,97 @@
+header.page-header {
+	&.oops-header {
+		margin-top: 0 !important;
+	    h1.page-title {
+	        font-size: rem-calc(300px);
+	        font-weight: 500;
+	        text-align: center;
+	        line-height: 1;
+	        margin-bottom: rem-calc(30px); 
+	        @include breakpoint(small only) {
+	        	font-size: rem-calc(130px);
+	        } 
+	    }
+
+	    h2 {
+	    	font-size: rem-calc(30px);
+	    	line-height: rem-calc(34px);
+	    	margin-bottom: rem-calc(20px);
+	    }		
+	}
+}
+
+section.error-404 {
+
+	.page-content {
+		p {
+			font-size: rem-calc(20px);
+			line-height: rem-calc(24px);
+			text-align: center;
+
+			@include breakpoint(small only) {
+				font-size: rem-calc(16px);
+				line-height: rem-calc(22px);				
+			}
+		}
+
+		.search-form {
+			margin-top: 40px;
+			text-align: center;
+			padding: 30px 30px;
+
+			@include breakpoint(small only) {
+				padding: 0;
+			}
+
+			.screen-reader-text {
+				display: none;
+			}
+
+			input.search-field {
+				vertical-align: top;
+				display: inline-block;
+				width: 50%;
+				height: 48px;
+
+				@include breakpoint(small only) {
+					width: 100%;
+				}
+			}
+
+			input.search-submit {
+				margin-left: 10px;
+				@include breakpoint(small only) {
+					margin-left: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+body[data-form-style="minimal"] {
+	section.error-404 {
+		.page-content {
+			.search-form {
+				margin-top: 0;
+				label {
+					display: block;
+				}
+				.minimal-form-input {
+					width: 50%;
+					@include breakpoint(small only) {
+						width: 100%;
+						margin-bottom: 20px;
+					}
+					input.search-field {
+						width: 100%;
+					}
+				}	
+
+				input.search-submit {
+					vertical-align: bottom;
+				}			
+			}
+		}
+	}
+}

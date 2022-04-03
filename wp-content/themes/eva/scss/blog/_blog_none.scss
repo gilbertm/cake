@@ -1,0 +1,52 @@
+.blog-content-area {
+	.page-content {
+		.search-form {
+			@include clearfix;
+			.screen-reader-text {
+				display: none;
+				body[data-form-style="minimal"] & {
+					display: inline-block;
+				}
+			}
+			margin-top: 40px;
+			vertical-align: bottom;
+
+
+			input {
+				&.search-field {
+					width: 50%;
+					float: left;
+					height: 48px;
+					@include breakpoint(small only) {
+						width: 100%;
+					}
+				}
+
+				&.search-submit {
+					float: left;
+					margin-left: 15px;
+					@include breakpoint(small only) {
+						width: 100%;
+						margin-left: 0;
+					}					
+				}
+			}
+		}		
+	}
+}
+
+body[data-form-style="minimal"]:not(.single) {
+	.blog-content-area .site-content {
+		.minimal-form-input {
+			width: 60%;
+			float: left;
+			@include breakpoint(small only) {
+				width: 100%;
+			}
+		}
+
+		input.search-submit {
+			margin-top: 35px;
+		}
+	}
+}

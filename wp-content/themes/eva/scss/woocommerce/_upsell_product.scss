@@ -1,0 +1,33 @@
+.single_product_summary_upsell {
+	text-align: center;
+
+	.upsells {
+		margin-bottom: rem-calc(40px);	
+	}
+
+	h2.products-upsells-title {
+		display: inline-block;
+		text-align: center;
+		margin: 40px auto 60px;
+		font-size: 26px;
+		line-height: 36px;
+		// font-weight: bold;
+		// font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		&:after {
+			margin: 10px auto 0;
+			text-align: center;
+			display: block;
+			content: "";
+			height: 3px;
+			width: 100px;
+			background-color: $maincolor;
+		}		
+	}
+
+	.product {
+		text-align: left;
+	}	
+}
+

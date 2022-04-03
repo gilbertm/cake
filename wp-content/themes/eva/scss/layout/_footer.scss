@@ -1,0 +1,352 @@
+footer#site-footer {
+  width: 100%;
+  // height: 600px;
+  // margin-top: 60px;
+  // background-color: #eee;
+
+  .widget-area {
+    .column-widget {
+      @include breakpoint(768px down) {
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .widget {
+      margin-bottom: 20px;
+      @include breakpoint(small only) {
+        margin-bottom: 40px;
+      }
+
+      @include breakpoint(medium down) {
+        .mc4wp-form {
+          table {
+            margin-top: 15px;
+            tbody {
+              td {
+                display: block;
+                width: 100%;
+                padding: 0;
+              }
+
+              .minimal-form-input {
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .f-copyright {
+    margin-top: 40px;
+    .socials {
+      text-align: center;
+      .footer-divider {
+        border-bottom: 1px solid $maincolor;
+      }
+
+      .social-icons {
+        padding: 0 20px;
+        top: -20px;
+        position: relative;
+        background-color: #fff;
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        a {
+          &:before {
+            color: $maincolor;
+          }
+        }
+      }
+    }
+
+    .copytxt {
+      text-align: center;
+      font-size: rem-calc(14);
+      p {
+        margin: 0;
+        padding: 30px 0 60px;
+        a {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+          &:hover {
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+          }
+        }
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        margin-top: -40px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li {
+          display: inline-block;
+          padding: 0px 10px;
+          margin: 0px;
+          position: relative;
+
+          a {
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+
+          &:after {
+            content: '';
+            height: 14px;
+            width: 1px;
+            background: #ece9e4;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+          }
+
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Instagram feed
+.footer-instagram-section {
+  position: relative;
+  margin-bottom: 80px;
+  @include opacity(0.7);
+  @include transition(opacity 0.5s ease-in-out);
+  &:hover {
+    @include opacity(1);
+  }
+
+  #sb_instagram {
+    #sbi_images {
+      .sbi_item {
+        position: relative;
+
+        .sbi_photo_wrap {
+          .fa-clone {
+            top: 10px;
+            width: 0.8em;
+            @include transition(transform 0.3s ease, opacity 0s ease);
+          }
+          .sbi_link {
+            background: rgba(0, 0, 0, 0.2);
+
+            .sbi_hover_top {
+              width: 100%;
+              padding: 5% !important;
+            }
+
+            .sbi_hover_bottom {
+              width: 100%;
+              padding: 0 !important;
+              bottom: 0;
+              z-index: 1;
+
+              .sbi_meta {
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                padding-top: 40px;
+                padding-right: 25px;
+                padding-bottom: 20px;
+                padding-left: 25px;
+                background: linear-gradient(
+                  transparent 0,
+                  rgba(0, 0, 0, 0.65) 100%
+                );
+                opacity: 0;
+                @include transition(transform 0.3s ease, opacity 0s ease);
+                transform: translateY(100%);
+
+                @include breakpoint(small only) {
+                  padding-top: 30px;
+                  padding-right: 15px;
+                  padding-bottom: 15px;
+                  padding-left: 15px;
+                }
+                span {
+                  font-size: 14px;
+                  font-weight: 600;
+                  svg {
+                    display: none;
+                  }
+                  &:before {
+                    font-size: 12px;
+                    width: 16px;
+                    text-align: center;
+                    display: inline-block;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    line-height: 16px;
+                    font-family: 'icomoon';
+                    margin-right: 5px;
+                  }
+                  &.sbi_likes {
+                    &:before {
+                      content: '\e90c';
+                    }
+                  }
+                  &.sbi_comments {
+                    &:before {
+                      content: '\e920';
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            .sbi_hover_bottom {
+              .sbi_meta {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+              }
+            }
+            .sbi_photo {
+              transform: scale(1);
+            }
+            .fa-clone {
+              transform: translateY(10px) translateX(-10px);
+            }
+          }
+        }
+
+        .sbi_info {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.feed-simple {
+    #sb_instagram {
+      #sbi_images {
+        .sbi_item {
+          @include breakpoint(375px down) {
+            width: 50%;
+          }
+          @include breakpoint(768px down) {
+            width: 33.33%;
+          }
+          .sbi_photo_wrap {
+            a.sbi_photo {
+              &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                content: '';
+                z-index: 4;
+                @include transition(box-shadow 0.3s ease);
+              }
+
+              &:after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                content: '';
+                z-index: 1;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+              }
+              &:hover {
+                &:after {
+                  opacity: 0.3;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.feed-pro {
+    #sb_instagram {
+      #sbi_images {
+        .sbi_item {
+          .sbi_photo_wrap {
+            .sbi_link {
+              a.sbi_link_area {
+                &:before {
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  content: '';
+                  z-index: 4;
+                  @include transition(box-shadow 0.3s ease);
+                }
+
+                &:after {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  content: '';
+                  z-index: 1;
+                  opacity: 0;
+                  transition: opacity 0.3s ease;
+                }
+                &:hover {
+                  &:after {
+                    opacity: 0.3;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  p.clear {
+    margin: 0;
+    a {
+      z-index: 4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 15px 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: inherit;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+
+      @include transform(translate(-50%, -50%));
+      @include box-shadow(0px 0px 20px 0px rgba(0, 0, 0, 0.1));
+
+      &:hover,
+      &:focus {
+        background-color: #fff;
+      }
+    }
+  }
+}
