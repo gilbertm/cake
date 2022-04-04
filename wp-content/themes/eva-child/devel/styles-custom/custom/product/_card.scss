@@ -1,0 +1,132 @@
+.product-card {
+    ul.card-action-buttons {
+        margin: -30px 3px 0 0;
+        text-align: right;
+
+        li {
+            display: inline-flex;
+            padding-left: 7px;
+          }
+      }
+
+    .card {
+        margin: 20px;
+        overflow: hidden;
+        border:1px solid rgba(255, 20, 154, 0.15);
+
+        .price-wrapper {
+           background:rgba(255, 20, 154, 0.75);
+        }
+
+        .card-content {
+            padding: 5px;
+          }
+          
+
+          .price {
+            color:#fff !important;
+            .woocommerce-Price-amount {
+                font-weight: 600;
+                font-size: 1.25rem;
+                color:#fff !important;
+                margin: 10px;
+            }
+          }
+    }
+
+    a {
+        letter-spacing: inherit !important;
+    }
+
+    .card-action-buttons button {
+        cursor:default !important;
+    }
+
+    .yith-wcwl-add-button,
+    .yith-wcwl-wishlistaddedbrowse, 
+    .yith-wcwl-wishlistexistsbrowse {
+        i {
+            display:none;
+        }
+    }
+
+    .yith-wcwl-add-button a:before,
+    .yith-wcwl-wishlistaddedbrowse a:before, 
+    .yith-wcwl-wishlistexistsbrowse a:before {
+        letter-spacing: inherit !important;
+        color:#fff !important;
+        line-height: inherit !important;
+        font-size:1.1rem;
+    }
+
+    .btn-circle {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        padding: 0;
+        border-radius: 50%;
+      }
+      
+      .btn-circle i {
+        position: relative;
+        top: -1px;
+        line-height:inherit !important;
+      }
+      
+      .btn-circle-sm {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 0.9rem;
+      }
+      
+      .btn-circle-lg {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 1.1rem;
+      }
+      
+      .btn-circle-xl {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 1.3rem;
+      }
+      
+      /*PINK*/
+  .b-pink, .b-pink:before {
+    background: rgba(231,72,234,1);
+    background: -moz-linear-gradient(45deg, rgba(231,72,234,1) 0%, rgba(75,26,188,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(231,72,234,1)), color-stop(100%, rgba(75,26,188,1)));
+    background: -webkit-linear-gradient(45deg, rgba(231,72,234,1) 0%, rgba(75,26,188,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(231,72,234,1) 0%, rgba(75,26,188,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(231,72,234,1) 0%, rgba(75,26,188,1) 100%);
+    background: linear-gradient(45deg, rgba(231,72,234,1) 0%, rgba(75,26,188,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e748ea', endColorstr='#4b1abc', GradientType=1 );
+  }
+  .button2 {
+    display: inline-block;
+    font-size: 2em;
+    border-radius: 5px;
+    transition: all .5s;
+    filter: hue-rotate(0deg);
+    color: #FFF;
+    text-decoration: none;
+
+    a.button {
+        background:none transparent;
+        color:#fefefe !important;
+        font-size:1.15rem;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  }
+
+  .rot-135:hover {
+    filter: hue-rotate(135deg);
+  }
+}
+
+
+  @import "card_media";

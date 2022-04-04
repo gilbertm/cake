@@ -31,6 +31,10 @@ function eva_child_enqueue_styles() {
 
     wp_enqueue_style( 'eva-style' , get_template_directory_uri() . '/style.css' );
 
+    wp_enqueue_style( 'eva-child-materialize' , get_stylesheet_directory_uri() . '/css/bootstrap.min.css' );
+
+    wp_enqueue_style( 'eva-child-materialize' , get_stylesheet_directory_uri() . '/css/materialize.min.css' );
+
     wp_enqueue_style( 'eva-child-style', get_stylesheet_directory_uri() . '/css/style.css' );
 
     wp_enqueue_style( 'eva-child-main-style', get_stylesheet_directory_uri() . '/css/main.min.css', array( 'eva-style' ),    wp_get_theme()->get('Version') );

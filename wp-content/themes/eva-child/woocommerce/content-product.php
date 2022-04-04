@@ -47,6 +47,125 @@ $quick_view  = (!empty($tdl_options['tdl_quick_view'])) ? $tdl_options['tdl_quic
 $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl_options['tdl_add_to_cart_display'] : 'display_buttons';
 ?>
 
+<div class="custom product column <?php  if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 1) ) : ?>catalog_mode<?php endif; 
+    echo esc_attr($add_to_cart_display) ?>">
+
+    <?php 
+    // quick view
+    // do_action('woocommerce_before_shop_loop_item'); 
+    ?>
+        
+    <?php
+    // thumbnail
+    $attachment_ids = $product->get_gallery_image_ids();
+    if ($attachment_ids) {
+        $loop = 0;
+
+        foreach ( $attachment_ids as $attachment_id ) {
+            
+            $image_link = wp_get_attachment_url($attachment_id);
+
+            if (!$image_link) {
+                continue;
+            }
+            
+            $loop++;
+            $product_thumbnail_second = wp_get_attachment_image_src($attachment_id, 'shop_catalog');
+             
+            if ($loop == 1) {
+                break;
+            }
+        }
+    }
+    ?>
+
+    <div class="product-card">
+        <div class="card z-depth-4">
+            <div class="card-image <?php echo ent2ncr($class); ?>">
+                <div class="m-2 p-1 text-primary position-absolute rounded-pill price-wrapper">
+                    <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_price' ); ?>
+                </div>
+                
+                <a href="<?php the_permalink(); ?>">
+
+                <?php if (has_post_thumbnail($post->ID)) : ?>
+
+                        <?php if ( $custom_shop_second_image == "1" ) : ?>
+                            <span class="product_thumbnail_secondary" style="<?php echo ent2ncr($style); ?>"></span>            
+                        <?php endif; ?>
+
+                <?php endif; ?>
+
+                    <?php
+                        if (has_post_thumbnail($post->ID) ) {
+                            echo  get_the_post_thumbnail($post->ID, 'post-thumbnail');
+                        } else {
+                            echo apply_filters('woocommerce_single_product_image_html', sprintf('<img src="%s" alt="Placeholder" />', wc_placeholder_img_src()), $post->ID);
+                        }
+                    ?>
+                </a>
+            </div>
+             <?php if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 0) ) : ?>
+               
+                <?php if ( !$product->is_in_stock() ) : ?>
+                    <div class="card-img-overlay">
+                        <span class="out_of_stock_title">
+                        <?php 
+                            if (isset($tdl_options['tdl_out_of_stock_text'])) {
+                                esc_html_e($tdl_options['tdl_out_of_stock_text'], 'eva');
+                            } else {
+                                esc_html_e('Out of stock', 'woocommerce');
+                            }
+                        ?>
+                        </span> 
+                    
+                     </div>
+                <?php endif; ?>           
+            <?php endif; ?>
+
+            <div class="card-header bg-transparent">
+                <a class="shop_product_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <?php // extra infos, showing variants //do_action( 'woocommerce_after_shop_loop_item_title' ); ?> 
+            </div>
+            <div class="card-content">
+                <ul class="card-action-buttons">
+                    <li>
+                        <button type="button" class="btn btn-danger btn-circle m-1"><?php if (class_exists('YITH_WCWL')) : ?><?php echo trim(do_shortcode('[yith_wcwl_add_to_wishlist]')); ?><?php endif; ?></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-content text-center">
+                
+                <div class="button2 b-pink rot-135 text-center">
+                <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
+                        </div>
+            </div>
+            
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12">
+                        <p>
+                            <strong>Description:</strong> <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare auctor metus vel mollis.
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                        <div style="width: 95%; margin: auto;">
+                            <div class="chip">Dessert</div>
+                            <div class="chip">French</div>
+                            <div class="chip">Sweet</div>
+                            <div class="chip">Chocolate</div>
+                            <div class="chip"><a href="#">More...</a></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <li class="product column <?php  if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 1) ) : ?>catalog_mode<?php endif;
 
    echo esc_attr($add_to_cart_display) ?>">
@@ -64,6 +183,20 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
                 $product_thumbnail_second = wp_get_attachment_image_src($attachment_id, 'shop_catalog');
                 if ($loop == 1) break;
             }
+        }
+    ?>
+
+    <?php
+        $style = '';
+        $class = '';        
+        if (isset($product_thumbnail_second[0])) {            
+            $style = 'background-image:url(' . $product_thumbnail_second[0] . ')';
+            $class = 'with_second_image';     
+        }
+
+        if ( $custom_shop_second_image == "0" ) {
+            $style = '';
+            $class = '';
         }
     ?>
 

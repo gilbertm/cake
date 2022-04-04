@@ -21,6 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
+/**
+ * custom: This is the add to cart button with the shopping bag icon
+ *         seen on product display along witht he price and heart wishlist
+ */
 echo apply_filters(
 	'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 	sprintf(

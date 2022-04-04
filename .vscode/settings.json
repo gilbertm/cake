@@ -1,1 +1,4 @@
-{}
+{
+    "editor.wordWrapColumn": 250,
+    "phpcs.warningSeverity": 6
+}
