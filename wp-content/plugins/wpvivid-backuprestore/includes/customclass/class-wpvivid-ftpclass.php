@@ -445,7 +445,7 @@ class WPvivid_FTPClass extends WPvivid_Remote{
         $temp_path = trailingslashit(WP_CONTENT_DIR).WPvivid_Setting::get_backupdir().DIRECTORY_SEPARATOR.$temp_file;
         file_put_contents($temp_path,print_r($temp_file,true));
         if(! ftp_put($conn,trailingslashit($path).$temp_file,$temp_path,FTP_BINARY)){
-            return array('result'=>WPVIVID_FAILED,'error'=>'No privilege to create files in this remote storage directory.');
+            return array('result'=>WPVIVID_FAILED,'error'=>'Failed to add FTP storage. It can be because the FTP folder permissions are insufficient, or calling PHP ftp_put function of your web server failed. Please make sure the folder has write permission and the ftp_put function works properly.');
         }
         @unlink($temp_path);
         @ftp_delete($conn,trailingslashit($path).$temp_file);
