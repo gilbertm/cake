@@ -88,6 +88,7 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 
 /* --------------------------------------------------------------------------------- */
 class MyTracker {
+
     static $hooks;
         static function track_hooks( ) { 
             $filter = current_filter();
@@ -106,7 +107,7 @@ class MyTracker {
               } elseif( is_string($hook['function']) ) {
                  $func = $hook['function'];
               }
-               self::$hooks[] = 'On hook <b>"' . $filter . '"</b> run <b>'. $func . '</b> at priority ' . $priority;
+               self::$hooks[] = 'On hook <span></span><b>"' . $filter . '"</b> run <b>'. $func . '</b> at priority ' . $priority;
              }
           }
        }
