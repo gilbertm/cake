@@ -80,7 +80,7 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
     ?>
 
     <div class="product-card">
-        <div class="card z-depth-4">
+        <div class="card pb-3">
             <div class="card-image <?php echo ent2ncr($class); ?>">
                 <div class="m-2 p-1 text-primary position-absolute rounded-pill price-wrapper">
                     <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_price' ); ?>
@@ -128,23 +128,8 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
                 <?php // extra infos, showing variants //do_action( 'woocommerce_after_shop_loop_item_title' ); ?> 
             </div>
             <div class="card-content">
-                <ul class="card-action-buttons">
-                    <li>
-                        <button type="button" class="btn btn-danger btn-circle m-1"><?php if (class_exists('YITH_WCWL')) : ?><?php echo trim(do_shortcode('[yith_wcwl_add_to_wishlist]')); ?><?php endif; ?></button>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card-content text-center">
-                
-                <div class="button2 b-pink rot-135 text-center">
-                    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
-                </div>
-            </div>
-            
-            <div class="card-content">
                 <div class="row">
-                    <div class="col col-12">
+                    <div class="col col-8">
                         <?php if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 0) ) : ?>
                             <?php wc_get_template( 'loop/sale-flash.php' ); ?>
                         <?php endif; ?>
@@ -190,6 +175,21 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
 
                         <?php } ?>
                     </div>
+                    <div class="col col-4">
+                        <ul class="card-action-buttons">
+                            <li>
+                                <button type="button" class="btn btn-wish btn-circle m-1"><?php if (class_exists('YITH_WCWL')) : ?><?php echo trim(do_shortcode('[yith_wcwl_add_to_wishlist]')); ?><?php endif; ?></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="card-content text-center">
+                
+                <div class="button2 b-pink rot-135 text-center">
+                    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
                 </div>
             </div>
         </div>

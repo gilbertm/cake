@@ -1,7 +1,29 @@
 .product-card {
+
+    a {
+        letter-spacing: inherit !important;
+    }
+
     ul.card-action-buttons {
+
+        button {
+            cursor:default !important;
+        }
+        
+
         margin: -30px 3px 0 0;
         text-align: right;
+
+        .btn-wish {
+            color: #fff;
+            background-color: rgb(255, 255, 255);
+            border-color: rgba(237, 237, 237, 0.30);
+            box-shadow: 1px 1px 3px rgb(255 137 204 / 30%);
+
+            &:hover {
+                background-color:  rgba(237, 237, 237, 0.30);
+            }
+        }               
 
         li {
             display: inline-flex;
@@ -29,21 +51,19 @@
 
           .price {
             color:#fff !important;
+
             .woocommerce-Price-amount {
                 font-weight: 600;
                 font-size: 1.25rem;
                 color:#fff !important;
                 margin: 10px;
             }
+
+            .woocommerce-Price-currencySymbol {
+              font-size:0.75rem;
+              font-weight:100;
+            }
           }
-    }
-
-    a {
-        letter-spacing: inherit !important;
-    }
-
-    .card-action-buttons button {
-        cursor:default !important;
     }
 
     .yith-wcwl-add-button,
@@ -58,9 +78,17 @@
     .yith-wcwl-wishlistaddedbrowse a:before, 
     .yith-wcwl-wishlistexistsbrowse a:before {
         letter-spacing: inherit !important;
-        color:#fff !important;
+        color:rgb(255, 20, 154) !important;
         line-height: inherit !important;
         font-size:1.1rem;
+    }
+
+    .yith-wcwl-add-button a:before {
+        color:rgb(255, 20, 154, 0.15) !important;
+    }
+
+    .yith-wcwl-add-button:hover a:before {
+        color:rgb(255, 20, 154, 0.75) !important;
     }
 
     .btn-circle {

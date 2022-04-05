@@ -23,7 +23,9 @@ $meta_value = '0';
 
 update_post_meta( $post_id, $meta_key, $meta_value ); */
 
+add_filter( 'auto_update_plugin', '__return_false' );
 
+add_filter( 'auto_update_theme', '__return_false' );
 
 function eva_child_enqueue_styles() {
 

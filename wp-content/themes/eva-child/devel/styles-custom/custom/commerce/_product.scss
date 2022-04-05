@@ -1,3 +1,10 @@
+#products-carousel {
+    .carousel-title {
+        font-family: 'Rubik', Arial, Helvetica, sans-serif !important;
+        color:#888;
+    }
+}
+
 #product-images-carousel.owl-theme .owl-nav .owl-next::before, 
 #products-carousel #products.owl-theme .owl-nav .owl-next::before {
     content: "\f061";
