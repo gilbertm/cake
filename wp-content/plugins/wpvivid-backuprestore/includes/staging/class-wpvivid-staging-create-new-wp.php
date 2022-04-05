@@ -64,13 +64,6 @@ class WPvivid_Staging_Install_Wordpress_Free
         $wpdb=$this->get_db_instance(true);
 
         $wpdb->set_prefix($prefix);
-
-        $hook_name = 'update_option_blogname';
-        if(has_action($hook_name))
-        {
-            remove_all_actions($hook_name);
-        }
-
         $result = @wp_install($title, $username, $email, 0, '', md5(rand()));
         $wpvivid_plugin->staging->log->WriteLog(json_encode($result), 'notice');
         $user_id = $result['user_id'];
@@ -146,7 +139,7 @@ class WPvivid_Staging_Install_Wordpress_Free
         }
 
         $current   = array();
-        $current[] = 'wpvivid-backuprestore/wpvivid-backuprestore.php';
+        $current[] = 'wpvivid-staging/wpvivid-staging.php';
         sort( $current );
         $value=serialize($current);
         $update_query = $wpdb->prepare("UPDATE {$prefix}options SET option_value=%s WHERE option_name='active_plugins'" , $value);

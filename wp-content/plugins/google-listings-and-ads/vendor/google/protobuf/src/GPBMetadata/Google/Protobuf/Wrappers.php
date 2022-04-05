@@ -18,27 +18,27 @@ class Wrappers
             '
 Ç
 google/protobuf/wrappers.protogoogle.protobuf"
-DoubleValue
+DoubleValue
 value ("
 
-FloatValue
+FloatValue
 value ("
 
-Int64Value
+Int64Value
 value ("
-UInt64Value
+UInt64Value
 value ("
 
-Int32Value
+Int32Value
 value ("
-UInt32Value
+UInt32Value
 value ("
-	BoolValue
+	BoolValue
 value ("
-StringValue
+StringValue
 value (	"
 
-BytesValue
+BytesValue
 value (Bƒ
 com.google.protobufBWrappersProtoPZ1google.golang.org/protobuf/types/known/wrapperspbø¢GPBªGoogle.Protobuf.WellKnownTypesbproto3'
         , true);

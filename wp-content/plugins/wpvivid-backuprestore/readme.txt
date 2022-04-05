@@ -4,11 +4,11 @@ Tags: move, clone, migrate, staging, backup, restore, auto backup, cloud backup
 Requires at least: 4.5
 Tested up to: 5.9.2
 Requires PHP: 5.3
-Stable tag: 0.9.71
+Stable tag: 0.9.70
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Migrate, staging, backup WP.
+Migrate, staging, back up WP.
 
 == Description ==
 WPvivid Backup Plugin offers backup, migration, and staging as basic features, and is integrating more and more elegant features, such as unused images cleaner etc.
@@ -182,26 +182,16 @@ Yes, we do. Here are the guides for [migrating your site to a new host](https://
 Feel free to let us know how we can help using the [support forum](https://wordpress.org/support/plugin/wpvivid-backuprestore) for WPvivid Backup Plugin on WordPress.org or our [contact form](https://wpvivid.com/contact-us). You can also reach us with a direct message on [Twitter](https://twitter.com/WPvividcom).
 
 == Languages and Translators ==
-Thank you so much for translating WPvivid Backup Plugin to your languages!
+Thank you for translating WPvivid Backup Plugin to your languages!
 
 * [Andrew Galas](https://profiles.wordpress.org/andrewgalas) (Polish)
 * [Shohei OKADA](https://ja.gravatar.com/silversword0630) (Japanese)
 * [Francesco Tosi](https://profiles.wordpress.org/seventhose/) (Italian)
 * [Valentin Lyong](https://profiles.wordpress.org/icedge/) (Bulgarian)
 * [Daniel Wilczkowiak](https://profiles.wordpress.org/virtual03/) (German)
-* [Nima Nimaee](https://profiles.wordpress.org/nima78600/) (Persian)
-* [Alex](https://profiles.wordpress.org/alexser/) (Russian)
-* [Robi Erwin Setiawan](https://www.linkedin.com/in/robi-erwin-setiawan/) (Indonesian)
-* [Lois](https://profiles.wordpress.org/naoko01/) (Hungarian)
-* [Khoi](https://profiles.wordpress.org/khoipro/) (Vietnamese)
-* [Jairo Ochoa](https://profiles.wordpress.org/jairoochoa/) and [Carlos Macías](https://profiles.wordpress.org/cmacias/)  (Galician)
+* [Nima](https://profiles.wordpress.org/nima78600/) (Persian)
+
 == Changelog ==
-= 0.9.71 =
-- Fixed the warning: Undefined array key "page" when editing pages in some cases.
-- Fixed: Creating a fresh install failed when Elementor plugin is enabled.
-- Fixed some vulnerabilities in the plugin code.
-- Fixed some UI bugs.
-- Fixed some bugs in the plugin code.
 = 0.9.70 =
 - Fixed: There was no notification after restoration in some environments.
 - Fixed some vulnerabilities in the plugin code.

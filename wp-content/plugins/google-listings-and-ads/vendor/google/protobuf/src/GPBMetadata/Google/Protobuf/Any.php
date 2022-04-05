@@ -19,7 +19,7 @@ class Any
 Ô
 google/protobuf/any.protogoogle.protobuf"&
 Any
-type_url (	
+type_url (	
 value (Bv
 com.google.protobufBAnyProtoPZ,google.golang.org/protobuf/types/known/anypb¢GPBªGoogle.Protobuf.WellKnownTypesbproto3'
         , true);

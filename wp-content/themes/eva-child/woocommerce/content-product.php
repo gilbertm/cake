@@ -191,34 +191,6 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
                         <?php } ?>
                     </div>
                 </div>
-
-                <?php /*div class="row">
-                    <div class="col col-12">
-                        <?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>      
-
-                            <?php / * 
-
-                                div class="product_after_shop_loop">
-                                    
-                                        
-
-                                    <div class="product_after_shop_loop_switcher__nytowl">
-                                        
-                                        
-
-                                        <?php if ( $catalog_mode == 0 ) : ?>
-                                        
-                                        <div class="product_after_shop_loop_buttons">
-                                            <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
-                                        </div>
-
-                                        <?php endif; ?>
-                                        
-                                    </div>
-                                    
-                                </div * / ? >
-                    </div>
-                </div */ ?>
             </div>
         </div>
     </div>

@@ -69,7 +69,7 @@ foreach ($page_array as $page_name){
     <?php do_action('wpvivid_add_schedule_notice'); ?>
     <div id="wpvivid_remote_notice"></div>
 </div>
-<h2 class="nav-tab-wrapper wpvivid-custom-table-manager">
+<h2 class="nav-tab-wrapper">
     <?php
     do_action('wpvivid_backuprestore_add_tab');
     ?>

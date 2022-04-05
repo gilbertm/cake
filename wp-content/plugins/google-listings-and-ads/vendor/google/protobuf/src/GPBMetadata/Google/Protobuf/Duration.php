@@ -19,7 +19,7 @@ class Duration
 ë
 google/protobuf/duration.protogoogle.protobuf"*
 Duration
-seconds (
+seconds (
 nanos (Bƒ
 com.google.protobufBDurationProtoPZ1google.golang.org/protobuf/types/known/durationpbø¢GPBªGoogle.Protobuf.WellKnownTypesbproto3'
         , true);

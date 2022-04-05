@@ -21,7 +21,7 @@ class Routing
 google.api google/protobuf/descriptor.proto"G
 RoutingRule8
 routing_parameters (2.google.api.RoutingParameter"8
-RoutingParameter
+RoutingParameter
 field (	
 path_template (	Bj
 com.google.apiBRoutingProtoPZAgoogle.golang.org/genproto/googleapis/api/annotations;annotations¢GAPIbproto3'

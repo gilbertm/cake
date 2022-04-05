@@ -87,7 +87,7 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 
 
 /* --------------------------------------------------------------------------------- */
-class MyTracker {
+/* class MyTracker {
 
     static $hooks;
         static function track_hooks( ) { 
@@ -116,7 +116,7 @@ class MyTracker {
    
    // add_action( 'all', array('MyTracker', 'track_hooks') );
    
-   /* add_action( 'shutdown', function() {
+   / * add_action( 'shutdown', function() {
      echo "<div style='font-family:Arial,sans-serif'>";
      echo implode( '<br />', MyTracker::$hooks );
       echo "</div>";
