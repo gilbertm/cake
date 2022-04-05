@@ -138,236 +138,88 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
             <div class="card-content text-center">
                 
                 <div class="button2 b-pink rot-135 text-center">
-                <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
-                        </div>
+                    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
+                </div>
             </div>
             
             <div class="card-content">
                 <div class="row">
-                    <div class="col s12">
-                        <p>
-                            <strong>Description:</strong> <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare auctor metus vel mollis.
-                        </p>
-                    </div>
+                    <div class="col col-12">
+                        <?php if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 0) ) : ?>
+                            <?php wc_get_template( 'loop/sale-flash.php' ); ?>
+                        <?php endif; ?>
                     
+                        <?php if ( (isset($tdl_options['tdl_review_off'])) && ($tdl_options['tdl_review_off'] == 1) ) : ?>
+                            <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_rating' ); ?>
+                        <?php endif; ?>
+
+                        <?php 
+                        $catalog_mode  = (!empty($tdl_options['tdl_catalog_mode'])) ? $tdl_options['tdl_catalog_mode'] : 0;
+
+                        $category_listing  = (!empty($tdl_options['tdl_category_listing'])) ? $tdl_options['tdl_category_listing'] : 'first_category'; ?>
+
+                        <?php if ( $category_listing !== 'none') { ?>
+                                
+                                <?php if ( $category_listing == 'brand') { ?>
+                                
+                                    <?php if(($term_id = get_brands_term_by_product_id($product->get_id())) > 0): $term = get_term($term_id,'brands');?>
+                                        <p class="product-category-listing w-75 mx-auto text-center"><a href="<?php echo get_term_link($term_id,'brands');?>" class="product-category-link"><?php echo esc_attr($term->name) ?></a></p>
+                                    <?php endif; ?>            
+                                
+                                <?php } else if ( $category_listing == 'first_category') { ?>
+
+                                        <?php 
+
+                                        $product_cats = strip_tags(wc_get_product_category_list ($product->get_id(), '|||', '', '')); 
+                                        list($firstpart) = explode('|||', $product_cats);
+                                        $category_object = get_term_by('name', $firstpart, 'product_cat');
+                                        $category_id = $category_object->term_id;
+                                        if(empty($category_id)){
+                                            $category_url = $firstpart;
+                                        } else {
+                                            $category_url = get_term_link( (int)$category_id, 'product_cat' );
+                                        }
+                                        ?>
+                                        <p class="product-category-listing mx-auto px-2"><a href="<?php echo esc_url($category_url); ?>" class="product-category-link"><?php echo esc_attr($firstpart); ?></a></p>
+
+                                <?php } else { ?>
+                                        <?php
+                                            echo wc_get_product_category_list($product->get_id(), ', ', '<p class="product-category-listing  w-75 mx-auto text-center">', '</p>');
+                                        ?>
+                                <?php } ?>
+
+                        <?php } ?>
+                    </div>
                 </div>
-                <div class="row">
-                        <div style="width: 95%; margin: auto;">
-                            <div class="chip">Dessert</div>
-                            <div class="chip">French</div>
-                            <div class="chip">Sweet</div>
-                            <div class="chip">Chocolate</div>
-                            <div class="chip"><a href="#">More...</a></div>
-                        </div>
-                </div>
+
+                <?php /*div class="row">
+                    <div class="col col-12">
+                        <?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>      
+
+                            <?php / * 
+
+                                div class="product_after_shop_loop">
+                                    
+                                        
+
+                                    <div class="product_after_shop_loop_switcher__nytowl">
+                                        
+                                        
+
+                                        <?php if ( $catalog_mode == 0 ) : ?>
+                                        
+                                        <div class="product_after_shop_loop_buttons">
+                                            <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
+                                        </div>
+
+                                        <?php endif; ?>
+                                        
+                                    </div>
+                                    
+                                </div * / ? >
+                    </div>
+                </div */ ?>
             </div>
         </div>
     </div>
-
 </div>
-
-<li class="product column <?php  if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 1) ) : ?>catalog_mode<?php endif;
-
-   echo esc_attr($add_to_cart_display) ?>">
-
-   <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>	
-
-    <?php
-        $attachment_ids = $product->get_gallery_image_ids();
-        if ( $attachment_ids ) {
-            $loop = 0;
-            foreach ( $attachment_ids as $attachment_id ) {
-                $image_link = wp_get_attachment_url( $attachment_id );
-                if (!$image_link) continue;
-                $loop++;
-                $product_thumbnail_second = wp_get_attachment_image_src($attachment_id, 'shop_catalog');
-                if ($loop == 1) break;
-            }
-        }
-    ?>
-
-    <?php
-        $style = '';
-        $class = '';        
-        if (isset($product_thumbnail_second[0])) {            
-            $style = 'background-image:url(' . $product_thumbnail_second[0] . ')';
-            $class = 'with_second_image';     
-        }
-
-        if ( $custom_shop_second_image == "0" ) {
-            $style = '';
-            $class = '';
-        }
-    ?>
-
-    <?php
-    $style = '';
-    $class = '';        
-    if (isset($product_thumbnail_second[0])) {            
-        $style = 'background-image:url(' . $product_thumbnail_second[0] . ')';
-        $class = 'with_second_image';     
-    }
-
-    if ( $custom_shop_second_image == "0" ) {
-        $style = '';
-        $class = '';
-    }
-    ?>
-
-    <div class="product_thumbnail <?php echo ent2ncr($class); ?>">
-        <span class="button-loader"></span>
-
-        <a href="<?php the_permalink(); ?>">
-
-        <?php if ( has_post_thumbnail( $post->ID ) ) : ?>
-
-                <?php if ( $custom_shop_second_image == "1" ) : ?>
-                    <span class="product_thumbnail_secondary" style="<?php echo ent2ncr($style); ?>"></span>            
-                <?php endif; ?>
-
-        <?php endif; ?>
-
-            <?php
-                if ( has_post_thumbnail( $post->ID ) ) { 	
-                    echo  get_the_post_thumbnail( $post->ID, 'post-thumbnail');
-                } else {
-                    echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="Placeholder" />', wc_placeholder_img_src() ), $post->ID );
-                }
-            ?>
-        </a>
-
-    <?php if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 0) ) : ?>
-        <?php if ( !$product->is_in_stock() ) : ?>            
-            <span class="out_of_stock_title">
-                <?php 
-                    if (isset($tdl_options['tdl_out_of_stock_text'])) {
-                        esc_html_e($tdl_options['tdl_out_of_stock_text'], 'eva');
-                    } else {
-                        esc_html_e('Out of stock', 'woocommerce');
-                    }
-                ?>
-            </span> 
-        <?php endif; ?>           
-    <?php endif; ?>
-
-    <?php  if ( (isset($tdl_options['tdl_review_off'])) && ($tdl_options['tdl_review_off'] == 1) ) : ?>
-        <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_rating' ); ?>
-    <?php endif; ?>
-
-    </div><!--.product_thumbnail-->
-
-    <div class="product_after_shop_loop">
-                
-                    
-
-                <div class="product_after_shop_loop_switcher__nytowl">
-                    
-                    
-
-                    <?php if ( $catalog_mode == 0 ) : ?>
-                    
-                    <div class="product_after_shop_loop_buttons">
-                        <div class="custom-pill mb-2 mb-md-3">
-                            <div class="button-wrapper d-flex vertical-align-top">
-                                <div class="price pill">
-                                    <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_price' ); ?>
-                                </div><div class="add-cart pill">
-                                    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
-                                </div><div class="add-wish pill">
-                                    <?php if (class_exists('YITH_WCWL')) : ?><?php echo trim(do_shortcode('[yith_wcwl_add_to_wishlist]')); ?><?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <?php endif; ?>
-                    
-                </div>
-                
-            </div>
-
-
-    <?php if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 0) ) : ?>
-        <?php wc_get_template( 'loop/sale-flash.php' ); ?>
-    <?php endif; ?>
-    
-    <?php /* if ( (isset($tdl_options['tdl_review_off'])) && ($tdl_options['tdl_review_off'] == 1) ) : ?>
-        <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_rating' ); ?>
-    <?php endif; */ ?>
-
-    <?php 
-    $catalog_mode  = (!empty($tdl_options['tdl_catalog_mode'])) ? $tdl_options['tdl_catalog_mode'] : 0;
-
-    $category_listing  = (!empty($tdl_options['tdl_category_listing'])) ? $tdl_options['tdl_category_listing'] : 'first_category'; ?>
-
-       <?php if ( $category_listing !== 'none') { ?>
-             
-            <?php if ( $category_listing == 'brand') { ?>
-             
-                <?php if(($term_id = get_brands_term_by_product_id($product->get_id())) > 0): $term = get_term($term_id,'brands');?>
-                    <p class="product-category-listing w-75 mx-auto text-center"><a href="<?php echo get_term_link($term_id,'brands');?>" class="product-category-link"><?php echo esc_attr($term->name) ?></a></p>
-                <?php endif; ?>            
-             
-             <?php } else if ( $category_listing == 'first_category') { ?>
-
-                    <?php 
-
-                    $product_cats = strip_tags(wc_get_product_category_list ($product->get_id(), '|||', '', '')); 
-                    list($firstpart) = explode('|||', $product_cats);
-                    $category_object = get_term_by('name', $firstpart, 'product_cat');
-                    $category_id = $category_object->term_id;
-                    if(empty($category_id)){
-                        $category_url = $firstpart;
-                    } else {
-                        $category_url = get_term_link( (int)$category_id, 'product_cat' );
-                    }
-                    ?>
-                    <p class="product-category-listing  w-75 mx-auto text-center"><a href="<?php echo esc_url($category_url); ?>" class="product-category-link"><?php echo esc_attr($firstpart); ?></a></p>
-
-            <?php } else { ?>
-                    <?php
-                        echo wc_get_product_category_list($product->get_id(), ', ', '<p class="product-category-listing  w-75 mx-auto text-center">', '</p>');
-                    ?>
-            <?php } ?>
-
-        <?php } ?>      
-
-	<div class="shop_product_metas w-75 mx-auto text-center">
-        <?php do_action( 'add_swatches_to_loop' ); ?> 
-
-        <?php /* if (class_exists('YITH_WCWL')) : ?>
-        <?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?>
-    <?php endif; */ ?>      
-
-		<h1><a class="shop_product_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-
-        <?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>      
-
-       <?php /* <div class="product_after_shop_loop_price custom__nytowl">
-                        <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_price' ); ?>
-                    </div>
-
-             div class="product_after_shop_loop">
-                
-                    
-
-                <div class="product_after_shop_loop_switcher__nytowl">
-                    
-                    
-
-                    <?php if ( $catalog_mode == 0 ) : ?>
-                    
-                    <div class="product_after_shop_loop_buttons">
-                        <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
-                    </div>
-
-                    <?php endif; ?>
-                    
-                </div>
-                
-            </div */ ?>
-
-    </div>
-
-
-</li>

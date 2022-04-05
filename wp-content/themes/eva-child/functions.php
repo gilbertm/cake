@@ -31,10 +31,6 @@ function eva_child_enqueue_styles() {
 
     wp_enqueue_style( 'eva-style' , get_template_directory_uri() . '/style.css' );
 
-    wp_enqueue_style( 'eva-child-materialize' , get_stylesheet_directory_uri() . '/css/bootstrap.min.css' );
-
-    wp_enqueue_style( 'eva-child-materialize' , get_stylesheet_directory_uri() . '/css/materialize.min.css' );
-
     wp_enqueue_style( 'eva-child-style', get_stylesheet_directory_uri() . '/css/style.css' );
 
     wp_enqueue_style( 'eva-child-main-style', get_stylesheet_directory_uri() . '/css/main.min.css', array( 'eva-style' ),    wp_get_theme()->get('Version') );
@@ -67,7 +63,7 @@ function eva_child_icomoon_enqueue_styles() {
   // wp_enqueue_script( 'icomoon-free-liga',  get_stylesheet_directory_uri() . '/fonts/icomoon-free-liga.js' );
  }
  
- add_action(  'wp_enqueue_scripts', 'eva_child_icomoon_enqueue_styles',100 );
+ add_action(  'wp_enqueue_scripts', 'eva_child_icomoon_enqueue_styles', 100 );
 
  
 /**
@@ -92,32 +88,30 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 
 /* --------------------------------------------------------------------------------- */
 class MyTracker {
-
-     static $hooks;
-   
-     static function track_hooks( ) { 
-       $filter = current_filter();
-       if ( ! empty($GLOBALS['wp_filter'][$filter]) ) {
+    static $hooks;
+        static function track_hooks( ) { 
+            $filter = current_filter();
+            
+              if (! empty($GLOBALS['wp_filter'][$filter]) ) {
          foreach ( $GLOBALS['wp_filter'][$filter] as $priority => $tag_hooks ) {
            foreach ( $tag_hooks as $hook ) {
              if ( is_array($hook['function']) )  {
                if ( is_object($hook['function'][0]) ) {
-                 $func = get_class($hook['function'][0]) . '->' . $hook['function'][1];
-               } elseif ( is_string($hook['function'][0]) ) {
-                 $func = $hook['function'][0] . '::' . $hook['function'][1];
-               }
-             } elseif( $hook['function'] instanceof Closure ) {
-               $func = 'a closure';
-             } elseif( is_string($hook['function']) ) {
-               $func = $hook['function'];
+                  $func = get_class($hook['function'][0]) . '->' . $hook['function'][1];
+                  } elseif ( is_string($hook['function'][0]) ) {
+                    $func = $hook['function'][0] . '::' . $hook['function'][1];
+                  }
+              } elseif( $hook['function'] instanceof Closure ) {
+                 $func = 'a closure';
+              } elseif( is_string($hook['function']) ) {
+                 $func = $hook['function'];
+              }
+               self::$hooks[] = 'On hook <b>"' . $filter . '"</b> run <b>'. $func . '</b> at priority ' . $priority;
              }
-             self::$hooks[] = 'On hook <b>"' . $filter . '"</b> run <b>'. $func . '</b> at priority ' . $priority;
-           }
-         }
+          }
        }
-     }
-   
-   }
+    } 
+}
    
    // add_action( 'all', array('MyTracker', 'track_hooks') );
    
