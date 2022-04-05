@@ -1,12 +1,11 @@
 /* widgets */
-
-footer .widget-area .widget h3.widget-title {
-    font-family: 'Yellowtail', sans-serif;
-    text-transform:capitalize;
-    font-size:1.25rem;
-    margin-bottom:10px;
-  }
-
+footer .column-widget,
+.site-content .widget-area .widget {
+     .widget-title {
+        font-family: 'Rubik', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+}
 
 #mc_embed_signup {
     .optionalParent {

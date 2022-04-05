@@ -80,7 +80,7 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
     ?>
 
     <div class="product-card">
-        <div class="card pb-3">
+        <div class="m-0 card pb-3">
             <div class="card-image <?php echo ent2ncr($class); ?>">
                 <div class="m-2 p-1 text-primary position-absolute rounded-pill price-wrapper">
                     <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_price' ); ?>

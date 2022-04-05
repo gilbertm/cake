@@ -54,3 +54,22 @@
         }
     }
 }
+
+
+/* product specific pages */
+.archive  {
+    .products-grid {
+        .product-card {
+            .price .woocommerce-Price-amount {
+                font-size: 1rem;
+                margin: 2px;
+            }
+
+            .btn-circle {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}
