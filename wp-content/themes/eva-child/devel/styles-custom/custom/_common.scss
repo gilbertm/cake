@@ -2,10 +2,12 @@
     margin-top:50px;
 }
 
-/* widgets */
+/*** widgets ***/
 .vc_sep_holder.vc_sep_holder_r {
     display:none;
 }
+
+/*** contents ***/
 
 .woocommerce-cart .woocommerce .cart-empty .cart-empty-text,
 .widget-area .widget.widget_price_filter .price_slider_amount .button,
@@ -25,30 +27,63 @@
     font-family: 'Rubik', Arial, Helvetica, sans-serif !important;
 }
 
+/*** my wishlist ***/
+.yith-wcwl-share {
+    display:none;
+}
+
+/*** social media popup ***/
+.arthref .icon-container .share-title h1,
+.arthref .icon-container .share-title h2,
+.arthref .icon-container .share-title h3,
+.arthref .icon-container .share-title h4 {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif !important;
+}
+
+/*** my account ***/
+.my_account_container {
+
+    label {
+        text-transform:none;
+    }
+
+    em {
+        font-size: 12px;
+        font-weight: 100;
+        margin-top: 0.25rem;
+    }
+
+    h1,h2,h3 {
+        font-family: 'Rubik', Arial, Helvetica, sans-serif !important;
+    }
+
+    fieldset {
+        margin-top:2rem;
+    }
+
+    .edit-link a {
+        color:#fff !important;
+        text-transform:none !important;
+    }
+}
+
+
+/*** checkout ***/
+.showcoupon {
+    color: rgb(13, 110, 253);
+}
+.woocommerce-checkout:not(.woocommerce-order-received) .checkout_coupon_box .checkout_coupon .button {
+    color:#fff;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+}
+
+
+/*** footer ***/
 footer .column-widget,
 .site-content .widget-area .widget {
      .widget-title {
         font-family: 'Rubik', Arial, Helvetica, sans-serif;
         font-weight: 600;
-    }
-}
-
-#mc_embed_signup {
-    .optionalParent {
-        text-align:left;
-        margin-top:1rem;
-    }
-
-    #mc-embedded-subscribe {
-        width: auto !important;
-    }
-
-    .minimal-form-input input[type="email"] {
-        padding:5px;
-    }
-
-    p {
-        margin:0;
     }
 }
 
