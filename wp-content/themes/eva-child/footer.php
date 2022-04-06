@@ -42,160 +42,87 @@ $footer_text = (!empty($tdl_options['tdl_footer_text'])) ? $tdl_options['tdl_foo
 
       <footer id="site-footer">
 
-        <?php if (!empty($tdl_options['tdl_instagram_feed']) == 1) { ?>
-          <?php if (! $hide_instagram) { ?>
-            <?php eva_footer_instagram();?>
-          <?php } ?>
-        <?php } ?>
-
-        <?php if( $number_of_widgets !== '0' ) { ?>
-        <div class="f-columns widget-area">
-
-        <?php if ( $number_of_widgets == 1 ): ?>
-          <div class="row <?php echo esc_attr($grid_class);?>">
-            <section class="column column-widget <?php echo esc_attr($footer_align_1);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-            </section>                                        
-          </div><!-- .row -->
-        <?php endif; ?>         
-
-        <?php if ( $number_of_widgets == 2 ): ?>
-          <div class="row <?php echo esc_attr($grid_class);?>">
-            <section class="column column-widget <?php echo esc_attr($footer_align_1);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_2);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-2' ); ?><?php } ?>
-            </section>                                           
-          </div><!-- .row -->
-        <?php endif; ?>         
-
-        <?php if ( $number_of_widgets == 3 ): ?>
-          <div class="row <?php echo esc_attr($grid_class);?>">
-            <section class="column column-widget <?php echo esc_attr($footer_align_1);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_2);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-2' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_3);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-3' ); ?><?php } ?>
-            </section>                                            
-          </div><!-- .row -->
-        <?php endif; ?>        
-
-        <?php if ( $number_of_widgets == 4 ): ?>
-          <div class="row <?php echo esc_attr($grid_class);?>">
-            <section class="column column-widget <?php echo esc_attr($footer_align_1);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_2);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-2' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_3);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-3' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_4);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-4' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-4' ); ?><?php } ?>
-            </section>                                               
-          </div><!-- .row -->
-        <?php endif; ?>
-
-        <?php if ( $number_of_widgets == 5 ): ?>
-          <div class="row <?php echo esc_attr($grid_class);?>">
-            <section class="column column-widget <?php echo esc_attr($footer_align_1);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_2);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-2' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_3);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-3' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_4);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-4' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-4' ); ?><?php } ?>
-            </section>
-            <section class="column column-widget <?php echo esc_attr($footer_align_5);?>">
-              <?php if ( is_active_sidebar( 'footer-sidebar-5' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-5' ); ?><?php } ?>
-            </section>                                                
-          </div><!-- .row -->
-        <?php endif; ?>
-
-        <?php if ( $number_of_widgets == 6 ) : ?>
         <div class="row">
-          <section class="large-2 medium-3 columns column-widget <?php echo esc_attr($footer_align_1);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-          </section>
-          <section class="large-2 medium-3 columns column-widget <?php echo esc_attr($footer_align_2);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-2' ); ?><?php } ?>
-          </section>
-          <section class="large-2 medium-3 columns column-widget <?php echo esc_attr($footer_align_3);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-3' ); ?><?php } ?>
-          </section> 
-           <section class="large-4 medium-3 columns column-widget <?php echo esc_attr($footer_align_4);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-4' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-4' ); ?><?php } ?>
-          </section>             
-        </div><!-- .row -->    
-        <?php endif; ?> 
+          <div class="col col-12 col-md-4 mb-3">
+            <div class="row">
+              <div class="col col-3">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 
+                <?php if ( ! empty( $tdl_options['tdl_main_logo_noretina']['url'] ) ) : ?>
 
-        <?php if ( $number_of_widgets == 7 ) : ?>
-        <div class="row">
-          <section class="large-3 medium-4 columns column-widget <?php echo esc_attr($footer_align_1);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-          </section>
-          <section class="large-3 medium-4 columns column-widget <?php echo esc_attr($footer_align_2);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-2' ); ?><?php } ?>
-          </section>
-          <section class="large-6 medium-4 columns column-widget <?php echo esc_attr($footer_align_3);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-3' ); ?><?php } ?>
-          </section>    
-        </div><!-- .row -->    
-        <?php endif; ?>
+                  <?php 
+                  if (is_ssl()) {
+                    $site_logo = str_replace("http://", "https://", $tdl_options['tdl_main_logo_noretina']['url']);
+                    $site_logo_retina = str_replace("http://", "https://", $tdl_options['tdl_main_logo_retina']['url']);
+                  } else {
+                    $site_logo = $tdl_options['tdl_main_logo_noretina']['url'];
+                    $site_logo_retina = $tdl_options['tdl_main_logo_retina']['url'];
+                  }
+                  ?>
 
-      
+                  <!-- Main Logo -->
 
-        <?php if ( $number_of_widgets == 8 ) : ?>
-        <div class="row">
-          <section class="large-3 medium-4 columns column-widget <?php echo esc_attr($footer_align_1);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-          </section>
-          <section class="large-6 medium-4 columns column-widget <?php echo esc_attr($footer_align_2);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-2' ); ?><?php } ?>
-          </section>
-          <section class="large-3 medium-4 columns column-widget <?php echo esc_attr($footer_align_3);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-3' ); ?><?php } ?>
-          </section>
-        </div><!-- .row -->
-        <?php endif; ?> 
+                  <?php if ( ! empty( $tdl_options['tdl_main_logo_retina']['url'] ) ) : ?>
+                    <img class="main-logo dark animated fadeIn w-100" src="<?php echo esc_url($site_logo); ?>" srcset="<?php echo esc_url($site_logo_retina); ?> 2x" >
+                  <?php else : ?>
+                    <img class="main-logo dark animated fadeIn w-100" src="<?php echo esc_url($site_logo); ?>" >
+                  <?php endif; ?>
 
-        <?php if ( $number_of_widgets == 9 ) : ?>
-        <div class="row">
-          <section class="large-6 medium-4 columns column-widget <?php echo esc_attr($footer_align_1);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-1' ); ?><?php } ?>
-          </section>
-          <section class="large-3 medium-4 columns column-widget <?php echo esc_attr($footer_align_2);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-2' ); ?><?php } ?>
-          </section>
-          <section class="large-3 medium-4 columns column-widget <?php echo esc_attr($footer_align_3);?>">
-          <?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) { ?><?php dynamic_sidebar( 'footer-sidebar-3' ); ?><?php } ?>
-          </section>
+                <?php endif; ?>
+
+                </a>
+              </div>
+              <div class="col col-9">
+                <h3 class="mb-0 pt-1" style="line-height:1rem">Sunshine's Sweettooth</h3>
+                <p class="mt-0 mb-2">Cake shop</p>
+								<p class="small">Shop No. 2, Amir Building, Al Qusais<br>
+											Dubai, United Arab Emirates<br>
+									<a href="tel:+971505063624" class="text-primary"><i class="fa fa-phone small" aria-hidden="true"><!-- empty --></i> (050) 506 3624</a></p>
+              </div>
+            </div>
+            <div class="row m-0 mb-3">
+              <div class="col col-12 border-top mt-3 pt-3 mx-auto text-center">
+              <?php if ( (isset($tdl_options['tdl_footer_social'])) && ($tdl_options['tdl_footer_social'] == "1") ) : ?>
+                    <?php eva_socials(); ?>  
+                  <?php endif; ?> 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-12">
+                <div style="width: 100%"><iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/place/Sunshine's+Sweettooth/@25.2840373,55.4060467,16z/data=!4m5!3m4!1s0x3e5f5fda299bce2b:0x944635ec973d1b58!8m2!3d25.2846164!4d55.4083836"></iframe></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-4 mb-3">
+            <div class="row">
+              <div class="col widget widget_meta">
+                <h5 style="font-family:Rubik">About</h5>
+                <ul class="list">
+                  <li><a class="text-primary" href="/contact-us/">Contact us</a></li>
+                  <li><a class="text-primary" target="_blank" href="https://www.facebook.com/sweettoothbysunshine">Facebook</a></li>
+                </ul>
+              </div>
+              <div class="col widget widget_meta">
+              <h5 style="font-family:Rubik">Shop</h5>
+                  <ul class="list">
+                    <li><a class="text-primary" href="/shop">Categories</a></li>
+                    <li><a class="text-primary" href="/cart/">Cart</a></li>
+                    <li><a class="text-primary" href="/checkout/">Checkout</a></li>
+                    <li><a class="text-primary" href="/wishlist/">Wishlist</a></li>
+                  </ul>
+              </div>
+            </div>
+            
+          </div>
+          <div class="ccol col-12 col-md-4 mb-3">
+          <h5 style="font-family:Rubik">Subscribe</h5>           	
+            <?php echo apply_shortcodes('[contact-form-7 id="1657" title="Contact form 1"]'); ?>            
+          </div>
         </div>
-        <?php endif; ?>               
-
-
-        </div>
-        <?php } ?>      
 
         <div class="f-copyright">
           <div class="row">
-            <div class="medium-12 columns socials">
-              <div class="footer-divider"></div>
-                  <?php if ( (isset($tdl_options['tdl_footer_social'])) && ($tdl_options['tdl_footer_social'] == "1") ) : ?>
-                    <?php eva_socials(); ?>  
-                  <?php endif; ?>              
-            </div>
-            <div class="medium-12 columns copytxt"><p><?php echo wp_kses( $footer_text, array(
+            <div class="col-12 columns copytxt"><p style="font-size:12px;color:#777;font-family:Arial,Helvetica,serif"><?php echo wp_kses( $footer_text, array(
                             'ul' => array('class' => array(),),
                             'li' => array('class' => array(),),
                             'br' => array(),

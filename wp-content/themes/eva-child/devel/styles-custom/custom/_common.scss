@@ -3,10 +3,26 @@
 }
 
 /* widgets */
+.vc_sep_holder.vc_sep_holder_r {
+    display:none;
+}
 
+.woocommerce-cart .woocommerce .cart-empty .cart-empty-text,
+.widget-area .widget.widget_price_filter .price_slider_amount .button,
+.vc_custom_1456090660314 .wpb_wrapper h1,
+.vc_custom_1456090660314 .wpb_wrapper h2,
+.vc_custom_1456090660314 .wpb_wrapper h3,
+.vc_custom_1456090660314 .wpb_wrapper h4,
+.vc_custom_1456090660314 .wpb_wrapper h5,
+.vc_separator.vc_separator_align_left h1,
+.vc_separator.vc_separator_align_left h2,
+.vc_separator.vc_separator_align_left h3,
+.vc_separator.vc_separator_align_left h4,
+.vc_separator.vc_separator_align_left h5,
+.vc_custom_heading,
 .shortcode_title,
 #tags {
-    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif !important;
 }
 
 footer .column-widget,
