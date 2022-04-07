@@ -67,7 +67,7 @@ add_action(  'wp_enqueue_scripts', 'eva_child_enqueue_styles',100 );
 
 
 function bootstraps(){
-
+  
   wp_enqueue_script( 'eva-child-bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' );
 
   // wp_enqueue_script( 'eva-child-jquery-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js' );

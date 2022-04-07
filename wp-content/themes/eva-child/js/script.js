@@ -1,7 +1,5 @@
 jQuery(document).ready(function () {
-      
-
-      setTimeout(function() {
+        setTimeout(function() {
         jQuery('#mce-EMAIL').attr('placeholder','format: email@domain.com');
         console.log("here");
       }, 1000)

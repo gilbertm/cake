@@ -58,7 +58,19 @@
     .pi_delivery_time {
         .text {
             transform: none !important;
-            top:30% !important;
+            top:20% !important;
+            margin-top:0 !important;
+            
+            .text-inner {
+                animation:none !important;
+                transition:none !important;
+                transform:none !important;
+            }
+        }
+
+        .select2-container .select2-selection .select2-selection__arrow, .select2-container .select2-selection .select2-arrow, .select2-container .select2-choice .select2-selection__arrow, .select2-container .select2-choice .select2-arrow
+        {
+            top:20px !important;
         }
     }
 
@@ -110,6 +122,33 @@
     .select2-results .select2-highlighted {
         color:#fff !important;
     }
+
+    .showcoupon {
+        color: rgb(13, 110, 253);
+    }
+    .woocommerce-checkout:not(.woocommerce-order-received) .checkout_coupon_box .checkout_coupon .button {
+        color:#fff;
+        font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    }
+
+
+    .woocommerce-shipping-totals {
+        .woocommerce-shipping-methods {
+            li {
+                text-indent: -22px;
+                padding-left: 20px;
+            }
+            label {
+                font-weight:300;
+
+                .woocommerce-Price-currencySymbol,
+                .woocommerce-Price-amount.amount {
+                    font-weight:600 !important;
+                }
+               
+            }
+        }
+    }
 }
 
 
@@ -154,15 +193,6 @@
 }
 
 
-/*** checkout ***/
-.showcoupon {
-    color: rgb(13, 110, 253);
-}
-.woocommerce-checkout:not(.woocommerce-order-received) .checkout_coupon_box .checkout_coupon .button {
-    color:#fff;
-    font-family: 'Rubik', Arial, Helvetica, sans-serif;
-}
-
 /*** thank-you ***/
 .woocommerce {
     ul.order_details {
@@ -173,6 +203,7 @@
         font-size:3.5rem !important;
     }
 
+    .wc-bacs-bank-details,
     .woocommerce-order-overview {
         li {
             font-size:14px;
@@ -186,12 +217,42 @@
         }
     }
 
+    .thank_you_bank_details,
     .woocommerce-order-details,
     .woocommerce-customer-details {
         h1,h2,h3, h4 {
             font-family:'Rubik',Arial, Helvetica, sans-serif !important;
         }
 
+    }
+
+    .woocommerce-order-overview.woocommerce-thankyou-order-details {
+        margin-bottom: 0 !important;
+        padding-top: 1rem !important;
+    }
+
+    .woocommerce-bacs-bank-details {
+
+        padding: 1rem;
+        margin-top:2rem;
+        background: #efefef;
+        border: 1px solid #dedede;
+        font-size: 14px;
+        .wc-bacs-bank-details-heading {
+            font-size:1.5rem;
+        }
+        .wc-bacs-bank-details-account-name {
+            font-size: 1rem;
+            color: rgb(255, 20, 154);
+            text-transform: initial;
+        }
+
+        .wc-bacs-bank-details {
+            border: 0!important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
     }
 }
 

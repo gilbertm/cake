@@ -89,7 +89,30 @@ $footer_text = (!empty($tdl_options['tdl_footer_text'])) ? $tdl_options['tdl_foo
             </div>
             <div class="row">
               <div class="col col-12">
-                <div style="width: 100%"><iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/place/Sunshine's+Sweettooth/@25.2840373,55.4060467,16z/data=!4m5!3m4!1s0x3e5f5fda299bce2b:0x944635ec973d1b58!8m2!3d25.2846164!4d55.4083836"></iframe></div>
+                 <?php /* <div style="width: 100%"><iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=250&amp;hl=en&amp;q=Shop%20No.%202,%20Amir%20Building%20-%20Al%20Qusais%20-%20Dubai+(Sunshine's%20Sweettooth%20Cake%20shop)&amp;data=!3m1!4b1!4m5!3m4!1s0x3e5f5fda299bce2b:0x944635ec973d1b58!8m2!3d25.2846164!4d55.4083836&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed&amp;key=AIzaSyAo2dd5EqI3m_p14rFLRtySDwlIObD6ftY"></iframe></div> */ ?>
+
+                  <div id="footer_map" style="width:100%;height:250px"></div>
+
+                  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                  <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo2dd5EqI3m_p14rFLRtySDwlIObD6ftY&callback=initFooterMap&v=weekly"
+                    async
+                  ></script>
+                  <script type="text/javascript">
+                    function initFooterMap() {
+                        const myLatLng = { lat: 25.2846164, lng: 55.4061949 };
+                        const footer_map = new google.maps.Map(document.getElementById("footer_map"), {
+                          zoom: 14,
+                          center: myLatLng,
+                        });
+
+                        new google.maps.Marker({
+                          position: myLatLng,
+                          footer_map,
+                          title: "Sunshine Sweettooth Cake Shop",
+                        });
+                      }
+                  </script>
               </div>
             </div>
           </div>

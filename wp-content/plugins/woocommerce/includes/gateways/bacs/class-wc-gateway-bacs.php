@@ -299,7 +299,7 @@ class WC_Gateway_BACS extends WC_Payment_Gateway {
 				$bacs_account = (object) $bacs_account;
 
 				if ( $bacs_account->account_name ) {
-					$account_html .= '<h3 class="wc-bacs-bank-details-account-name">' . wp_kses_post( wp_unslash( $bacs_account->account_name ) ) . ':</h3>' . PHP_EOL;
+					$account_html .= '<h3 class="wc-bacs-bank-details-account-name">' . wp_kses_post( wp_unslash( $bacs_account->account_name ) ) . '</h3>' . PHP_EOL;
 				}
 
 				$account_html .= '<ul class="wc-bacs-bank-details order_details bacs_details">' . PHP_EOL;
@@ -325,7 +325,7 @@ class WC_Gateway_BACS extends WC_Payment_Gateway {
 							'value' => $bacs_account->iban,
 						),
 						'bic'            => array(
-							'label' => __( 'BIC', 'woocommerce' ),
+							'label' => __( 'SWIFT', 'woocommerce' ),
 							'value' => $bacs_account->bic,
 						),
 					),
