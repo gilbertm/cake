@@ -23,9 +23,30 @@ $meta_value = '0';
 
 update_post_meta( $post_id, $meta_key, $meta_value ); */
 
-add_filter( 'auto_update_plugin', '__return_false' );
+/**
+ * Prevent update notification for plugin
+ * http://www.thecreativedev.com/disable-updates-for-specific-plugin-in-wordpress/
+ * Place in theme functions.php or at bottom of wp-config.php
+ */
+function disable_plugin_updates( $value ) {
+  $plugins_to_disable = [
+      'pi-woocommerce-order-date-time-and-type/pi-woocommerce-order-date-time-and-type.php'
+  ];
+  if ( isset($value) && is_object($value) ) {
+      foreach ($plugins_to_disable as $plugin) {
+          if ( isset( $value->response[$plugin] ) ) {
+              unset( $value->response[$plugin] );
+          }
+      }
+  }
+  return $value;
+}
+add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
 
-add_filter( 'auto_update_theme', '__return_false' );
+
+//add_filter( 'auto_update_plugin', '__return_false' );
+
+//add_filter( 'auto_update_theme', '__return_false' );
 
 function eva_child_enqueue_styles() {
 

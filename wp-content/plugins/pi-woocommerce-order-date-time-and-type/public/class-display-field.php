@@ -55,19 +55,21 @@ class pi_dtt_display_fields{
         $single_type_class = count($show_types) < 2 ? "pi-single-type" : '';
         $show_delivery_type_label = pisol_dtt_get_setting('pi_show_delivery_type_label', 1);
         ?>
+
+        <h4 style="font-family:Rubik,Arial,Helvetica,serif" class="text-uppercase">Delivery <abbr style="color:#ff149a" class="required" title="<?php  echo esc_attr__( 'required', 'woocommerce' ); ?>">*</abbr></h4>
+          
         <p class="form-row pi_delivery_type validate-required" id="pi_delivery_type_field" data-priority="">
         <?php if(!empty($show_delivery_type_label)): ?>
-        <label for="pi_delivery_type_delivery" class=""><?php echo __('Delivery Type','pisol-dtt'); ?>&nbsp;<abbr class="required" title="<?php  echo esc_attr__( 'required', 'woocommerce' ); ?>">*</abbr>
-        </label>
+             <label for="pi_delivery_type_delivery" class="d-none"><?php echo __('Delivery Type','pisol-dtt'); ?>&nbsp;<abbr class="required" title="<?php  echo esc_attr__( 'required', 'woocommerce' ); ?>">*</abbr></label>
         <?php endif; ?>
         <span class="woocommerce-input-wrapper">
 
         <?php if(isset($show_types['delivery'])): ?>
-        <input type="radio" class="input-radio " value="delivery" name="pi_delivery_type" id="pi_delivery_type_delivery" <?php  checked($selected_delivery_type, 'delivery' ); ?>><label for="pi_delivery_type_delivery" class="radio <?php echo $single_type_class; ?>"><?php echo pisol_dtt_get_setting('pi_delivery_label','Delivery'); ?></label>
+            <input type="radio" class="input-radio " value="delivery" name="pi_delivery_type" id="pi_delivery_type_delivery" <?php  checked($selected_delivery_type, 'delivery' ); ?>><label for="pi_delivery_type_delivery" class="radio <?php echo $single_type_class; ?>"><img src="<?php echo plugin_dir_url(__FILE__); ?>/delivery.png" width="175" /><br /><?php echo pisol_dtt_get_setting('pi_delivery_label','Delivery'); ?></label>
         <?php endif; ?>
 
         <?php if(isset($show_types['pickup'])): ?>
-        <input type="radio" class="input-radio " value="pickup" name="pi_delivery_type" id="pi_delivery_type_pickup" <?php  checked($selected_delivery_type, 'pickup' ); ?>><label for="pi_delivery_type_pickup" class="radio <?php echo $single_type_class; ?>"><?php echo pisol_dtt_get_setting('pi_pickup_label','Pickup'); ?></label>
+        <input type="radio" class="input-radio " value="pickup" name="pi_delivery_type" id="pi_delivery_type_pickup" <?php  checked($selected_delivery_type, 'pickup' ); ?>><label for="pi_delivery_type_pickup" class="radio <?php echo $single_type_class; ?>"><img src="<?php echo plugin_dir_url(__FILE__); ?>/pickup.png" width="175" /><br /><?php echo pisol_dtt_get_setting('pi_pickup_label','Pickup'); ?></label>
         <?php endif; ?>
 
         <?php do_action('pisol_extra_delivery_type_checkout', $selected_delivery_type); ?>

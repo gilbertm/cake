@@ -9,6 +9,9 @@
 
 /*** contents ***/
 
+.checkout submit,
+.checkout h3,
+.checkout h2,
 .woocommerce-cart .woocommerce .cart-empty .cart-empty-text,
 .widget-area .widget.widget_price_filter .price_slider_amount .button,
 .vc_custom_1456090660314 .wpb_wrapper h1,
@@ -26,6 +29,89 @@
 #tags {
     font-family: 'Rubik', Arial, Helvetica, sans-serif !important;
 }
+
+/*** checkout ***/
+.woocommerce-checkout {
+    .form-row.place-order {
+        button {
+            font-family: 'Rubik', Arial, Helvetica, sans-serif !important;
+            color:#fff;
+        }
+    }
+
+    #billing_country_field {
+        strong {
+            font-weight:400;
+        }
+    }
+
+    abbr {
+        text-decoration: none;
+        color:#ff149a;
+    }
+
+    #pi_delivery_date {
+        display:inline-block;
+    }
+
+    .pi_delivery_date,
+    .pi_delivery_time {
+        .text {
+            transform: none !important;
+            top:30% !important;
+        }
+    }
+
+    .select2-selection {
+        border-bottom: none !important;
+    }
+
+    .woocommerce-input-wrapper,
+    #select2-pi_delivery_time-container {
+        line-height:3rem;
+    }
+
+
+    .pi_delivery_type .woocommerce-input-wrapper label, 
+    .pi_delivery_type .woocommerce-input-wrapper .woocommerce-radio-wrapper label {
+        background:rgba(136, 136, 136, 0.1);
+        color:#555;
+
+        img {
+            filter: grayscale(100%);
+            opacity:0.5;
+          }
+
+          &:hover {
+            background:rgba(136, 136, 136, 0.5);
+            color:#000;
+
+            img {
+                filter: grayscale(50%);
+                opacity:0.75;
+              }
+          }
+    }
+
+    .pi_delivery_type .input-radio:checked + label, 
+    .pi_delivery_type .woocommerce-input-wrapper label.active_type, 
+    .pi_delivery_type .woocommerce-input-wrapper .woocommerce-radio-wrapper input:checked + label {
+        background:rgb(255, 20, 154,0.3);
+        color:#fff;
+
+        img {
+            filter: grayscale(0%);
+            opacity:1;
+          }
+    }
+
+    .select2-dropdown .select2-results__option[aria-selected="true"], 
+    .select2-dropdown .select2-results__option--highlighted[aria-selected], 
+    .select2-results .select2-highlighted {
+        color:#fff !important;
+    }
+}
+
 
 /*** my wishlist ***/
 .yith-wcwl-share {
@@ -77,6 +163,37 @@
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
 }
 
+/*** thank-you ***/
+.woocommerce {
+    ul.order_details {
+        border-top:3px solid #ff149a !important;
+    }
+
+    .thank_you_header_text .woocommerce-notice {
+        font-size:3.5rem !important;
+    }
+
+    .woocommerce-order-overview {
+        li {
+            font-size:14px;
+            padding:5px;
+
+            strong {
+                margin-top:0.5rem;
+                font-weight:400;
+                font-size:1rem;
+            }
+        }
+    }
+
+    .woocommerce-order-details,
+    .woocommerce-customer-details {
+        h1,h2,h3, h4 {
+            font-family:'Rubik',Arial, Helvetica, sans-serif !important;
+        }
+
+    }
+}
 
 /*** footer ***/
 footer .column-widget,
