@@ -188,7 +188,7 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
 
             <div class="card-content text-center">
                 
-                <div class="button2 b-pink rot-135 text-center">
+                <div class="button jelly text-center">
                     <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
                 </div>
             </div>

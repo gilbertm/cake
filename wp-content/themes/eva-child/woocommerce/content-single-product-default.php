@@ -168,7 +168,7 @@ add_action( 'woocommerce_product_summary_thumbnails', 'woocommerce_show_product_
 
 <div class="row">
 	<div class="large-12 large-centered columns description-section">
-		<?php do_action( 'woocommerce_single_product_summary_single_meta' ); ?>
+		<?php /* do_action( 'woocommerce_single_product_summary_single_meta' ); */ ?>
 		<?php do_action( 'woocommerce_after_single_product_summary_data_tabs' ); ?>
 	</div><!-- .columns -->
 </div><!-- .row -->

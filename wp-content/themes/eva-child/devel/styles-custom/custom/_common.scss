@@ -151,6 +151,26 @@
     }
 }
 
+.woocommerce {
+    .woocommerce-shipping-totals {
+        .woocommerce-shipping-methods {
+            li {
+                text-indent: -22px;
+                padding-left: 20px;
+            }
+            label {
+                font-weight:300;
+
+                .woocommerce-Price-currencySymbol,
+                .woocommerce-Price-amount.amount {
+                    font-weight:600 !important;
+                }
+               
+            }
+        }
+    }
+}
+
 
 /*** my wishlist ***/
 .yith-wcwl-share {
@@ -257,13 +277,23 @@
 }
 
 /*** footer ***/
-footer .column-widget,
-.site-content .widget-area .widget {
-     .widget-title {
-        font-family: 'Rubik', Arial, Helvetica, sans-serif;
-        font-weight: 600;
+footer {
+    .column-widget,
+    .site-content .widget-area .widget {
+         .widget-title {
+            font-family: 'Rubik', Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
     }
-}
+
+    .text-primary {
+        color: rgb(255, 20, 154) !important;
+        &:hover {
+            text-decoration:underline !important;
+        }
+    }
+
+} 
 
 @import
 "common_media";

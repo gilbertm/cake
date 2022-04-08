@@ -109,6 +109,13 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 }
 
 
+/** woocommerce ajax overrides */
+add_action('wp_enqueue_scripts', 'override_woo_frontend_scripts');
+function override_woo_frontend_scripts() {
+    wp_deregister_script('wc-add-to-cart');
+    wp_enqueue_script('wc-add-to-cart', get_stylesheet_directory_uri() . '/woocommerce/js/add-to-cart.js', array('jquery', 'woocommerce'), null, true);
+}
+
 /* --------------------------------------------------------------------------------- */
 /* class MyTracker {
 

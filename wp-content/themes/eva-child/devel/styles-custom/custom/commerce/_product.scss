@@ -55,6 +55,20 @@
     }
 }
 
+header.site-header .header-wrapper .tools ul li a .counter_number, 
+.offcanvas_aside_right .offcanvas_minicart .widget_shopping_cart_content .cart_list li a.remove i, 
+.woocommerce-cart .entry-content .woocommerce form table tbody td.product-remove .remove, 
+.woocommerce #content table.wishlist_table.cart a.remove, #yith-wcwl-form .shop_table.mobile li .item-wrapper .product-thumbnail .product-remove a
+{
+    box-shadow: 1px 1px 5px 0px rgb(217 17 131 / 40%);
+}
+
+.woocommerce-cart .entry-content .woocommerce form table tbody td.product-remove .remove {
+    font-size:14px;
+    line-height:18px;
+    
+}
+
 
 /* product specific pages */
 .woocommerce.shortcode_products_listing,
