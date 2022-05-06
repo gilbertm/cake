@@ -73,11 +73,11 @@ $footer_text = (!empty($tdl_options['tdl_footer_text'])) ? $tdl_options['tdl_foo
                 </a>
               </div>
               <div class="col col-9">
-                <h3 class="mb-0 pt-1" style="line-height:1rem">Sunshine's Sweettooth</h3>
+                <h3 class="mb-0 pt-1" style="font-size:1.25rem;line-height:1.5rem">Sunshine's Sweettooth</h3>
                 <p class="mt-0 mb-2">Cake shop</p>
 								<p class="small">Shop No. 2, Amir Building, Al Qusais<br>
 											Dubai, United Arab Emirates<br>
-									<a href="tel:+971505063624" class="text-primary"><i class="fa fa-phone small" aria-hidden="true"><!-- empty --></i> (050) 506 3624</a></p>
+									<a href="tel:+971505063624" class="text-primary mt-2 d-inline-block"><i class="fa fa-phone small" aria-hidden="true"><!-- empty --></i> (050) 506 3624</a></p>
               </div>
             </div>
             <div class="row m-0 mb-3">
