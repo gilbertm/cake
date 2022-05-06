@@ -35,44 +35,30 @@
     .card {
         margin: 20px;
         overflow: hidden;
-        border:1px solid rgba(255, 20, 154, 0.1);
-
+       
         .card-header {
             border-bottom: 1px solid rgba(255, 20, 154, 0.1);
-            min-height:120px;
-        } 
-
-        .price-wrapper {
-           background:rgba(255, 20, 154, 0.75);
-        }
-
-        .card-content {
-            padding: 5px;
-        }
-          
-
-        .price {
-            color:#fff !important;
-
-            .woocommerce-Price-amount {
-                font-weight: 600;
-                font-size: 1.25rem;
-                color:#fff !important;
-                margin: 10px;
-            }
-
-            .woocommerce-Price-currencySymbol {
-              font-size:0.75rem;
-              font-weight:100;
-            }
         } 
 
         .card-header {
-          .shop_product_title {
-              font-size: 1.25rem;
-              font-weight: 100;
-              line-height:1.5rem;
-          }
+            padding: 5px;
+
+            .price {
+                color:#333 !important;
+    
+                .woocommerce-Price-amount {
+                    font-family: sans-serif;
+                    font-weight: 300;
+                    font-size: 1.25rem;
+                    color: #333!important;
+                }
+    
+                .woocommerce-Price-currencySymbol {
+                  font-size:0.75rem;
+                  font-weight:100;
+                }
+            } 
+    
         }
     }
 

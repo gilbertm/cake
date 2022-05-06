@@ -113,26 +113,27 @@
       transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-.button {
-    &.jelly {
+.product-card {
+    .button.jelly {
         background: transparent !important;
 
-        a, a:active {
-            background: rgb(255, 20, 154) !important;
-            border-radius: 20px;
-            padding: 20px 30px;
-            color: #fff;
+        a, 
+        a:active {
+            color: #777;
             text-decoration: none;
-            font-size: 1.45em;
-            margin: 0 15px;
-            animation: still 0ms linear 2 alternate !important;
-            font-family: Rubik, Arial, Helvetica, sans-serif;
-            font-size:12px;
+            animation: still 0s linear 2 alternate!important;
+            font-family: Rubik,Arial,Helvetica,sans-serif;
+            font-size: 0.75rem;
+            background: none !important;
+            font-family: 'Varela Round';
+            white-space: nowrap;
+            text-transform: capitalize !important;
 
             i {
+                color:#ff149a;
                 display: block;
                 font-size: 2rem;
-                margin-bottom: 0.5rem;
+                line-height: 2.5rem;
             }
 
             &.added {
@@ -162,22 +163,33 @@
                 padding:1rem 2rem;
                 display:inline-block;
             }
+        }
+    }
 
-            &:hover { 
-              -webkit-animation: hover 1200ms linear 2 alternate !important;
-              animation: hover 1200ms linear 2 alternate !important;
+    &:hover, &:active {
+        img {
+                -webkit-animation: scale 100ms ease-in-out forwards;
+                -moz-animation: scale 100ms ease-in-out forwards;
+                -o-animation: scale 100ms ease-in-out forwards;
+                animation: scale 100ms ease-in-out forwards;
             }
-        
-            &:active {
-                -webkit-animation: active 1200ms ease 1 alternate !important;
-                animation: active 1200ms ease 1 alternate !important; 
-                background: #5F9BE0 !important;
-            }    
+        .button.jelly {
+            a {
+                -moz-animation:  hover 1500ms linear 2 alternate !important;
+                -o-animation:  hover 1500ms linear 2 alternate !important;
+                 -webkit-animation: hover 1500ms linear 2 alternate !important;
+                 animation: hover 1500ms linear 2 alternate !important;
+            }
         }
     }
 }
 
 /* Active state animation keyframes below */
+@keyframes scale {
+    to {
+      transform: scale(1.2);
+    }
+}
 
 @-webkit-keyframes active { 
     0% {transform: scale(1,1);}

@@ -5,7 +5,7 @@
         .card {
             margin: 5px;
             
-            .card-image {
+            .card-header {
               .price {
 
                 white-space: nowrap;
@@ -20,13 +20,6 @@
                 }
               } 
             }
-
-            .card-header {
-                .shop_product_title {
-                    font-size: 1.15rem;
-                    line-height:1.25rem;
-                }
-              }
         }
     }
 }

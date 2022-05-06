@@ -89,15 +89,6 @@ header.site-header .header-wrapper .tools .cart-button i::before {
     content: "\e93a";
 }
 
-.shortcode_title,
-.product_title,
-.carousel-title {
-  text-transform: capitalize !important;
-  font-family: 'Dancing Script', 'Times New Roman', Times, serif !important;
-  font-size: 2rem !important;
-  letter-spacing: 2px;
-}
-
 /* product listing caroursel */
 
 .woocommerce ul.products li .eva_product_quick_view_button {
@@ -225,30 +216,34 @@ header.site-header .header-wrapper .tools .cart-button i::before {
 }
 
 
-.select2-dropdown .select2-results__option[aria-selected="true"], .select2-dropdown .select2-results__option--highlighted[aria-selected], .select2-results .select2-highlighted
+.select2-dropdown .select2-results__option[aria-selected="true"], 
+.select2-dropdown .select2-results__option--highlighted[aria-selected], 
+.select2-results .select2-highlighted
 {
-  background-color:#ff149a !important
+  background-color:#ff149a !important;
+  color:#fff !important;
 }
 
 
 
 
 /***************** single product  ******************/
-
-/* product item */
-.woocommerce .woocommerce-tabs ul.tabs li a {
-  font-family: 'Dancing Script', 'Times New Roman', Times, serif !important;
-  text-transform:capitalize;
-}
-
 .progress-page,
 /* .woocommerce ul.products li.product .product_after_shop_loop_buttons .button, 
 .woocommerce ul.products li.product .product_after_shop_loop_buttons .added_to_cart, */
 .woocommerce .woocommerce-pagination ul li span.current, .woocommerce .top_bar_shop 
 .catalog-ordering .shop-filter, .description-section .product_meta .product_meta_ins {
-  background: rgba(250, 255, 103, 0.5);
-  border:1px solid rgba(0, 0, 0, 0.5);
+  background: #ff149a;
   box-shadow:none;
+}
+
+.progress-page .scrolltotop .arrow-top {
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+
+.progress-page .scrolltotop .arrow-top-line {
+  background-color: #fff;
 }
 
 
@@ -271,7 +266,7 @@ header.site-header .header-wrapper .nav .header-nav .menu-trigger.menu_trigger_4
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  font-family:'Rubik', Helvetica, sans-serif;
+  opacity:1;
 }
 
 .product_content_wrapper .single_add_to_cart_button.button {
@@ -322,7 +317,6 @@ header.site-header .header-wrapper .nav .header-nav .menu-trigger.menu_trigger_4
 .product-inner-data .price,
 .cart .quantity input,
 .product-buttons a {
-  font-family: 'Rubik', Arial, Helvetica, sans-serif !important;
   font-weight:100 !important;
 }
 

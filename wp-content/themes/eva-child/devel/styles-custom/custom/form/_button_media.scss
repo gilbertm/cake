@@ -1,15 +1,12 @@
 @include media-breakpoint-down(sm) {
-    .button {
-        &.jelly {
+    .product-card {
+        .button.jelly {
     
             a, a:active {
-                border-radius: 10px;
-                padding: 10px 15px;
-                font-size: 1rem;
-                font-size:10px;
+                font-size:12px;
     
                 i {
-                    font-size: 1rem;
+                    font-size: 2rem;
                     margin-bottom: 0.5rem;
                 }
     

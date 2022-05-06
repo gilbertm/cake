@@ -87,7 +87,7 @@ $footer_text = (!empty($tdl_options['tdl_footer_text'])) ? $tdl_options['tdl_foo
                   <?php endif; ?> 
               </div>
             </div>
-            <div class="row">
+            <div class="row d-none">
               <div class="col col-12">
                  <?php /* <div style="width: 100%"><iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=250&amp;hl=en&amp;q=Shop%20No.%202,%20Amir%20Building%20-%20Al%20Qusais%20-%20Dubai+(Sunshine's%20Sweettooth%20Cake%20shop)&amp;data=!3m1!4b1!4m5!3m4!1s0x3e5f5fda299bce2b:0x944635ec973d1b58!8m2!3d25.2846164!4d55.4083836&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed&amp;key=AIzaSyAo2dd5EqI3m_p14rFLRtySDwlIObD6ftY"></iframe></div> */ ?>
 

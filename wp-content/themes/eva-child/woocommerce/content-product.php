@@ -79,13 +79,9 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
     }
     ?>
 
-    <div class="product-card">
-        <div class="m-0 card pb-3">
+    <div class="product-card mb-3 mb-md-4">
+        <div class="m-0 card pb-3 border-0">
             <div class="card-image <?php echo ent2ncr($class); ?>">
-                <div class="m-2 p-1 text-primary position-absolute rounded-pill price-wrapper">
-                    <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_price' ); ?>
-                </div>
-                
                 <a href="<?php the_permalink(); ?>">
 
                 <?php if (has_post_thumbnail($post->ID)) : ?>
@@ -123,10 +119,19 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
                 <?php endif; ?>           
             <?php endif; ?>
 
-            <div class="card-header bg-transparent">
-                <a class="shop_product_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                <?php // extra infos, showing variants //do_action( 'woocommerce_after_shop_loop_item_title' ); ?> 
+            <div class="card-content text-center">
+                
+                <div class="button jelly text-center p-0 m-0">
+                    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
+                </div>
             </div>
+
+            <div class="card-header bg-transparent">
+                <div class="mx-auto mb-2 mb-md-3 text-primary rounded-pill price-wrapper text-center">
+                    <?php do_action( 'woocommerce_after_shop_loop_item_title_loop_price' ); ?>
+                </div>
+            </div>
+
             <div class="card-content">
                 <div class="row">
                     <div class="col col-7">
@@ -148,7 +153,7 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
                                 <?php if ( $category_listing == 'brand') { ?>
                                 
                                     <?php if(($term_id = get_brands_term_by_product_id($product->get_id())) > 0): $term = get_term($term_id,'brands');?>
-                                        <p class="product-category-listing w-75 mx-auto text-center"><a href="<?php echo get_term_link($term_id,'brands');?>" class="product-category-link"><?php echo esc_attr($term->name) ?></a></p>
+                                        <p class="product-category-listing mx-auto px-2 py-2"><a href="<?php echo get_term_link($term_id,'brands');?>" class="product-category-link"><?php echo esc_attr($term->name) ?></a></p>
                                     <?php endif; ?>            
                                 
                                 <?php } else if ( $category_listing == 'first_category') { ?>
@@ -165,7 +170,7 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
                                             $category_url = get_term_link( (int)$category_id, 'product_cat' );
                                         }
                                         ?>
-                                        <p class="product-category-listing mx-auto px-2"><a href="<?php echo esc_url($category_url); ?>" class="product-category-link"><?php echo esc_attr($firstpart); ?></a></p>
+                                        <p class="product-category-listing mx-auto px-2 py-2"><a href="<?php echo esc_url($category_url); ?>" class="product-category-link"><?php echo esc_attr($firstpart); ?></a></p>
 
                                 <?php } else { ?>
                                         <?php
@@ -186,12 +191,11 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
                
             </div>
 
-            <div class="card-content text-center">
-                
-                <div class="button jelly text-center">
-                    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?> 
-                </div>
+            <div class="card-header bg-transparent border-0">
+                <a class="shop_product_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <?php // extra infos, showing variants //do_action( 'woocommerce_after_shop_loop_item_title' ); ?> 
             </div>
+
         </div>
     </div>
 </div>
