@@ -129,7 +129,7 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
             </div>
             <div class="card-content">
                 <div class="row">
-                    <div class="col col-8">
+                    <div class="col col-7">
                         <?php if ( (isset($tdl_options['tdl_catalog_mode'])) && ($tdl_options['tdl_catalog_mode'] == 0) ) : ?>
                             <?php wc_get_template( 'loop/sale-flash.php' ); ?>
                         <?php endif; ?>
@@ -175,7 +175,7 @@ $add_to_cart_display  = (!empty($tdl_options['tdl_add_to_cart_display'])) ? $tdl
 
                         <?php } ?>
                     </div>
-                    <div class="col col-4">
+                    <div class="col col-5">
                         <ul class="card-action-buttons">
                             <li>
                                 <button type="button" class="btn btn-wish btn-circle m-1"><?php if (class_exists('YITH_WCWL')) : ?><?php echo trim(do_shortcode('[yith_wcwl_add_to_wishlist]')); ?><?php endif; ?></button>

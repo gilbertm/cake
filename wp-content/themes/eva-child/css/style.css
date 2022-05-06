@@ -123,13 +123,6 @@ header.site-header .header-wrapper .tools .cart-button i::before {
     text-transform: capitalize;
 }
 
-.shop_product_title {
-    font-family: "Dancing Script",'Comic Sans MS', cursive;
-    text-transform: capitalize;
-    font-size: 1.25rem;
-    font-weight: 100;
-}
-
 .woocommerce span.out_of_stock_title, 
 .woocommerce-page span.out_of_stock_title {
      bottom: 50%;
@@ -425,7 +418,6 @@ header.site-header .header-wrapper .nav .header-nav .menu-trigger.menu_trigger_4
   color: #333;
   font-size: 16px;
   font-family: "FontAwesome" !important;
-  line-height: 1.5;
   padding: 0;
   background: #FAFAFA;
   -webkit-transform: translateX(-100%);
@@ -448,7 +440,6 @@ header.site-header .header-wrapper .nav .header-nav .menu-trigger.menu_trigger_4
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   font-family: "FontAwesome";
   border-radius: 0 4px 0 0;
-  line-height: 1.6
 }
 
 .quantity-button.quantity-down {

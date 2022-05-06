@@ -1,3 +1,27 @@
+html, body {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 14px;
+    line-height: 1.1rem;
+  }
+
+  #products-carousel .carousel-title:after {
+    height: 2px;
+  }
+
+  .mm-listview a:hover span div:before, 
+  .mm-listview li:hover span div:before, 
+  .mm-listview li.current-menu-item span div:before {
+      height: 5px;
+  }
+
+.woocommerce .woocommerce-pagination ul li span.current {
+    background: rgba(251, 255, 26, 0.5);
+    border: 1px solid rgb(226, 251, 0);
+    box-shadow: none;
+}
+
 .page-header .title-section {
     margin-top:50px;
 }
@@ -293,7 +317,55 @@ footer {
         }
     }
 
-} 
+}
+
+.floating-menu{
+    position:relative;
+    z-index:100;
+
+    .social-media{
+        align-items: center;
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+    .social-media:hover{
+        transform: translateX(calc(-100% + 60px));
+    }
+    
+    .social-media i{
+        color: #fff;
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        width: 60px;
+    }
+    .social-media a{
+        color: #fff;
+        padding: 0 30px;
+        line-height:1.1rem;
+        text-align: center;
+        text-decoration: none;
+    }
+    .social-media-container{
+        top: 50%;
+        list-style-type: none;
+        padding: 0;
+        position: fixed;
+        left: calc(100% - 70px);
+        transform: translateY(-50%);
+        min-width: 250px;
+    }
+    
+    .social-media.whatsapp{
+        background-color: #075e54;
+    }
+    .social-media.instagram{
+        background-color: #fb3958;
+    }
+    .social-media.facebook{
+        background-color: #4267B2;
+    }
+}
 
 @import
 "common_media";

@@ -27,10 +27,11 @@
 
         li {
             display: inline-flex;
-            padding-left: 7px;
+            padding-left: 0;
           }
       }
 
+    /* can be on different pages - carousel blocks */
     .card {
         margin: 20px;
         overflow: hidden;
@@ -38,7 +39,7 @@
 
         .card-header {
             border-bottom: 1px solid rgba(255, 20, 154, 0.1);
-            min-height:90px;
+            min-height:120px;
         } 
 
         .price-wrapper {
@@ -47,10 +48,10 @@
 
         .card-content {
             padding: 5px;
-          }
+        }
           
 
-          .price {
+        .price {
             color:#fff !important;
 
             .woocommerce-Price-amount {
@@ -64,7 +65,15 @@
               font-size:0.75rem;
               font-weight:100;
             }
+        } 
+
+        .card-header {
+          .shop_product_title {
+              font-size: 1.25rem;
+              font-weight: 100;
+              line-height:1.5rem;
           }
+        }
     }
 
     .yith-wcwl-add-button,

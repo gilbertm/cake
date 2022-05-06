@@ -196,6 +196,25 @@ $footer_text = (!empty($tdl_options['tdl_footer_text'])) ? $tdl_options['tdl_foo
       <div class="offcanvas_overlay"></div>      
 		</div><!-- .offcanvas_container -->
     
+    <div class="floating-menu">
+      <ul class="social-media-container">
+        <li class="social-media facebook">
+          <i class="fa fa-facebook"></i>
+          <a href="https://www.facebook.com/sweettoothbysunshine" target="_blank">Follow us on Facebook</a>
+        </li>
+        <li class="social-media instagram">
+          <i class="fa fa-instagram"></i>
+          <a href="https://www.instagram.com/sunshinessweettoothlove" target="_blank">Follow us on Instagram</a>
+        </li>
+        <li class="social-media whatsapp">
+          <i class="fa fa-whatsapp"></i>
+          <a href="https://api.whatsapp.com/send?phone=971505063624" target="_blank">Chat us on WhatsApp</a>
+        </li>
+      </ul>
+    </div>
+    
+
+
     <div class="cd-quick-view woocommerce">
     </div> <!-- cd-quick-view -->
     <div class="rellax"></div>
@@ -210,5 +229,6 @@ $footer_text = (!empty($tdl_options['tdl_footer_text'])) ? $tdl_options['tdl_foo
     
 		<?php wp_footer(); ?>
     <?php do_action( 'eva_after_footer' ); ?>
+    
 	</body>
 </html>

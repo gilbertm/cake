@@ -1,0 +1,32 @@
+@include media-breakpoint-down(sm) {
+    .product-card {
+
+        /* can be on different pages - carousel blocks */
+        .card {
+            margin: 5px;
+            
+            .card-image {
+              .price {
+
+                white-space: nowrap;
+
+                .woocommerce-Price-amount {
+                    font-weight: 300;
+                    font-size: 10px !important;
+                }
+    
+                .woocommerce-Price-currencySymbol {
+                  font-size:6px;
+                }
+              } 
+            }
+
+            .card-header {
+                .shop_product_title {
+                    font-size: 1.15rem;
+                    line-height:1.25rem;
+                }
+              }
+        }
+    }
+}

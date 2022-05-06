@@ -1,1 +1,27 @@
 
+@include media-breakpoint-down(sm) {
+
+    .mm-listview a:hover span div:before, 
+    .mm-listview li:hover span div:before, 
+    .mm-listview li.current-menu-item span div:before {
+        height: 2px;
+    }
+
+    .shortcode_title, 
+    .product_title, 
+    .carousel-title {
+        font-size: 1.5rem !important;
+        line-height: 1.5rem !important;
+    }
+
+    .woocommerce .woocommerce-pagination ul li span.current {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+
+    .page-header .page-header-bg-wrapper {
+        background-position: 20% !important;
+    }
+}
