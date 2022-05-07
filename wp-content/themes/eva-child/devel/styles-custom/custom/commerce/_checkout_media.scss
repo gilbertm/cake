@@ -1,0 +1,7 @@
+@include media-breakpoint-down(sm) {
+    .woocommerce-checkout {
+        #pi_checkout_field {
+            width:100% !important;
+        }
+    }
+}

@@ -7,4 +7,11 @@
     .woocommerce-form__label {
         font-size:12px !important
     }
+
+    #pi_checkout_field {
+        width:50%;
+    }
 }
+
+@import
+"checkout_media";

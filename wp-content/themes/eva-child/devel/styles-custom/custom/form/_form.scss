@@ -1,3 +1,50 @@
+form {
+  p.form-row {
+    margin-bottom:0.25rem;
+  }
+}
+
+input[type=submit], button[type=submit], input[type=button] {
+  background-color: rgba(255, 20, 153, 0.75);
+  color:rgba(255, 255, 255, 0.75);
+  
+  &:hover {
+    background-color: rgba(255, 20, 153, 1);
+    color:rgba(255, 255, 255, 1);
+  }
+}
+
+.widget-area .widget.widget_product_tag_cloud {
+  a {
+      border-color: rgba(255, 20, 153, 0.5);
+      &:hover {
+      color:rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.account-forms-container .account-forms form.login-form .lost_password, 
+.account-forms-container .account-forms form.register .lost_password, 
+.account-forms-container .account-forms form.track_order .lost_password {
+  float:none !important;
+  margin: auto !important;
+}
+
+.woocommerce-shipping-fields #ship-to-different-address,
+.woocommerce-account-fields .create-account {
+  margin: 1rem 0;
+  
+  label {
+    font-family: Rubik,Arial,Helvetica,sans-serif!important;
+    font-size: 18px !important;
+    font-weight: 300;
+  }
+}
+.woocommerce-account-fields .create-account {
+  margin-top:2rem;
+}
+
+
 /****** contact form 7 ******/
 .wpcf7-form-control {
   &.wpcf7-submit {

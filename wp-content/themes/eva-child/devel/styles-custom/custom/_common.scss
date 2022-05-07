@@ -6,6 +6,8 @@ html, body {
     line-height: 1.1rem;
   }
 
+
+
   #products-carousel .carousel-title:after {
     height: 2px;
   }
@@ -105,6 +107,7 @@ html, body {
     .woocommerce-input-wrapper,
     #select2-pi_delivery_time-container {
         line-height:3rem;
+        font-size:1rem;
     }
 
 
@@ -132,7 +135,7 @@ html, body {
     .pi_delivery_type .input-radio:checked + label, 
     .pi_delivery_type .woocommerce-input-wrapper label.active_type, 
     .pi_delivery_type .woocommerce-input-wrapper .woocommerce-radio-wrapper input:checked + label {
-        background:rgb(255, 20, 154,0.3);
+        background:rgb(255, 20, 154,0.75);
         color:#fff;
 
         img {
